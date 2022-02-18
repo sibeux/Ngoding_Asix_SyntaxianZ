@@ -12,3 +12,7 @@ print(fibonacci(10))
 print('hello world')
 print('hello world')
 print('sibe')
+
+#fungsi
+def fungsi(a,b):
+    return a+b
