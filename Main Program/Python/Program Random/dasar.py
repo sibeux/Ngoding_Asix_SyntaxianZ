@@ -27,3 +27,4 @@ def palindrome(kata):
         return palindrome(kata[1:-1])
 
 print(palindrome('katak'))
+
