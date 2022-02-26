@@ -6,8 +6,6 @@
 
 <h3 align="center">SibeUX Repository</h3>
 
-
-
  <div align="center">
 
   <span>
@@ -27,7 +25,6 @@
  </div>
 
 </br>
-
 
  <div align="center">
 
@@ -55,7 +52,6 @@
 
 </div>
 
-
 <div align="center">
 
 - 🌱 I’m currently learning **Java, Data Science, Web Development**
@@ -64,17 +60,9 @@
 
 - 📫 How to reach me **wahabinasrul@gmail.com**
 
-  
-
 </div>
 
-
-
-
-
  <h3 align="center">🗡️Connect with me:</h3>
-
-  
 
  <p align="center">
 <a href="https://www.linkedin.com/in/m-nasrul-wahabi-a35a97181/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="nasrul wahabi" height="30" width="40" /></a>
@@ -102,10 +90,6 @@
 <a href="https://www.mi.com/global/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/mi/mi-icon.svg" alt="mi" width="40" height="40"/> </a>
 </p>
 
-
-
-
-
 <h3 align="center"> 🚀 Frameworks </h3>
 
 <div align="center">
@@ -126,10 +110,7 @@
 
 </div>
 
-
-
 </br>
-
 
 <div align="center">
 
@@ -149,25 +130,13 @@
 
 </div>
 
-
-
 </br>
 
-
-
 </br>
-
-
-
-
 
 <div align="center">
 
-  
-
 ![Ralf's GitHub stats](https://github-readme-stats.vercel.app/api?username=sibeux&show_icons=true&theme=tokyonight)
-
-
 
 </div>
 
