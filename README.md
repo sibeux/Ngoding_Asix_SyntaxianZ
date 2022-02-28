@@ -93,6 +93,7 @@
 <a href="https://brave.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/brave/brave-icon.svg" alt="mi" width="40" height="40"/> </a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS?retiredLocale=id" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg" alt="mi" width="40" height="40"/> </a>
 <a href="https://www.php.net/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/php/php-icon.svg" alt="mi" width="40" height="40"/> </a>
+<a href="https://ubuntu.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/ubuntu/ubuntu-icon.svg" alt="mi" width="40" height="40"/> </a>
 </p>
 
 <h3 align="center"> 🚀 Frameworks </h3>
