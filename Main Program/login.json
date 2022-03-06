@@ -50,5 +50,9 @@
     {
         "USERNAME": "algo",
         "PASSWORD": "123"
+    },
+    {
+        "USERNAME": "1",
+        "PASSWORD": "1"
     }
 ]
