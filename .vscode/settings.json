@@ -13,6 +13,7 @@
         "terminal.ansiBrightCyan": "#00e1ff"
     },
     "editor.tokenColorCustomizations": {"comments": "#00ffc8"},
+    "prettier.enable": true,
     "bracketPairColorizer.colorMode": "Consecutive",
     "editor.find.autoFindInSelection": "multiline",
     "editor.multiCursorPaste": "spread",
