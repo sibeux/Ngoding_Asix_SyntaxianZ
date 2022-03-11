@@ -8,7 +8,26 @@
 <body>
     <script>
         // if-expression
+        const examvalue = 80;
+
+        // if
+        if (examvalue > 70){
+            document.writeln(`<p>Selamat, Anda lulus</p>`);
+        }
+
+        // else if
+        if (examvalue < 70){
+            document.writeln(`<p>Maaf, Anda tidak lulus</p>`);
+        } else if (examvalue > 60){
+            document.writeln(`<p>Anda lulus dengan cukup</p>`);
+        }
         
+        // else
+        if (examvalue > 90){
+            document.writeln(`<p>Selamat, Anda lulus</p>`);
+        } else {
+            document.writeln(`<p>Maaf, Anda tidak lulus</p>`);
+        }
     </script>
 </body>
 </html>
