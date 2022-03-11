@@ -1,5 +1,9 @@
 {
     "editor.fontSize": 14,
+    "highlight-matching-tag.enabled": true,
+    "highlight-matching-tag.highlightFromName": true,
+    "highlight-matching-tag.showPath": true,
+    "highlight-matching-tag.showRuler": true,
     "window.zoomLevel": -1,
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.cursorStyle": "block",
