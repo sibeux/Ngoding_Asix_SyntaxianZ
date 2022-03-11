@@ -4,7 +4,16 @@
     "highlight-matching-tag.highlightFromName": true,
     "highlight-matching-tag.showPath": true,
     "highlight-matching-tag.showRuler": true,
+    "cssPeek.enable": true,
     "window.zoomLevel": -1,
+    "quokka.colorizeOutput": true,
+    "quokka.colors": {
+        "covered": "#62b455",
+        "errorPath": "#ffa0a0",
+        "errorSource": "#fe536a",
+        "notCovered": "#cccccc",
+        "partiallyCovered": "#d2a032"
+    },
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.cursorStyle": "block",
     "workbench.colorTheme": "Dracula",
@@ -83,7 +92,7 @@
         ",",
         ";",
         "|"
-
+        
     ],
     "rainbow_csv.enable_separator_autodetection" : true,
     "rainbow_csv.enable_tooltip_column_names": true,
@@ -93,6 +102,29 @@
         "Testing\\JAVA_OOP\\src"
     ],
     "C_Cpp.errorSquiggles": "Disabled",
+    "cssPeek.peekFromLanguages": [
+        "html",
+        "django-html",
+        "laravel-blade",
+        "razor",
+        "vue",
+        "blade",
+        "pug",
+        "jade",
+        "handlebars",
+        "php",
+        "twig",
+        "md",
+        "nunjucks",
+        "javascript",
+        "javascriptreact",
+        "erb",
+        "typescript",
+        "typescriptreact",
+        "HTML (Eex)",
+        "html-eex",
+        "ejs"
+    ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "JAVA_OOP/src/com/javaoop/Database/Driver JDBC/postgresql-42.3.1.jar",
