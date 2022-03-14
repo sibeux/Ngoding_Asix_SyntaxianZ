@@ -53,20 +53,27 @@ body{
     font-size: 30px;
     font-weight: 500;
     padding: 10px;
-    line-height: 25px;
+    line-height: 15px;
 }
 
-.wrapper .place{
+.wrapper .prodi{
     color: #fff;
     font-size: 17px;
     line-height: 0px;
     margin: 10px 0;
 }
 
+.wrapper .nim{
+    color: #fff;
+    font-size: 15px;
+    line-height: 29px;
+    margin: 10px 0;
+}
+
 .content{
     color: #fff;
     font-size: 17px;
-    margin-top: 10px;
+    margin-top: -20px;
     padding: 1px 20px 10px 20px !important;
 }
 
