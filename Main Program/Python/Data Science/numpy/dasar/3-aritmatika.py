@@ -41,5 +41,5 @@ hasil = c + d
 hasil = c * d 
 # [[  7  16  27] 
 # [ -4 -10 -18]]
-
+print(hasil)
 print(hasil)
