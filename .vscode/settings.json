@@ -3,6 +3,15 @@
     "jupyter.defaultCellMarker": "# %%",
     "highlight-matching-tag.enabled": true,
     "highlight-matching-tag.highlightFromName": true,
+    "notebook.lineNumbers": "on",
+    "jupyter.showOutlineButtonInNotebookToolbar": true,
+    "notebook.undoRedoPerCell": true,
+    "notebook.cellFocusIndicator": "border",
+    "notebook.displayOrder": [],
+    "notebook.showCellStatusBar": "visible",
+    "notebook.cellToolbarLocation": {
+        "default": "right"
+    },
     "notebook.editorOptionsCustomizations": {
         "editor.bracketPairColorization.enabled": true,
     },
@@ -92,6 +101,7 @@
         "plaintext": false,
         "markdown": false
     },
+    "notebook.cellToolbarVisibility": "click",
     "rainbow_csv.autodetect_separators": [
         "\t",
         ",",
