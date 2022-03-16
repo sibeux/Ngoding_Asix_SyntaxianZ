@@ -8,6 +8,7 @@
     "notebook.undoRedoPerCell": true,
     "notebook.cellFocusIndicator": "border",
     "notebook.displayOrder": [],
+    "github.copilot.inlineSuggest.enable": true,
     "notebook.showCellStatusBar": "visible",
     "notebook.cellToolbarLocation": {
         "default": "right"
