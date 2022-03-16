@@ -1,5 +1,6 @@
 {
     "editor.fontSize": 14,
+    "jupyter.defaultCellMarker": "# %%",
     "highlight-matching-tag.enabled": true,
     "highlight-matching-tag.highlightFromName": true,
     "notebook.editorOptionsCustomizations": {
