@@ -1,3 +1,4 @@
+import numpy as np
 arr = np.array([
     [ 5, 10, 10, 7],
     [ 7,  8, 4, 10],
