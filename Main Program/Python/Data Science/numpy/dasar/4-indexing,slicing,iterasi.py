@@ -14,6 +14,5 @@ print('element dari 4 sampai akhir',a[4:])
 print('element dari awal sampai ke 5',a[:5])
 
 # iterasi
-
 for i in a:
     print('value',i)
