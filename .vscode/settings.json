@@ -7,6 +7,8 @@
     "jupyter.showOutlineButtonInNotebookToolbar": true,
     "notebook.undoRedoPerCell": true,
     "notebook.cellFocusIndicator": "border",
+    "prettier.embeddedLanguageFormatting": "auto",
+    "prettier.useTabs": true,
     "notebook.displayOrder": [],
     "github.copilot.inlineSuggest.enable": true,
     "notebook.showCellStatusBar": "visible",
