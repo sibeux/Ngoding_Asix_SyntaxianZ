@@ -1,73 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <div class="right-sidebar">
-        <div class="right-sidebar-header">
-            <h3>
-                <a href="index.php">
-                    <img src="images/logo.png" alt="">
-                </a>
-            </h3>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bxs-camera-movie icon' ></i>
+            <div class="logo_name">CbuxCinema</div>
+            <i class='bx bx-menu' id="btn"></i>
         </div>
-        <div class="right-sidebar-body">
-            <div class="right-sidebar-body-header">
-                <h4>
-                    <a href="index.php">
-                        <img src="facebook.png" alt="">
-                    </a>
-                </h4>
-            </div>
-            <div class="right-sidebar-body-content">
-                <div class="right-sidebar-body-content-header">
-                    <h5>
-                        <a href="index.php">
-                            <img src="images/logo.png" alt="">
-                        </a>
-                    </h5>
+        <ul class="nav-list">
+            <li>
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Search...">
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxl-facebook' ></i>
+                    <span class="links_name">Facebook</span>
+                </a>
+                <span class="tooltip">Facebook</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxl-youtube'></i>
+                    <span class="links_name">Youtube</span>
+                </a>
+                <span class="tooltip">Youtube</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxl-instagram' ></i>
+                    <span class="links_name">Instagram</span>
+                </a>
+                <span class="tooltip">Instagram</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxl-github' ></i>
+                    <span class="links_name">Github</span>
+                </a>
+                <span class="tooltip">Github</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxl-twitter'></i>
+                    <!-- links name berfungsi nampilin fulltext -->
+                    <!-- saat ditekan -->
+                    <span class="links_name">Twitter</span>
+                </a>
+                <span class="tooltip">Twitter</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxl-linkedin' ></i>
+                    <span class="links_name">LinkedIn</span>
+                </a>
+                <span class="tooltip">LinkedIn</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxl-google' ></i>
+                    <span class="links_name">wahabinasrul</span>
+                </a>
+                <span class="tooltip">Google</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="links_name">Setting</span>
+                </a>
+                <span class="tooltip">Setting</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <!--<img src="profile.jpg" alt="profileImg">-->
+                    <div class="name_job">
+                        <div class="name">SibeUX</div>
+                        <div class="job">Movie Cinema</div>
+                    </div>
                 </div>
-                <div class="right-sidebar-body-content-body">
-                    <ul>
-                        <li>
-                            <a href="index.php">
-                                <img src="images/home.png" alt="">
-                                <span>Home</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="movies.php">
-                                <img src="images/movies.png" alt="">
-                                <span>Movies</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="series.php">
-                                <img src="images/series.png" alt="">
-                                <span>Series</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="about.php">
-                                <img src="images/about.png" alt="">
-                                <span>About</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="contact.php">
-                                <img src="images/contact.png" alt="">
-                                <span>Contact</span>
+                <i class='bx bx-log-out' id="log_out"></i>
+            </li>
+        </ul>
     </div>
-    
+    <section class="home-section">
+        <div class="text">Dashboard</div>
+    </section>
+    <!-- kalo js nya dicomment, sidebarnya ga bisa diklik/amimasi -->
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let closeBtn = document.querySelector("#btn");
+        let searchBtn = document.querySelector(".bx-search");
+
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            menuBtnChange(); //calling the function(optional)
+        });
+
+        searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
+            sidebar.classList.toggle("open");
+            menuBtnChange(); //calling the function(optional)
+        });
+
+        // following are the code to change sidebar button(optional)
+        function menuBtnChange() {
+            if (sidebar.classList.contains("open")) {
+                closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); //replacing the iocns class
+            } else {
+                closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
+            }
+        }
+    </script>
 </body>
 
 </html>
