@@ -282,6 +282,23 @@
     margin: 18px
 }
 
+.home-section .movie .movie1 {
+    left: 300px;
+    position: relative;
+    width: 400px;
+    height: 200px;
+    background-color: #f65065;
+    border-radius: 35px;
+}
+
+.imegm1 {
+    background-color: #FFF;
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    margin: auto 10px;
+}
+
 @media (max-width: 420px) {
     .sidebar li .tooltip {
         display: none;
