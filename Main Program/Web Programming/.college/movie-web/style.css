@@ -348,6 +348,7 @@
     padding-left: 90px;
     padding-top: -1px;
     padding-right: 0px;
+    position: absolute;
 }
 
 .product-body h3{
@@ -390,6 +391,25 @@
 
 .yellow-star {
 	color: rgb(255, 166, 0);
+}
+
+.btn i:hover {
+    color: #f65065;
+}
+
+.btn i{
+    margin-right: 5px;
+}
+
+.btn{
+    float: right;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    right: -12px;
+    bottom: -40px;
+    color: #FFF;
+    z-index: 1;
+    position: absolute;
 }
 
 img {
