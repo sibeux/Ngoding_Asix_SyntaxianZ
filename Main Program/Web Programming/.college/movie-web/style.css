@@ -312,36 +312,42 @@
 }
 
 .product-card {
-	margin: auto;
-	width: 200px;
-	box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.1);
-	border-radius: 1rem;
+    position: relative;
+    display: flex;
+	margin: 10px;
+    padding-left: 55px;
+    justify-content: space-between;
+    align-items: center;
+	width: 380px;
+    height: 180px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 2rem;
     background-color: #322f59;
 }
 
 .product-image {
-	position: relative;
 	padding-bottom: 100%;
 }
 
 .product-image img {
 	position: absolute;
-	width: 80%;
-	height: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
+	width: 95px;
+	height: 135px;
+    margin-left: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	border-top-left-radius: 1rem;
-	border-top-right-radius: 1rem;
+	border-radius: 2em;
 }
 
 .product-body {
-	padding: 0.75rem;
-    float: right;
+	/* padding: 0.75rem; */
+    padding-left: 90px;
+    padding-top: -1px;
+    padding-right: 0px;
 }
 
 .product-body h3{
@@ -353,20 +359,29 @@
 }
 
 .product-price {
-	font-weight: 600;
+    font-size: 12px;
     color: #6a629b;
 }
 
 .product-discount {
-	color: rgb(102, 98, 98);
 	font-size: 0.8rem;
 }
 
+.product-discount .action {
+    /* padding - jarak konten dengan wadah */
+    padding: 0.1rem 0.7rem;
+	border-radius: 0.8rem;
+	color: white;
+	background-color: #6647bf;
+}
+
 .product-discount-percentage {
-	padding: 0.1rem 0.3rem;
-	border-radius: 0.3rem;
+    padding: 0.1rem 0.7rem;
+	border-radius: 0.8rem;
 	color: white;
 	background-color: #d94a86;
+    /* margin - jarak wadah dengan sekeliling */
+    margin-right: 5px;
 }
 
 .product-rates {
