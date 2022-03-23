@@ -9,7 +9,10 @@
 }
 
 body {
-    background: #51489a;
+    /* background: #51489a; */
+    background-image: url(img/bg.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
 }
 
 .sidebar {
@@ -561,6 +564,14 @@ footer{
     font-size: 14px;
     word-spacing: 2px;
     text-transform: capitalize;
+}
+
+.header-content h1{
+    color: #FFF;
+}
+
+.header-content h1 span{
+    color: salmon;
 }
 
 .footer-bottom span{
