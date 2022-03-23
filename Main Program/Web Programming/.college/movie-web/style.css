@@ -12,7 +12,6 @@ body {
     /* background: #51489a; */
     background-image: url(img/bg.jpg);
     background-size: cover;
-    background-blend-mode: multiply;
 }
 
 .sidebar {
@@ -567,6 +566,7 @@ footer{
 }
 
 .header-content h1{
+    text-align: center;
     color: #FFF;
 }
 
