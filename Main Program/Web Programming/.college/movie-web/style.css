@@ -9,7 +9,8 @@
 }
 
 body {
-    background-color: #51489a;
+    background-image: url(img/bg.jpg);
+    background-size: cover;
 }
 
 .sidebar {
@@ -281,7 +282,7 @@ ul {
 .home {
     position: relative;
     margin: auto;
-    background: #51489a;
+    /* background: #51489a; */
     min-height: 100vh;
     top: 20px;
     right: 0;
@@ -376,6 +377,22 @@ ul {
 	background-color: #eb8052;
 }
 
+.product-discount .demons{
+    padding: 0.1rem 0.7rem;
+	border-radius: 0.8rem;
+	color: white;
+    margin-right: 5px;
+	background-color: #eb5252;
+}
+
+.product-discount .school{
+    padding: 0.1rem 0.7rem;
+	border-radius: 0.8rem;
+	color: white;
+    margin-right: 5px;
+	background-color: #ebdc52;
+}
+
 .product-discount .Fantasy{
     padding: 0.1rem 0.7rem;
     border-radius: 0.8rem;
@@ -415,7 +432,7 @@ ul {
     padding: 0.1rem 0.7rem;
 	border-radius: 0.8rem;
 	color: white;
-	background-color: #f75064;
+	background-color: #f750a9;
     margin-right: 5px;
 }
 
@@ -423,7 +440,7 @@ ul {
     padding: 0.1rem 0.7rem;
 	border-radius: 0.8rem;
 	color: white;
-	background-color: #d94a86;
+	background-color: #4ad994;
     /* margin - jarak wadah dengan sekeliling */
     margin-right: 5px;
 }
@@ -444,6 +461,17 @@ ul {
     margin-right: 5px;
 }
 
+.footer {
+    background-color: #333;
+    height: 60px;
+}
+
+.footer .copy{
+    color: #eaeaea;
+    padding: 20px;
+    text-align: center;
+}
+
 .product-card .btn{
     float: right;
     margin-right: 30px;
@@ -453,6 +481,86 @@ ul {
     color: #FFF;
     z-index: 1;
     position: absolute;
+}
+
+footer{
+    /* position: absolute; */
+    background: rgb(57, 36, 90);
+    height: auto;
+    width: 100%;
+    font-family: "open sans";
+    padding-top: 40px;
+    color: #FFF;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+    /* margin-right: 5px; */
+}
+
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    padding-top: auto;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
 }
 
 img {
