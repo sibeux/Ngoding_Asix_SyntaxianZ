@@ -1,5 +1,11 @@
 {
     "editor.fontSize": 14,
+    "markdown.preview.lineHeight": 1.6,
+    "markdown.styles": [
+        
+    ],
+    "markdown.preview.fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+    "markdown.math.enabled": true,
     "jupyter.defaultCellMarker": "# %%",
     "highlight-matching-tag.enabled": true,
     "highlight-matching-tag.highlightFromName": true,
