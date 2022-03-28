@@ -1,16 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <!-- form bootstrap -->
     <div class="container">
-        <!-- form bootstrap -->
-        
+        <form>
+            <!-- <div class="form-group required row">
+                <label class="col-md-2 control-label">E-mail</label>
+                <div class="col-md-4"><input class="form-control" id="id_email" name="email" placeholder="E-mail"
+                        required="required" title="" type="email" /></div>
+            </div> -->
+            <div class="form-group row">
+                <label for="formFile" class="col-sm-2 col-form-label control-label">Thumbnail</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+            </div>
+            <div class="form-group required row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label control-label">Title</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" placeholder="Insert Title" required="required">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="exampleFormControlTextarea1" class="col-sm-2 col-form-label">Description</label>
+                <div class="col-sm-10">
+                    <textarea></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label control-label">Release Year</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" placeholder="Year" required="required">
+                </div>
+            </div>
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                value="option1" checked>
+                            <label class="form-check-label" for="gridRadios1">
+                                First radio
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                value="option2">
+                            <label class="form-check-label" for="gridRadios2">
+                                Second radio
+                            </label>
+                        </div>
+                        <div class="form-check disabled">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
+                                value="option3" disabled>
+                            <label class="form-check-label" for="gridRadios3">
+                                Third disabled radio
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-group row">
+                <div class="col-sm-2">Checkbox</div>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">
+                            Example checkbox
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+            </div>
+        </form>
     </div>
 </body>
+
 </html>
