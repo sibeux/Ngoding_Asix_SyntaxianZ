@@ -14,14 +14,14 @@
 <body>
     <!-- form bootstrap -->
     <div class="container">
+        <h3>Update Existing Film</h3>
         <form>
+
             <!-- <div class="form-group mb-2 required row">
                 <label class="col-md-2 control-label">E-mail</label>
                 <div class="col-md-4"><input class="form-control" id="id_email" name="email" placeholder="E-mail"
                         required="required" title="" type="email" /></div>
             </div> -->
-
-
 
             <!-- mb = margin bottom -->
             <div class="form-group mb-2 row">
@@ -42,22 +42,22 @@
                 <label for="exampleFormControlTextarea1"
                     class="col-sm-2 col-form-label control-label">Description</label>
                 <div class="col-sm-10">
-                    <textarea></textarea>
+                    <textarea class="form-control"></textarea>
                 </div>
             </div>
 
             <div class="form-group mb-2 row">
                 <label for="inputEmail3" class="col-sm-2 col-form-label control-label">Release Year</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" placeholder="Year" required="required">
+                    <input type="text" class="form-control" placeholder="Year">
                 </div>
             </div>
 
             <div class="form-group mb-2 required row">
                 <label class="col-sm-2 col-form-label control-label" for="exampleFormControlSelect1">Language</label>
                 <div class="col-sm-10">
-                    <select class="form-select" id="exampleFormControlSelect1">
-                        <option selected>Choose</option>
+                    <select class="form-select" id="exampleFormControlSelect1" required>
+                        <option value="">Choose</option>
                         <option value="1">English</option>
                         <option value="2">Indonesia</option>
                         <option value="3">Germany</option>
@@ -69,8 +69,8 @@
                 <label class="col-sm-2 col-form-label control-label" for="exampleFormControlSelect1">Original
                     Language</label>
                 <div class="col-sm-10">
-                    <select class="form-select" id="exampleFormControlSelect1">
-                        <option selected>Choose</option>
+                    <select class="form-select" id="exampleFormControlSelect1" required>
+                        <option value="">Choose</option>
                         <option value="1">-</option>
                     </select>
                 </div>
@@ -80,8 +80,8 @@
                 <label for="formFile" class="col-sm-2 col-form-label control-label">Rental Duration</label>
                 <div class="col-sm-10">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder=""
-                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <input type="text" class="form-control" placeholder="" aria-label="Recipient's username"
+                            aria-describedby="basic-addon2" required="required">
                         <span class="input-group-text" id="inputGroup-sizing-default">Days</span>
                     </div>
                 </div>
@@ -93,23 +93,57 @@
                     <div class="input-group">
                         <span class="input-group-text" id="inputGroup-sizing-default">$</span>
                         <input type="text" class="form-control" placeholder=""
-                        aria-label="Amount (to the nearest dollar)" aria-describedby="basic-addon2">
+                            aria-label="Amount (to the nearest dollar)" aria-describedby="basic-addon2" required="required">
                     </div>
                 </div>
             </div>
-
 
             <div class="form-group mb-2 row">
-                <div class="col-sm-2">Checkbox</div>
+                <label for="formFile" class="col-sm-2 col-form-label control-label">Length</label>
                 <div class="col-sm-10">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck1">
-                        <label class="form-check-label" for="gridCheck1">
-                            Example checkbox
-                        </label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder=""
+                            aria-label="Amount (to the nearest dollar)" aria-describedby="basic-addon2">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Minutes</span>
                     </div>
                 </div>
             </div>
+
+            <div class="form-group mb-2 required row">
+                <label for="formFile" class="col-sm-2 col-form-label control-label">Replacement Cost</label>
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-text" id="inputGroup-sizing-default">$</span>
+                        <input type="text" class="form-control" placeholder=""
+                            aria-label="Amount (to the nearest dollar)" aria-describedby="basic-addon2" required="required">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-2 required row">
+                <label class="col-sm-2 col-form-label control-label" for="exampleFormControlSelect1">Rating</label>
+                <div class="col-sm-10">
+                    <select class="form-select" id="exampleFormControlSelect1" required>
+                        <option value="">Choose</option>
+                        <option value="1">PG</option>
+                        <option value="2">MD</option>
+                        <option value="3">SM</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group mb-2 row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label control-label">Special Features</label>
+                <div class="col-sm-10">
+                    <select class="form-select" multiple aria-label="multiple select example">
+                        <option selected>Trailers</option>
+                        <option value="1">Speed</option>
+                        <option value="2">Graphic</option>
+                        <option value="3">Performance</option>
+                    </select>
+                </div>
+            </div>
+
             <div class="form-group mb-2 row">
                 <div class="col-sm-10">
                     <button type="submit" class="btn btn-primary">Sign in</button>
