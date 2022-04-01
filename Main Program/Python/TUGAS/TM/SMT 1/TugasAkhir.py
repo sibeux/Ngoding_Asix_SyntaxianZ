@@ -71,7 +71,7 @@ def login():
 def sign_in():
     clear_screen()
     with open(
-        'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\Root\KULIAH\\00 - UNEJ\PEMROGRAMAN\Main Program\login.json', 'r') as logs:
+        'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\SIBEUX\KULIAH\\00 - UNEJ\Alghoritm Programming\PEMROGRAMAN\login.json', 'r') as logs:
         temp = json.load(logs)
     print('{0:^48s}'.format('SIGN IN\n'))
     usersign = input('username : ')
@@ -88,13 +88,13 @@ def register():
     print('{0:^48s}'.format('REGISTER\n'))
     print('Mohon masukkan data Anda di bawah dengan benar!')
     with open(
-        'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\Root\KULIAH\\00 - UNEJ\PEMROGRAMAN\Main Program\login.json', 'r') as regs:
+        'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\SIBEUX\KULIAH\\00 - UNEJ\Alghoritm Programming\PEMROGRAMAN\login.json', 'r') as regs:
         data = json.load(regs)
     temp['USERNAME'] = input('USERNAME : ')
     temp['PASSWORD'] = input('PASSWORD : ')
     data.append(temp)
     with open(
-        'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\Root\KULIAH\\00 - UNEJ\PEMROGRAMAN\Main Program\login.json', 'w') as regs:
+        'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\SIBEUX\KULIAH\\00 - UNEJ\Alghoritm Programming\PEMROGRAMAN\login.json', 'w') as regs:
         json.dump(data, regs, indent=4)
     print('akun berhasil ditambahkan')
     back_to_login()
@@ -134,7 +134,7 @@ def create_transaksi():
     print('{0:^48s}'.format('='*40))
     temp = dict() 
     with open(
-        'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\Root\KULIAH\\00 - UNEJ\PEMROGRAMAN\Main Program\project.json', 'r') as file_json: 
+        'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\SIBEUX\KULIAH\\00 - UNEJ\Alghoritm Programming\PEMROGRAMAN\project.json', 'r') as file_json: 
         data = json.load(file_json) 
     temp['no'] = input('\nnomor transaksi\t: ') 
     cname = input('nama barang\t: ')
@@ -290,7 +290,7 @@ def edit_transaksi():
     print('{0:^115s}'.format('='*70))
     new_data = [] 
     with open (
-        'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\Root\KULIAH\\00 - UNEJ\PEMROGRAMAN\Main Program\project.json', 'r') as file_json: 
+        'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\SIBEUX\KULIAH\\00 - UNEJ\Alghoritm Programming\PEMROGRAMAN\project.json', 'r') as file_json: 
         temp = json.load(file_json)
         print('\n')
         print('{0:2s} {1:15s} {2:8s} {3:20s} {4:20s} {5:20s} {6:20s} {7:10s}'.format('NO','NAMA BARANG','JUMLAH','HARGA BARANG','TOTAL HARGA','JUMLAH UANG','KEMBALIAN','TANGGAL'))
@@ -407,7 +407,7 @@ def edit_transaksi():
         if a == 'y':
             print('transaksi berhasil diubah') 
             with open (
-                'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\Root\KULIAH\\00 - UNEJ\PEMROGRAMAN\Main Program\project.json', 'w') as file_json: 
+                'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\SIBEUX\KULIAH\\00 - UNEJ\Alghoritm Programming\PEMROGRAMAN\project.json', 'w') as file_json: 
                 json.dump(new_data, file_json, indent=4) 
             back_to_menu() 
         elif a == 't':
@@ -423,7 +423,7 @@ def view_transaksi():
     print('{0:^115s}'.format('='*70))
     print('\n')
     with open (
-        'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\Root\KULIAH\\00 - UNEJ\PEMROGRAMAN\Main Program\project.json', 'r') as file_json: 
+        'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\SIBEUX\KULIAH\\00 - UNEJ\Alghoritm Programming\PEMROGRAMAN\project.json', 'r') as file_json: 
         temp = json.load(file_json)
         print('{0:2s} {1:15s} {2:8s} {3:20s} {4:20s} {5:20s} {6:20s} {7:10s}'.format('NO','NAMA BARANG','JUMLAH','HARGA BARANG','TOTAL HARGA','JUMLAH UANG','KEMBALIAN','TANGGAL'))
         print('='*125)
@@ -440,7 +440,7 @@ def remove_transaksi():
     new_data = []
     print('\n')
     with open (
-        'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\Root\KULIAH\\00 - UNEJ\PEMROGRAMAN\Main Program\project.json', 'r') as file_json:
+        'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\SIBEUX\KULIAH\\00 - UNEJ\Alghoritm Programming\PEMROGRAMAN\project.json', 'r') as file_json:
         temp = json.load(file_json)
         print('{0:2s} {1:15s} {2:8s} {3:20s} {4:20s} {5:20s} {6:20s} {7:10s}'.format('NO','NAMA BARANG','JUMLAH','HARGA BARANG','TOTAL HARGA','JUMLAH UANG','KEMBALIAN','TANGGAL'))
         print('='*125)
@@ -468,7 +468,7 @@ def remove_transaksi():
                 print('Nomor transaksi tidak ditemukan!')
                 back_to_delete()
             with open (
-                'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\Root\KULIAH\\00 - UNEJ\PEMROGRAMAN\Main Program\project.json', 'w') as file_json: 
+                'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\SIBEUX\KULIAH\\00 - UNEJ\Alghoritm Programming\PEMROGRAMAN\project.json', 'w') as file_json: 
                 json.dump(new_data, file_json, indent=4) 
             print('Transaksi berhasil dihapus!')
             back_to_menu()
@@ -486,7 +486,7 @@ def total():
     print('\n')
     reiner = []
     with open (
-        'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\Root\KULIAH\\00 - UNEJ\PEMROGRAMAN\Main Program\project.json', 'r') as file_json:
+        'G:\.shortcut-targets-by-id\\1GLhesaekxPRKr-lkNYX-mtfouqJhqhXN\SIBEUX\KULIAH\\00 - UNEJ\Alghoritm Programming\PEMROGRAMAN\project.json', 'r') as file_json:
         temp = json.load(file_json)
         print('TANGGAL\t\t  TOTAL')
         print('-'*40)
