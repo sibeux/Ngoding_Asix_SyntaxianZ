@@ -32,7 +32,7 @@ membagikan makanan berbuka puasa di Riyadh, Arab Saudi, 3 April 2022."
 
 <body>
     <header>
-        Sibeux<span>&nbsp;News</span>
+        </p>Sibeux<span>&nbsp;News</span><p>
         <nav class="menu">
             <ul>
                 <li><a href="#">Home</a></li>
