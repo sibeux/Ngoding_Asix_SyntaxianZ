@@ -13,11 +13,19 @@ header {
     color: aliceblue;
 }
 
+.footer {
+    background-color: #333;
+}
+
+.footer .copy{
+    color: #eaeaea;
+    padding: 20px;
+    text-align: center;
+}
+
 .content{
-    display: flex;
     margin-top: 30px;
     text-align: left;
-    align-items: center;
     margin-left: 30px;
 }
 
@@ -31,7 +39,15 @@ img{
 .satu{
     background-color: aliceblue;
     width:600px;
-    height: 250px;
+    height: 280px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.dua{
+    background-color: aliceblue;
+    width:600px;
+    height: 280px;
     padding: 10px;
     box-sizing: border-box;
 }
