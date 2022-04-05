@@ -26,9 +26,8 @@ while ($row =  $result->fetch_assoc()) {
                                     <div class='product-price'>{$row['desk']}
                                     </div>
                                     <div class='product-discount'>
-                                    
-                                        // <span class='Sci-FI'>sci-fi</span>
-                                        // <span class='Fantasy'>fantasy</span>
+                                        <span class='{$genre[0]}'>{$genre[0]}</span>
+                                        
                                     </div>
                                     <div class='product-rates'>
                                         <span class='yellow-star'>&#9733;</span>
@@ -46,6 +45,5 @@ while ($row =  $result->fetch_assoc()) {
                             </div>
                         </div>
                     </div>
-    
     ";
 }

@@ -132,8 +132,6 @@
                                             echo "<span class='$genre[$i]'>$genre[$i]</span>";
                                         }
                                         ?>
-                                        <!-- <span class="sci-fi">sci-fi</span>
-                                        <span class="fantasy">fantasy</span> -->
                                     </div>
                                     <div class="product-rates">
                                         <?php 
