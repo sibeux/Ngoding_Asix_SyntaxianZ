@@ -1,6 +1,6 @@
 <?php
 
-require_once "./db.php";
+require_once("./db.php");
 
 $typing = $_GET["typing"];
 
@@ -15,13 +15,9 @@ $sql = "SELECT * FROM mahasiswa
 
 $result = $db->query($sql);
 
+$data = [];
 while ($row = $result->fetch_assoc()) {
-    echo "
-    <tr>
-        <td>{$row['nama']}</td>
-        <td>{$row['nim']}</td>
-        <td>{$row['email']}</td>
-        <td>{$row['jurusan']}</td>
-    </tr>
-    ";
+    array_push($data, $row);
 }
+header("Content-Type: aplication/json");
+echo json_encode($data);

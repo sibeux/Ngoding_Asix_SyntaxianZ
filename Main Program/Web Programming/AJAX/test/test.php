@@ -1,16 +1,15 @@
 <?php
 
-require_once "./db.php";
+require_once("./db.php");
 
-$typing = $_GET["typing"];
+$ngetik = $_GET["ngetik"];
 
 
 $sql = "SELECT * FROM mahasiswa
-            WHERE 
-        nama LIKE '%{$typing}%' OR
-        nim LIKE '%{$typing}%' OR
-        email LIKE '%{$typing}%' OR
-        jurusan LIKE '%{$typing}%'
+        WHERE nama LIKE '%{$ngetik}%' OR
+        nim LIKE '%{$ngetik}%' OR
+        email LIKE '%{$ngetik}%' OR
+        jurusan LIKE '%{$ngetik}%'
 ";
 
 $result = $db->query($sql);
