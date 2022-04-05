@@ -3,7 +3,7 @@
 define('HOST', 'localhost');
 define('SIBEUX', 'root');
 define('pass', '');
-define('DB', 'mhs');
+define('DB', 'movie');
 $db = new mysqli(HOST, SIBEUX, pass, DB);
 
 if($db->connect_errno){
