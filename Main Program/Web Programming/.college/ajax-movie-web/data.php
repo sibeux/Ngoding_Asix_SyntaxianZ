@@ -14,6 +14,8 @@ $result = $db->query($sql);
 
 while ($row =  $result->fetch_assoc()) {
     $genre = explode(" ", $row['genre']);
+    $title = ucwords($row['title']);
+
     echo "
     <div class='col col-lg-6 col-xl-4'>
                         <div class='product-container'>
@@ -22,21 +24,24 @@ while ($row =  $result->fetch_assoc()) {
                                     <img src='img/{$row['title']}.jpg' alt='' />
                                 </div>
                                 <div class='product-body'>
-                                    <h3 class='product-title'>{$row['title']}</h3>
+                                    <h3 class='product-title'>{$title}</h3>
                                     <div class='product-price'>{$row['desk']}
-                                    </div>
-                                    <div class='product-discount'>
-                                        <span class='{$genre[0]}'>{$genre[0]}</span>
-                                        
-                                    </div>
-                                    <div class='product-rates'>
-                                        <span class='yellow-star'>&#9733;</span>
-                                        <span class='yellow-star'>&#9733;</span>
-                                        <span class='yellow-star'>&#9733;</span>
-                                        <span class='yellow-star'>&#9733;</span>
-                                        <span>&#9733;</span>
-                                        4/5
-                                    </div>
+                                    </div>";
+                                    echo "<div class='product-discount'>";
+                                    foreach ($genre as $value) {
+                                        echo "<span class='{$value}'>{$value}</span>" ;
+                                    }
+                                    echo "</div>
+                                    <div class='product-rates'>";
+                                    $star = $row['rating'];
+                                    for ($i = 0; $i < $star; $i++){
+                                        echo "<span class='yellow-star'>&#9733;</span>";
+                                    }
+                                    for ($i = 0; $i < 5 - $star; $i++){
+                                        echo "<span>&#9733;</span>";
+                                    }
+                                    echo "$star/5";
+                                    echo "</div>
                                     <div class='btn'>
                                         <i class='bx bxs-edit-alt'></i>
                                         <i class='bx bxs-trash'></i>
