@@ -4,7 +4,6 @@ require_once "./db.php";
 
 $typing = $_GET["typing"];
 
-
 $sql = "SELECT * FROM anime
             WHERE 
         title LIKE '%{$typing}%'
@@ -15,7 +14,6 @@ $result = $db->query($sql);
 while ($row =  $result->fetch_assoc()) {
     $genre = explode(" ", $row['genre']);
     $title = ucwords($row['title']);
-
     echo "
     <div class='col col-lg-6 col-xl-4'>
                         <div class='product-container'>
