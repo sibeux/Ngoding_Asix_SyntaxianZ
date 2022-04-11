@@ -30,7 +30,7 @@ for x in perm_list:
             values = True
             break
     if values:
-        print(x)
+        print(*x)
         break
     elif count == len(perm_list)-1:
         print("NO SOLUTION")
