@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo-details">
+                <i class='bx bxs-camera-movie icon'></i>
+                <div class="logo_name">CbuxCinema</div>
+                <i class='bx bx-menu' id="btn"></i>
+            </div>
+            <ul class="nav-list">
+                <li>
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Search...">
+                    <span class="tooltip">Search</span>
+                </li>
+                <li>
+                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
+                        <i class='bx bxl-facebook'></i>
+                        <span class="links_name">Facebook</span>
+                    </a>
+                    <span class="tooltip">Facebook</span>
+                </li>
+                <li>
+                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
+                        <i class='bx bxl-youtube'></i>
+                        <span class="links_name">Youtube</span>
+                    </a>
+                    <span class="tooltip">Youtube</span>
+                </li>
+                <li>
+                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
+                        <i class='bx bxl-instagram'></i>
+                        <span class="links_name">Instagram</span>
+                    </a>
+                    <span class="tooltip">Instagram</span>
+                </li>
+                <li>
+                    <a href="https://www.github.com/sibeux" target="_blank">
+                        <i class='bx bxl-github'></i>
+                        <span class="links_name">Github</span>
+                    </a>
+                    <span class="tooltip">Github</span>
+                </li>
+                <li>
+                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
+                        <i class='bx bxl-twitter'></i>
+                        <!-- links name berfungsi nampilin fulltext -->
+                        <!-- saat ditekan -->
+                        <span class="links_name">Twitter</span>
+                    </a>
+                    <span class="tooltip">Twitter</span>
+                </li>
+                <li>
+                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
+                        <i class='bx bxl-linkedin'></i>
+                        <span class="links_name">LinkedIn</span>
+                    </a>
+                    <span class="tooltip">LinkedIn</span>
+                </li>
+                <li>
+                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
+                        <i class='bx bxl-google'></i>
+                        <span class="links_name">wahabinasrul</span>
+                    </a>
+                    <span class="tooltip">Google</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-cog'></i>
+                        <span class="links_name">Setting</span>
+                    </a>
+                    <span class="tooltip">Setting</span>
+                </li>
+                <li class="profile">
+                    <div class="profile-details">
+                        <img src="img/sibeux.jpg" alt="profileImg">
+                        <div class="name_job">
+                            <div class="name">SibeUX</div>
+                            <div class="job">Movie Cinema</div>
+                        </div>
+                    </div>
+                    <i class='bx bx-log-out' id="log_out"></i>
+                </li>
+            </ul>
+        </div>
+        <div class="home">
+            <header>
+                <div class="header-content">
+                    <h1>
+                        Cbux<span>Cinema</span>
+                    </h1>
+                </div>
+            </header>
+            <div class="row">
+                <div class="col col-lg-6 col-xl-4">
+                    <div class="product-container">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/bh6.jpg" alt="" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-title">Big Hero 6</h3>
+                                <div class="product-price">Robotics prodigy Hiro lives in the city of San
+                                    Fransokyo. Next to his older brother, Tadashi, Hiro's closest companion is Baymax
+                                    ...
+                                </div>
+                                <div class="product-discount">
+                                    <span class="Sci-FI">sci-fi</span>
+                                    <span class="Fantasy">fantasy</span>
+                                </div>
+                                <div class="product-rates">
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span>&#9733;</span>
+                                    4/5
+                                </div>
+                                <div class="btn">
+                                    <i class='bx bxs-edit-alt'></i>
+                                    <i class='bx bxs-trash'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-6 col-xl-4">
+                    <div class="product-container">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/coco.jpg" alt="Kopi Paling Enak" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-title">COCO</h3>
+                                <div class="product-price">Coco is a 2017 American computer-animated fantasy film by
+                                    Pixar
+                                    Animation Studios. Based on an <br> original idea ...
+                                </div>
+                                <div class="product-discount">
+                                    <span class="kids">kids</span>
+                                    <span class="drama">drama</span>
+                                </div>
+                                <div class="product-rates">
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    2/5
+                                </div>
+                                <div class="btn">
+                                    <i class='bx bxs-edit-alt'></i>
+                                    <i class='bx bxs-trash'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-6 col-xl-4">
+                    <div class="product-container">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/kungfupanda2.jpg" alt="" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-title">Kungfu Panda 2</h3>
+                                <div class="product-price">Kung Fu Panda 2 is a 2011 American computer-animated action
+                                    comedy <br> film produced by DreamWorks Animation
+                                    ...
+                                </div>
+                                <div class="product-discount">
+                                    <span class="kids">kids</span>
+                                    <span class="action">action</span>
+                                </div>
+                                <div class="product-rates">
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span>&#9733;</span>
+                                    4/5
+                                </div>
+                                <div class="btn">
+                                    <i class='bx bxs-edit-alt'></i>
+                                    <i class='bx bxs-trash'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-6 col-xl-4">
+                    <div class="product-container">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/kimi.jpg" alt="" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-title">Kimi no Nawa</h3>
+                                <div class="product-price">Mitsuha Miyamizu, a high school girl, yearns to live the life
+                                    of a boy in the bustling city of Tokyo
+                                    ...
+                                </div>
+                                <div class="product-discount">
+                                    <span class="school">school</span>
+                                    <span class="drama">drama</span>
+                                    <span class="romance">romance</span>
+                                </div>
+                                <div class="product-rates">
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span>&#9733;</span>
+                                    4/5
+                                </div>
+                                <div class="btn">
+                                    <i class='bx bxs-edit-alt'></i>
+                                    <i class='bx bxs-trash'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-6 col-xl-4">
+                    <div class="product-container">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/cars2.jpg" alt="Kopi Paling Enak" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-title">Cars 2</h3>
+                                <div class="product-price"> Lightning McQueen and Mater, along with Luigi, Guido,
+                                    Fillmore and Sarge, travel to Japan and Europe ...
+                                </div>
+                                <div class="product-discount">
+                                    <span class="drama">drama</span>
+                                    <span class="action">action</span>
+                                </div>
+                                <div class="product-rates">
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    3/5
+                                </div>
+                                <div class="btn">
+                                    <i class='bx bxs-edit-alt'></i>
+                                    <i class='bx bxs-trash'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-6 col-xl-4">
+                    <div class="product-container">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/up.jpg" alt="" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-title">UP</h3>
+                                <div class="product-price">As a boy, Carl Fredricksen wanted to explore South America
+                                    and find the forbidden Paradise Falls. About 64 years later he gets to begin his
+                                    journey
+                                    ...
+                                </div>
+                                <div class="product-discount">
+                                    <span class="advanture">advanture</span>
+                                    <span class="kids">kids</span>
+                                </div>
+                                <div class="product-rates">
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    5/5
+                                </div>
+                                <div class="btn">
+                                    <i class='bx bxs-edit-alt'></i>
+                                    <i class='bx bxs-trash'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-6 col-xl-4">
+                    <div class="product-container">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/jjk.jpg" alt="" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-title">Jujutsu Kaisen 0</h3>
+                                <div class="product-price">Yuta Okkotsu is haunted by the spirit of his childhood friend
+                                    Rika, who died in a tragic traffic accident. Her spirit no longer appears as the
+                                    sweet girl
+                                    ...
+                                </div>
+                                <div class="product-discount">
+                                    <span class="Fantasy">fantasy</span>
+                                    <span class="action">action</span>
+                                    <span class="school">school</span>
+                                </div>
+                                <div class="product-rates">
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    5/5
+                                </div>
+                                <div class="btn">
+                                    <i class='bx bxs-edit-alt'></i>
+                                    <i class='bx bxs-trash'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-6 col-xl-4">
+                    <div class="product-container">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/kny.jpg" alt="Kopi Paling Enak" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-title">Kimetsu no Yaiba</h3>
+                                <div class="product-price">Set after the events of the first season, Tanjiro,
+                                    Zenitsu, Inosuke, and Nezuko board the Infinity Train to
+                                    assist the Flame Hashira Kyojuro Rengoku
+                                    ...
+                                </div>
+                                <div class="product-discount">
+                                    <span class="action">action</span>
+                                    <span class="Fantasy">fantasy</span>
+                                    <span class="demons">demons</span>
+                                </div>
+                                <div class="product-rates">
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span>&#9733;</span>
+                                    4/5
+                                </div>
+                                <div class="btn">
+                                    <i class='bx bxs-edit-alt'></i>
+                                    <i class='bx bxs-trash'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-6 col-xl-4">
+                    <div class="product-container">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/nemo.jpg" alt="" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-title">Finding Nemo</h3>
+                                <div class="product-price">A clown fish named Marlin lives in the Great Barrier Reef and
+                                    loses his son, Nemo, after he ventures into the open sea, despite his father's
+                                    ...
+                                </div>
+                                <div class="product-discount">
+                                    <span class="advanture">advanture</span>
+                                    <span class="drama">drama</span>
+                                </div>
+                                <div class="product-rates">
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    3/5
+                                </div>
+                                <div class="btn">
+                                    <i class='bx bxs-edit-alt'></i>
+                                    <i class='bx bxs-trash'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-6 col-xl-4">
+                    <div class="product-container">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/rat.jpg" alt="" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-title">Ratatouille</h3>
+                                <div class="product-price">A rat named Remy dreams of becoming a great French chef
+                                    despite his family's wishes and the obvious problem of being a rat in a decidedly
+                                    rodent
+                                    ...
+                                </div>
+                                <div class="product-discount">
+                                    <span class="romance">romance</span>
+                                </div>
+                                <div class="product-rates">
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-sta">&#9733;</span>
+                                    4/5
+                                </div>
+                                <div class="btn">
+                                    <i class='bx bxs-edit-alt'></i>
+                                    <i class='bx bxs-trash'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-6 col-xl-4">
+                    <div class="product-container">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/rap.jpg" alt="Kopi Paling Enak" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-title">Wreck it Ralph</h3>
+                                <div class="product-price">Going off to a bar-game called Tapper, Ralph is unsure what
+                                    to do, when he encounters a soldier from a new first-person shooter named "Hero's
+                                    Duty."
+                                    ...
+                                </div>
+                                <div class="product-discount">
+                                    <span class="Fantasy">fantasy</span>
+                                    <span class="kids">kids</span>
+                                    <span class="action">action</span>
+                                </div>
+                                <div class="product-rates">
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-sta">&#9733;</span>
+                                    <span class="yellow-sta">&#9733;</span>
+                                    <span>&#9733;</span>
+                                    2/5
+                                </div>
+                                <div class="btn">
+                                    <i class='bx bxs-edit-alt'></i>
+                                    <i class='bx bxs-trash'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-6 col-xl-4">
+                    <div class="product-container">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/toy4.jpg" alt="Kopi Paling Enak" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-title">Toy Story 4</h3>
+                                <div class="product-price">Woody and the rest of the toys are back for an all-new
+                                    adventure in Toy Story 4, welcoming new friends to <br> Bonnie's room ...
+                                </div>
+                                <div class="product-discount">
+                                    <span class="advanture">advanture</span>
+                                    <span class="action">action</span>
+                                </div>
+                                <div class="product-rates">
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    3/5
+                                </div>
+                                <div class="btn">
+                                    <i class='bx bxs-edit-alt'></i>
+                                    <i class='bx bxs-trash'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ================================================================== -->
+            <div class="row">
+                <div class="col col-lg-6 col-xl-4">
+                    <div class="product-container">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/sao.jpg" alt="" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-title">Sword Art Online</h3>
+                                <div class="product-price">High school student Asuna struggles to survive with a young
+                                    swordsman after its revealed that she is trapped inside the game of Sword Art Online
+                                    ...
+                                </div>
+                                <div class="product-discount">
+                                    <span class="action">action</span>
+                                    <span class="Fantasy">fantasy</span>
+                                    <span class="romance">romance</span>
+                                </div>
+                                <div class="product-rates">
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span>&#9733;</span>
+                                    4/5
+                                </div>
+                                <div class="btn">
+                                    <i class='bx bxs-edit-alt'></i>
+                                    <i class='bx bxs-trash'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-6 col-xl-4">
+                    <div class="product-container">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/ko.jpg" alt="" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-title">Tenki no Ko</h3>
+                                <div class="product-price">Hodaka quickly finds himself in over his head in Tokyo when
+                                    he’s unable to find a job. He takes showers at cheaply-priced manga cafes
+                                    ...
+                                </div>
+                                <div class="product-discount">
+                                    <span class="romance">romance</span>
+                                    <span class="Sci-FI">sci-fi</span>
+                                    <span class="drama">drama</span>
+                                </div>
+                                <div class="product-rates">
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-sta">&#9733;</span>
+                                    <span class="yellow-sta">&#9733;</span>
+                                    <span class="yellow-sta">&#9733;</span>
+                                    2/5
+                                </div>
+                                <div class="btn">
+                                    <i class='bx bxs-edit-alt'></i>
+                                    <i class='bx bxs-trash'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-6 col-xl-4">
+                    <div class="product-container">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/sen.jpg" alt="Kopi Paling Enak" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-title">Sen to Chihiro</h3>
+                                <div class="product-price">Chihiro, a ten-year-old girl, sulks in the back seat of her
+                                    parents car. The family is on its way to a new home, and Chihiro
+                                    doesnt want to move
+                                    ...
+                                </div>
+                                <div class="product-discount">
+                                    <span class="demons">demons</span>
+                                    <span class="kids">kids</span>
+                                </div>
+                                <div class="product-rates">
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-star">&#9733;</span>
+                                    <span class="yellow-sta">&#9733;</span>
+                                    <span class="yellow-sta">&#9733;</span>
+                                    <span>&#9733;</span>
+                                    2/5
+                                </div>
+                                <div class="btn">
+                                    <i class='bx bxs-edit-alt'></i>
+                                    <i class='bx bxs-trash'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <h3>Sibeux Platform</h3>
+                <p>Tempat streaming film terbaru dan terkeren dengan
+                    pengalaman menonton yang lebih seru!
+                </p>
+                <ul class="socials">
+                    <li><a href="https://www.facebook.com/m.n.wahabi/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/nasrulwahabi" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.github.com/sibeux" target="_blank"><i class="fa fa-github"></i></a></li>
+                    <li><a href="https://bit.ly/HabiqiYT" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/m-nasrul-wahabi-a35a97181/" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2022 Sibeux. Created by <span>Nasrul Wahabi</span></p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let closeBtn = document.querySelector("#btn");
+        let searchBtn = document.querySelector(".bx-search");
+
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            menuBtnChange(); //calling the function(optional)
+        });
+
+        searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
+            sidebar.classList.toggle("open");
+            menuBtnChange(); //calling the function(optional)
+        });
+
+        // following are the code to change sidebar button(optional)
+        function menuBtnChange() {
+            if (sidebar.classList.contains("open")) {
+                closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); //replacing the iocns class
+            } else {
+                closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
+            }
+        }
+    </script>
+</body>
+
+</html>
