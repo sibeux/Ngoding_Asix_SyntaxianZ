@@ -29,6 +29,10 @@
                     <span class="tooltip">Search</span>
                 </li>
                 <li>
+                    <i class='bx bxs-down-arrow'></i>
+
+                </li>
+                <li>
                     <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
                         <i class='bx bxl-facebook'></i>
                         <span class="links_name">Facebook</span>
@@ -55,15 +59,6 @@
                         <span class="links_name">Github</span>
                     </a>
                     <span class="tooltip">Github</span>
-                </li>
-                <li>
-                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
-                        <i class='bx bxl-twitter'></i>
-                        <!-- links name berfungsi nampilin fulltext -->
-                        <!-- saat ditekan -->
-                        <span class="links_name">Twitter</span>
-                    </a>
-                    <span class="tooltip">Twitter</span>
                 </li>
                 <li>
                     <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
