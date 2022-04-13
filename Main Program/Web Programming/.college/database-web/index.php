@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- bootstrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -97,7 +98,7 @@
                 </li>
             </ul>
         </div>
-        <div class="home" >
+        <div class="home">
             <header>
                 <div class="header-content">
                     <h1>
@@ -115,26 +116,26 @@
 
                 while ($row = $result->fetch_assoc()) :
                 ?>
-                    <div class="col col-lg-6 col-xl-4">
-                        <div class="product-container">
-                            <div class="product-card">
-                                <div class="product-image">
-                                    <img src="img/<?=$row['title']?>.jpg" alt="" />
+                <div class="col col-lg-6 col-xl-4">
+                    <div class="product-container">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/<?=$row['title']?>.jpg" alt="" />
+                            </div>
+                            <div class="product-body">
+                                <h3 class="product-title"><?= ucwords($row['title']) ?></h3>
+                                <div class="product-price"><?= $row['desk'] ?>
                                 </div>
-                                <div class="product-body">
-                                    <h3 class="product-title"><?= ucwords($row['title']) ?></h3>
-                                    <div class="product-price"><?= $row['desk'] ?>
-                                    </div>
-                                    <div class="product-discount">
-                                        <?php
+                                <div class="product-discount">
+                                    <?php
                                         $genre = explode(" ", $row['genre']);
                                         for ($i = 0; $i < count($genre); $i++){
                                             echo "<span class='$genre[$i]'>$genre[$i]</span>";
                                         }
                                         ?>
-                                    </div>
-                                    <div class="product-rates">
-                                        <?php 
+                                </div>
+                                <div class="product-rates">
+                                    <?php 
                                         $star = $row['rating'];
                                         for ($i = 0; $i < $star; $i++){
                                             echo "<span class='yellow-star'>&#9733;</span>";
@@ -144,15 +145,15 @@
                                         }
                                         echo "$star/5";
                                         ?>
-                                    </div>
-                                    <div class="btn">
-                                        <i class='bx bxs-edit-alt'></i>
-                                        <i class='bx bxs-trash'></i>
-                                    </div>
+                                </div>
+                                <div class="btn">
+                                    <i class='bx bxs-edit-alt'></i>
+                                    <i class='bx bxs-trash'></i>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
                 <?php endwhile; ?>
             </div>
         </div>
@@ -163,11 +164,14 @@
                     pengalaman menonton yang lebih seru!
                 </p>
                 <ul class="socials">
-                    <li><a href="https://www.facebook.com/m.n.wahabi/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="https://www.instagram.com/nasrulwahabi" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/m.n.wahabi/" target="_blank"><i
+                                class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/nasrulwahabi" target="_blank"><i
+                                class="fa fa-instagram"></i></a></li>
                     <li><a href="https://www.github.com/sibeux" target="_blank"><i class="fa fa-github"></i></a></li>
                     <li><a href="https://bit.ly/HabiqiYT" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/m-nasrul-wahabi-a35a97181/" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/m-nasrul-wahabi-a35a97181/" target="_blank"><i
+                                class="fa fa-linkedin-square"></i></a></li>
                 </ul>
             </div>
             <div class="footer-bottom">
@@ -176,35 +180,40 @@
         </footer>
     </div>
     <script>
-        let sidebar = document.querySelector(".sidebar");
-        let closeBtn = document.querySelector("#btn");
-        let searchBtn = document.querySelector(".bx-search");
+    let sidebar = document.querySelector(".sidebar");
+    let closeBtn = document.querySelector("#btn");
+    let searchBtn = document.querySelector(".bx-search");
 
-        closeBtn.addEventListener("click", () => {
-            sidebar.classList.toggle("open");
-            menuBtnChange(); //calling the function(optional)
-        });
+    closeBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+    });
 
-        searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
-            sidebar.classList.toggle("open");
-            menuBtnChange(); //calling the function(optional)
-        });
+    searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+    });
 
-        // following are the code to change sidebar button(optional)
-        function menuBtnChange() {
-            if (sidebar.classList.contains("open")) {
-                closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); //replacing the iocns class
-            } else {
-                closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
-            }
+    // following are the code to change sidebar button(optional)
+    function menuBtnChange() {
+        if (sidebar.classList.contains("open")) {
+            closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); //replacing the iocns class
+        } else {
+            closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
         }
+    }
     </script>
     <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- pooper js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    </script>
     <!-- bootstrap js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
     <script src="script.js"></script>
 </body>
 

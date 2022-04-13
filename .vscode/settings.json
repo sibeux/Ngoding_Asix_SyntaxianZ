@@ -126,6 +126,7 @@
         "Testing\\JAVA_OOP\\src"
     ],
     "C_Cpp.errorSquiggles": "Disabled",
+    "phpserver.browser": "chrome,chromium",
     "cssPeek.peekFromLanguages": [
         "html",
         "django-html",
