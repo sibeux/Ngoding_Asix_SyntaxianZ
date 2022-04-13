@@ -8,7 +8,7 @@
     <title>Document</title>
     <!-- bootstrap css -->
     <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stil.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -29,13 +29,17 @@
                 </li>
                 <li>
                     <i class='bx bx-sort-alt-2'></i>
-                    <!-- <select class="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select> -->
+                    <select class="form-select" aria-label="Default select example" id="milih">
+                        <option selected>title ASC</option>
+                        <option value="title DESC">Title DESC</option>
+                        <option value="rating ASC">Rating ASC</option>
+                        <option value="rating DESC">Rating DESC</option>
+                    </select>
                     <span class="tooltip">Sort</span>
+                </li>
+                <li>
+                    <i class='bx bx-filter-alt'></i>
+                    <span class="tooltip">Filter</span>
                 </li>
                 <li>
                     <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
@@ -183,6 +187,8 @@
     let sidebar = document.querySelector(".sidebar");
     let closeBtn = document.querySelector("#btn");
     let searchBtn = document.querySelector(".bx-search");
+    let sortBtn = document.querySelector(".bx-sort-alt-2");
+    let filterBtn = document.querySelector(".bx-filter-alt");
 
     closeBtn.addEventListener("click", () => {
         sidebar.classList.toggle("open");
@@ -190,6 +196,16 @@
     });
 
     searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+    });
+
+    sortBtn.addEventListener("click", () => { // Sidebar open when you click on the sort iocn
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+    });
+
+    filterBtn.addEventListener("click", () => { // Sidebar open when you click on the filter iocn
         sidebar.classList.toggle("open");
         menuBtnChange(); //calling the function(optional)
     });
@@ -215,6 +231,7 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
     </script>
     <script src="script.js"></script>
+    <script src="script-sort.js"></script>
 </body>
 
 </html>
