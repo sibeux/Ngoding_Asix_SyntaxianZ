@@ -161,6 +161,11 @@ ul {
     color: #FFF;
 }
 
+.sidebar .bx-sort:hover {
+    background: #FFF;
+    color: #f65065;
+}
+
 .sidebar .bx-search:hover {
     background: #FFF;
     color: #f65065;

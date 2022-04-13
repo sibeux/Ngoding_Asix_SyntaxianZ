@@ -29,8 +29,14 @@
                     <span class="tooltip">Search</span>
                 </li>
                 <li>
-                    <i class='bx bxs-down-arrow'></i>
-
+                    <i class='bx bx-sort-alt-2'></i>
+                    <!-- <select class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select> -->
+                    <span class="tooltip">Sort</span>
                 </li>
                 <li>
                     <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
