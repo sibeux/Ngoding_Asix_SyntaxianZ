@@ -8,7 +8,7 @@
     <title>Document</title>
     <!-- bootstrap css -->
     <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="stil.css">
+    <link rel="stylesheet" href="styling.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -39,6 +39,18 @@
                 </li>
                 <li>
                     <i class='bx bx-filter-alt'></i>
+                    <select class="form-select" aria-label="Default select example" id="genre">
+                        <option selected value="all">ALL</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="demons">Demons</option>
+                        <option value="romance">Romance</option>
+                        <option value="school">School</option>
+                        <option value="drama">Drama</option>
+                        <option value="sci-fi">Sci-fi</option>
+                        <option value="action">Action</option>
+                        <option value="kids">Kids</option>
+                        <option value="advanture">Advanture</option>
+                    </select>
                     <span class="tooltip">Filter</span>
                 </li>
                 <li>
@@ -232,6 +244,7 @@
     </script>
     <script src="script.js"></script>
     <script src="script-sort.js"></script>
+    <script src="script-filter.js"></script>
     <!-- <script src="script-search-sort.js"></script> -->
 </body>
 

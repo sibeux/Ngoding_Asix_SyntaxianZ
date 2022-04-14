@@ -79,7 +79,7 @@ ul {
 }
 
 .sidebar i {
-    color: #fff;
+    color: rgb(255, 255, 255);
     height: 60px;
     min-width: 50px;
     font-size: 28px;
@@ -141,7 +141,26 @@ ul {
     background: #11101D;
 }
 
+.sidebar select {
+    font-size: 15px;
+    color: #FFF;
+    font-weight: 400;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    width: 50px;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.5s ease;
+    background: #11101D;
+}
+
 .sidebar.open input {
+    padding: 0 20px 0 50px;
+    width: 100%;
+}
+
+.sidebar.open select{
     padding: 0 20px 0 50px;
     width: 100%;
 }
@@ -156,19 +175,54 @@ ul {
     color: #FFF;
 }
 
+.sidebar .bx-sort-alt-2 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    background: #11101D;
+    color: #FFF;
+}
+
+.sidebar .bx-filter-alt {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    background: #11101D;
+    color: #FFF;
+}
+
 .sidebar.open .bx-search:hover {
     background: #1d1b31;
     color: #FFF;
 }
 
-.sidebar .bx-sort:hover {
-    background: #FFF;
-    color: #f65065;
+.sidebar.open .bx-sort-alt-2:hover {
+    background: #1d1b31;
+    color: #FFF;
+}
+
+.sidebar.open .bx-filter-alt:hover {
+    background: #1d1b31;
+    color: #FFF;
 }
 
 .sidebar .bx-search:hover {
     background: #FFF;
     color: #f65065;
+}
+
+.sidebar .bx-sort-alt-2:hover {
+    background: #FFF;
+    color: #21d968;
+}
+
+.sidebar .bx-filter-alt:hover {
+    background: #FFF;
+    color: #217dd9;
 }
 
 .sidebar li a {

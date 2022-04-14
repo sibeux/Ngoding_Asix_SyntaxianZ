@@ -165,6 +165,11 @@ ul {
     width: 100%;
 }
 
+.sidebar.open .form-check-inline{
+    padding: 0 20px 0 50px;
+    width: 100%;
+}
+
 .sidebar .bx-search {
     position: absolute;
     top: 50%;
@@ -185,7 +190,7 @@ ul {
     color: #FFF;
 }
 
-/* .sidebar .bx-filter-alt {
+.sidebar .bx-filter-alt {
     position: absolute;
     top: 50%;
     left: 0;
@@ -193,7 +198,7 @@ ul {
     font-size: 22px;
     background: #11101D;
     color: #FFF;
-} */
+}
 
 .sidebar.open .bx-search:hover {
     background: #1d1b31;
