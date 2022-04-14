@@ -30,7 +30,7 @@
                 <li>
                     <i class='bx bx-sort-alt-2'></i>
                     <select class="form-select" aria-label="Default select example" id="milih">
-                        <option selected>Title ASC</option>
+                        <option selected value="title ASC">Title ASC</option>
                         <option value="title DESC">Title DESC</option>
                         <option value="rating ASC">Rating ASC</option>
                         <option value="rating DESC">Rating DESC</option>
@@ -232,6 +232,7 @@
     </script>
     <script src="script.js"></script>
     <script src="script-sort.js"></script>
+    <!-- <script src="script-search-sort.js"></script> -->
 </body>
 
 </html>

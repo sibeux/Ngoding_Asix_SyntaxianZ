@@ -4,7 +4,7 @@ var data = document.getElementById("data");
 milih.addEventListener("change",function () {
     // inisiasi objek ajax
     var ObjAjax = new XMLHttpRequest();
-
+    
     // cek kesiapan ajax
     ObjAjax.onreadystatechange = function () {
         if (ObjAjax.readyState == 4 && ObjAjax.status == 200) {
