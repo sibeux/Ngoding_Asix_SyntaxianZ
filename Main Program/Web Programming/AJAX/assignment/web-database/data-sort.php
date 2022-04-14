@@ -3,22 +3,23 @@
 require_once "./db.php";
 
 $milih = $_GET["milih"];
+$choose = $milih;
 
 if ($milih == "title ASC") {
     $sql = "SELECT * FROM anime
-            ORDER BY title ASC
+            ORDER BY {$milih}
     ";
 } if ($milih == "rating DESC") {
     $sql = "SELECT * FROM anime
-            ORDER BY rating DESC
+            ORDER BY {$milih}
     ";
 } if ($milih == "title DESC") {
     $sql = "SELECT * FROM anime
-            ORDER BY title DESC
+            ORDER BY {$milih}
     ";
 } if ($milih == "rating ASC") {
     $sql = "SELECT * FROM anime
-            ORDER BY rating ASC
+            ORDER BY {$milih}
     ";
 }
 
