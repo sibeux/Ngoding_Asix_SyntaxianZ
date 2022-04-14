@@ -5,9 +5,9 @@ require_once "./db.php";
 $milih = $_GET["milih"];
 $choose = $milih;
 
-if ($milih == "title ASC") {
+if ($milih == "Title ASC") {
     $sql = "SELECT * FROM anime
-            ORDER BY {$milih}
+            ORDER BY title ASC
     ";
 } if ($milih == "rating DESC") {
     $sql = "SELECT * FROM anime
