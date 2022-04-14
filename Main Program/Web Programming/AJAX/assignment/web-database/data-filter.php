@@ -5,9 +5,11 @@ require_once "./db.php";
 $genre = $_GET["genre"];
 
 if ($genre == "all") {
-    $sql = "SELECT * FROM movies";
+    $sql = "SELECT * FROM anime";
 } else {
-    $sql = "SELECT * FROM movies WHERE genre = '{$genre}'";
+    $sql = "SELECT * FROM anime 
+    WHERE genre 
+    LIKE '%{$genre}%'";
 }
 
 $result = $db->query($sql);
