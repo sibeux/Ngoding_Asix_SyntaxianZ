@@ -8,7 +8,7 @@
     <title>Document</title>
     <!-- bootstrap css -->
     <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -32,8 +32,8 @@
                     <select class="form-select" aria-label="Default select example" id="milih">
                         <option selected value="title ASC">Title ASC</option>
                         <option value="title DESC">Title DESC</option>
-                        <option value="rating ASC">Rating ASC</option>
-                        <option value="rating DESC">Rating DESC</option>
+                        <option value="replacement_cost ASC">Cost ASC</option>
+                        <option value="replacement_cost DESC">Cost DESC</option>
                     </select>
                     <span class="tooltip">Sort</span>
                 </li>
@@ -41,15 +41,11 @@
                     <i class='bx bx-filter-alt'></i>
                     <select class="form-select" aria-label="Default select example" id="genre">
                         <option selected value="all">ALL</option>
-                        <option value="fantasy">Fantasy</option>
-                        <option value="demons">Demons</option>
-                        <option value="romance">Romance</option>
-                        <option value="school">School</option>
-                        <option value="drama">Drama</option>
-                        <option value="sci-fi">Sci-fi</option>
-                        <option value="action">Action</option>
-                        <option value="kids">Kids</option>
-                        <option value="advanture">Advanture</option>
+                        <option value="PG">PG</option>
+                        <option value="R">R</option>
+                        <option value="G">G</option>
+                        <option value="PG-13">PG-13</option>
+                        <option value="NC-17">NC-17</option>
                     </select>
                     <span class="tooltip">Filter</span>
                 </li>
@@ -126,7 +122,7 @@
                 <?php
                 require_once('./db.php');
 
-                $sql = "SELECT * FROM anime";
+                $sql = "SELECT * FROM film";
 
                 $result =  $db->query($sql);
 
@@ -136,31 +132,21 @@
                     <div class="product-container">
                         <div class="product-card">
                             <div class="product-image">
-                                <img src="img/<?=$row['title']?>.jpg" alt="" />
+                                <img src="img/film.png" alt="" />
                             </div>
                             <div class="product-body">
                                 <h3 class="product-title"><?= ucwords($row['title']) ?></h3>
-                                <div class="product-price"><?= $row['desk'] ?>
+                                <div class="product-price"><?= $row['description'] ?>
                                 </div>
                                 <div class="product-discount">
                                     <?php
-                                        $genre = explode(" ", $row['genre']);
+                                        $genre = explode(" ", $row['rating']);
                                         for ($i = 0; $i < count($genre); $i++){
                                             echo "<span class='$genre[$i]'>$genre[$i]</span>";
                                         }
                                         ?>
-                                </div>
-                                <div class="product-rates">
-                                    <?php 
-                                        $star = $row['rating'];
-                                        for ($i = 0; $i < $star; $i++){
-                                            echo "<span class='yellow-star'>&#9733;</span>";
-                                        }
-                                        for ($i = 0; $i < 5 - $star; $i++){
-                                            echo "<span>&#9733;</span>";
-                                        }
-                                        echo "$star/5";
-                                        ?>
+                                        <br><br>
+                                    <span class="cost">COST : <?=$row['replacement_cost']?></span>
                                 </div>
                                 <div class="btn">
                                     <i class='bx bxs-edit-alt'></i>

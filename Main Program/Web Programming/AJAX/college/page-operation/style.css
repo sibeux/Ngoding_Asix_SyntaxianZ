@@ -11,7 +11,7 @@
 body {
     /* background: #51489a; */
     background-image: url(img/bg.jpg);
-    background-size: cover;
+    background-size: contain;
 }
 
 .sidebar {
@@ -429,7 +429,7 @@ ul {
 	font-size: 0.8rem;
 }
 
-.product-discount .sci-fi{
+.product-discount .PG{
     padding: 0.1rem 0.7rem;
 	border-radius: 0.8rem;
 	color: white;
@@ -437,7 +437,7 @@ ul {
 	background-color: #eb8052;
 }
 
-.product-discount .demons{
+.product-discount .cost{
     padding: 0.1rem 0.7rem;
 	border-radius: 0.8rem;
 	color: white;
@@ -470,7 +470,7 @@ ul {
     margin-right: 5px;
 }
 
-.product-discount .advanture{
+.product-discount .PG-13{
     /* padding - jarak konten dengan wadah */
     padding: 0.1rem 0.7rem;
 	border-radius: 0.8rem;
@@ -479,7 +479,7 @@ ul {
     margin-right: 5px;
 }
 
-.product-discount .action {
+.product-discount .NC-17 {
     /* padding - jarak konten dengan wadah */
     padding: 0.1rem 0.7rem;
 	border-radius: 0.8rem;
@@ -488,7 +488,7 @@ ul {
     margin-right: 5px;
 }
 
-.product-discount .romance{
+.product-discount .G{
     padding: 0.1rem 0.7rem;
 	border-radius: 0.8rem;
 	color: white;
@@ -496,7 +496,7 @@ ul {
     margin-right: 5px;
 }
 
-.product-discount .kids {
+.product-discount .R {
     padding: 0.1rem 0.7rem;
 	border-radius: 0.8rem;
 	color: white;
