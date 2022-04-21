@@ -14,4 +14,4 @@ for i in range(1, 101):
         print(i)
 
 
-print("dari vs cdoe")
+print("dari vs cdo")
