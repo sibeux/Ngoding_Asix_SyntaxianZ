@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch perulangan",
+            "request": "launch",
+            "mainClass": "perulangan",
+            "projectName": "PEMROGRAMAN_ff228122"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArrayObject",
+            "request": "launch",
+            "mainClass": "ArrayObject",
+            "projectName": "PEMROGRAMAN_ff228122"
+        },
+        {
+            "type": "java",
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "com.javaoop.tugas.smt_3.PRAKTIKUM.Enkapsulasi_Polymorphisme.Main",

@@ -122,8 +122,8 @@
     "rainbow_csv.enable_tooltip_column_names": true,
     "rainbow_csv.enable_context_menu_head": true,
     "java.project.sourcePaths": [
-        "My Program\\JAVA_OOP\\src",
-        "Testing\\JAVA_OOP\\src"
+        "Main Program/JAVA_OOP/src/com/javaoop/java_dasar",
+        "Main Program/JAVA_OOP/src/com/javaoop/materi"
     ],
     "C_Cpp.errorSquiggles": "Disabled",
     "cssPeek.peekFromLanguages": [
