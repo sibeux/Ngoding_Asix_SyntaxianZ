@@ -8,6 +8,41 @@
             "type": "java",
             "name": "Launch perulangan",
             "request": "launch",
+            "mainClass": "com.javaoop.materi.perulangan",
+            "projectName": "PEMROGRAMAN_ff228122"
+        },
+        {
+            "type": "java",
+            "name": "Launch perulangan",
+            "request": "launch",
+            "mainClass": "com.javaoop.materi.com.javaoop.materi.perulangan",
+            "projectName": "PEMROGRAMAN_ff228122"
+        },
+        {
+            "type": "java",
+            "name": "Launch test",
+            "request": "launch",
+            "mainClass": "com.javaoop.materi.com.javaoop.materi.test",
+            "projectName": "PEMROGRAMAN_ff228122"
+        },
+        {
+            "type": "java",
+            "name": "Launch test",
+            "request": "launch",
+            "mainClass": "com.javaoop.materi.test",
+            "projectName": "PEMROGRAMAN_ff228122"
+        },
+        {
+            "type": "java",
+            "name": "Launch test",
+            "request": "launch",
+            "mainClass": "test",
+            "projectName": "PEMROGRAMAN_ff228122"
+        },
+        {
+            "type": "java",
+            "name": "Launch perulangan",
+            "request": "launch",
             "mainClass": "perulangan",
             "projectName": "PEMROGRAMAN_ff228122"
         },
