@@ -353,8 +353,8 @@ ul {
 }
 
 .sidebar.open~.home {
-    left: 150px;
-    width: calc(100% - 150px);
+    left: 140px; /* lebar bukaan sidebar */
+    width: calc(100% - 100px); /* lebar geseran sidebar */
 }
 
 /* .home-section .text {
@@ -375,24 +375,26 @@ ul {
     position: relative;
     display: flex;
 	margin-top: 50px;
-    padding-left: 55px;
+    padding-left: 55px; /* jarak gambar dengan tulisan title, desk, rating */
     justify-content: space-between;
     align-items: center;
-	width: 380px;
-    height: 180px;
+	width: 400px; /* lebar kartu*/
+    height: 180px; /* tinggi kartu */
 	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 	border-radius: 2rem;
     background-color: #322f59;
 }
 
-.product-image {
+/* .product-image img {
 	padding-bottom: 100%;
+} */
+
+a img:hover{
+    cursor: pointer;
 }
 
-.product-image img {
+a img {
 	position: absolute;
-	width: 95px;
-	height: 135px;
     margin-left: 25px;
     margin-top: auto;
     margin-bottom: auto;
@@ -404,16 +406,21 @@ ul {
 }
 
 .product-body {
-	/* padding: 0.75rem; */
-    padding-left: 80px;
+    position: absolute;
     padding-top: -1px;
     padding-right: 0px;
-    position: absolute;
+    left: 136px; /* menggeser tulisan ke kanan */
 }
 
-.product-body h3{
-    font-size: 20px;
+.product-body a .product-title{
+    font-size: 15px;
     color: #fff;
+    white-space: nowrap;
+}
+
+.product-body a .product-title:hover{
+    color: #f65065;
+    cursor: pointer;
 }
 
 .product-body *:not(:first-child) {
@@ -421,6 +428,7 @@ ul {
 }
 
 .product-price {
+    white-space: pre-wrap;
     font-size: 12px;
     color: #6a629b;
 }
@@ -435,6 +443,12 @@ ul {
 	color: white;
     margin-right: 5px;
 	background-color: #eb8052;
+}
+
+.product-discount .PG:hover{
+    background-color: aliceblue;
+    text-decoration: underline;
+    color: black;
 }
 
 .product-discount .cost{
@@ -453,15 +467,19 @@ ul {
 	background-color: #ebdc52;
 }
 
-.product-discount .fantasy{
+.product-discount .detail{
     padding: 0.1rem 0.7rem;
-    border-radius: 0.8rem;
+    /* border-radius: 0.8rem; */
     color: white;
     background-color: #4a8ddb;
     margin-right: 5px;
 }
 
-.product-discount .drama{
+.product-discount .detail:hover{
+    background-color: #1260b8;
+}
+
+.product-discount .year{
     /* padding - jarak konten dengan wadah */
     padding: 0.1rem 0.7rem;
 	border-radius: 0.8rem;
@@ -479,6 +497,12 @@ ul {
     margin-right: 5px;
 }
 
+.product-discount .PG-13:hover{
+    background-color: aliceblue;
+    text-decoration: underline;
+    color: black;
+}
+
 .product-discount .NC-17 {
     /* padding - jarak konten dengan wadah */
     padding: 0.1rem 0.7rem;
@@ -486,6 +510,12 @@ ul {
 	color: white;
 	background-color: #6647bf;
     margin-right: 5px;
+}
+
+.product-discount .NC-17:hover{
+    background-color: aliceblue;
+    text-decoration: underline;
+    color: black;
 }
 
 .product-discount .G{
@@ -496,6 +526,12 @@ ul {
     margin-right: 5px;
 }
 
+.product-discount .G:hover{
+    background-color: aliceblue;
+    text-decoration: underline;
+    color: black;
+}
+
 .product-discount .R {
     padding: 0.1rem 0.7rem;
 	border-radius: 0.8rem;
@@ -503,6 +539,12 @@ ul {
 	background-color: #4ad994;
     /* margin - jarak wadah dengan sekeliling */
     margin-right: 5px;
+}
+
+.product-discount .R:hover{
+    background-color: aliceblue;
+    text-decoration: underline;
+    color: black;
 }
 
 .product-rates {
