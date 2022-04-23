@@ -157,7 +157,7 @@
                                         $duration_hour = ($length - $duration_minute) / 60;
                                         echo "<span class='cost'>{$duration_hour}h {$duration_minute}m</span>";
                                         echo "<br><br>";
-                                        echo "<a id='{$row['film_id']}' href='detail_film.php' style='text-decoration: none;'>";
+                                        echo "<a href='film_detail.php' style='text-decoration: none;'>";
                                         echo "<span class='detail'>Detail</span>";
                                         echo "</a>";
                                         ?>
