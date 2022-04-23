@@ -148,18 +148,25 @@
         "html-eex",
         "ejs"
     ],
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "JAVA_OOP/src/com/javaoop/Database/Driver JDBC/postgresql-42.3.1.jar",
-        "JAVA_OOP/src/com/javaoop/materi/Database/Driver JDBC/postgresql-42.3.1.jar",
-        "/home/nasrulwahabi/Downloads/Compressed/commons-lang3-3.12.0-bin/commons-lang3-3.12.0/commons-lang3-3.12.0.jar",
-        "JAVA_OOP/src/com/javaoop/materi/Pretty_Table/commons-lang3-3.12.0-bin/commons-lang3-3.12.0/commons-lang3-3.12.0.jar",
-        "JAVA_OOP/src/com/javaoop/tugas/SMT_3/Project_Akhir/Model/db4o/db4o-7.2.44.10827-osgi.jar",
-        "JAVA_OOP/src/com/javaoop/tugas/SMT_3/Project_Akhir/Model/db4o/jpox-db4o-1.2.0-beta-5.jar",
-        "JAVA_OOP/src/com/javaoop/tugas/SMT_3/Project_Akhir/Model/db4o/objectmanager-7.2-java/7.2/lib/db4o-java1.2.jar",
-        "JAVA_OOP/src/com/javaoop/tugas/SMT_3/Project_Akhir/Entities/db4o/objectmanager-7.2-java/7.2/lib/db4o-sql.jar",
-        "My Program\\JAVA_OOP\\src\\com\\javaoop\\materi\\Pretty_Table\\commons-lang3-3.12.0-bin\\commons-lang3-3.12.0\\commons-lang3-3.12.0.jar",
-        "Testing\\JAVA_OOP\\src\\com\\javaoop\\materi\\Pretty_Table\\commons-lang3-3.12.0-bin\\commons-lang3-3.12.0\\commons-lang3-3.12.0.jar"
-    ],
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "JAVA_OOP/src/com/javaoop/Database/Driver JDBC/postgresql-42.3.1.jar",
+            "JAVA_OOP/src/com/javaoop/materi/Database/Driver JDBC/postgresql-42.3.1.jar",
+            "/home/nasrulwahabi/Downloads/Compressed/commons-lang3-3.12.0-bin/commons-lang3-3.12.0/commons-lang3-3.12.0.jar",
+            "JAVA_OOP/src/com/javaoop/materi/Pretty_Table/commons-lang3-3.12.0-bin/commons-lang3-3.12.0/commons-lang3-3.12.0.jar",
+            "JAVA_OOP/src/com/javaoop/tugas/SMT_3/Project_Akhir/Model/db4o/db4o-7.2.44.10827-osgi.jar",
+            "JAVA_OOP/src/com/javaoop/tugas/SMT_3/Project_Akhir/Model/db4o/jpox-db4o-1.2.0-beta-5.jar",
+            "JAVA_OOP/src/com/javaoop/tugas/SMT_3/Project_Akhir/Model/db4o/objectmanager-7.2-java/7.2/lib/db4o-java1.2.jar",
+            "JAVA_OOP/src/com/javaoop/tugas/SMT_3/Project_Akhir/Entities/db4o/objectmanager-7.2-java/7.2/lib/db4o-sql.jar",
+            "My Program\\JAVA_OOP\\src\\com\\javaoop\\materi\\Pretty_Table\\commons-lang3-3.12.0-bin\\commons-lang3-3.12.0\\commons-lang3-3.12.0.jar",
+            "Testing\\JAVA_OOP\\src\\com\\javaoop\\materi\\Pretty_Table\\commons-lang3-3.12.0-bin\\commons-lang3-3.12.0\\commons-lang3-3.12.0.jar",
+            "Main Program\\JAVA_OOP\\src\\com\\javaoop\\materi\\Pretty_Table\\commons-lang3-3.12.0-bin\\commons-lang3-3.12.0\\commons-lang3-3.12.0-javadoc.jar",
+            "Main Program\\JAVA_OOP\\src\\com\\javaoop\\materi\\Pretty_Table\\commons-lang3-3.12.0-bin\\commons-lang3-3.12.0\\commons-lang3-3.12.0.jar"
+        ],
+        "exclude": [
+            "Main Program/JAVA_OOP/src/com/javaoop/materi/Pretty_Table/commons-lang3-3.12.0-bin/commons-lang3-3.12.0/commons-lang3-3.12.0-javadoc.jar"
+        ]
+    },
     "python.formatting.provider": "yapf"
 }

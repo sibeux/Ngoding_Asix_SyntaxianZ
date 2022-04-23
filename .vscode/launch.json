@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch test",
+            "request": "launch",
+            "mainClass": "com.javaoop.materi.Pretty_Table.test",
+            "projectName": "PEMROGRAMAN_ff228122"
+        },
+        {
+            "type": "java",
+            "name": "Launch angkaBalik",
+            "request": "launch",
+            "mainClass": "com.javaoop.tugas.proton.angkaBalik",
+            "projectName": "PEMROGRAMAN_ff228122"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainStudy",
+            "request": "launch",
+            "mainClass": "com.javaoop.tugas.KUIS.MainStudy",
+            "projectName": "PEMROGRAMAN_ff228122"
+        },
+        {
+            "type": "java",
             "name": "Launch perulangan",
             "request": "launch",
             "mainClass": "com.javaoop.materi.perulangan",
