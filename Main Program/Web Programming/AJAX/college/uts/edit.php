@@ -83,24 +83,31 @@ if(isset($_POST['simpan'])){ // untuk create
     <title>UTS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/assets/favicon.ico">F
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="stil.css">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <style>
-    .mx-auto {
+    .col {
         width: 800px;
     }
 
     .card {
         margin-top: 10px;
     }
+    .col-lg-4{
+        margin-left: 10px;
+    }
     </style>
 </head>
 
 <body>
-    <div class="mx-auto">
-        <!-- untuk memasukkan data -->
+    <div class="row">
+        <div class="col-lg-4">
+            <!-- untuk memasukkan data -->
         <div class="card">
-            <h5 class="card-header">Edit Data</h5>
+            <h5 class="card-header bg-info">Edit Data</h5>
             <div class="card-body">
                 <!-- alert error -->
                 <?php 
@@ -150,60 +157,75 @@ if(isset($_POST['simpan'])){ // untuk create
                 </form>
             </div>
         </div>
+        </div>
 
-        <!-- untuk mengeluarkan data -->
-        <div class="card">
-            <h5 class="card-header text-white bg-secondary">Data Animo</h5>
-            <div class="card-body">
-                <table class="table table-sortable" id="sortTable">
-                    <thead>
-                        <tr>
-                            <th class="th-sm" scope="col">No</th>
-                            <th scope="col">Fakultas</th>
-                            <th scope="col">Animo</th>
-                            <th class="th-sm" scope="col">Aksi</th>
-                        </tr>
-                    <tbody>
-                        <?php
-                        $sql2 = "select * from animo order by id asc";
-                        $q2 = mysqli_query($connect, $sql2);
-                        $urut = 1;
-                        while($r2 = mysqli_fetch_array($q2)){
-                                $id         = $r2['id'];
-                                $fakultas   = $r2['fakultas'];
-                                $animo      = $r2['animo'];
-                                ?>
-                        <tr>
-                            <!-- row ga akan bisa diklik karena dia pake th bukan td -->
-                            <th class="th-sm" scope="row">
-                                <?php echo $urut++; ?>
-                            </th>
-                            <td scope="row">
-                                <?php echo $fakultas; ?>
-                            </td>
-                            <td scope="row">
-                                <?php echo $animo; ?>
-                            </td>
-                            <th scope="row">
-                                <a href="edit.php?op=edit&id=<?php echo $id ?>">
-                                    <button type="button" class="btn btn-warning">Edit</button>
-                                </a>
-                                <a href="index.php?op=delete&id=<?php echo $id ?>"
-                                    onclick="return confirm('Yakin akan menghapus data?')">
-                                    <button type="button" class="btn btn-danger">Delete</button>
-                                </a>
-                            </th>
-                        </tr>
-                        <?php
-                        }
-                        ?>
-                    </tbody>
-                    </thead>
-                </table>
+        <div class="col">
+            <!-- untuk mengeluarkan data -->
+            <div class="card">
+                <h5 class="card-header text-white bg-secondary">Data Animo</h5>
+                <div class="card-body">
+                    <table class="table table-sortable" id="example">
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Fakultas</th>
+                                <th scope="col">Animo</th>
+                                <th class="th-sm" scope="col">Option</th>
+                            </tr>
+                        <tbody>
+                            <?php
+                            $sql2 = "select * from animo order by id asc";
+                            $q2 = mysqli_query($connect, $sql2);
+                            $urut = 1;
+                            while($r2 = mysqli_fetch_array($q2)){
+                                    $id         = $r2['id'];
+                                    $fakultas   = $r2['fakultas'];
+                                    $animo      = $r2['animo'];
+                                    ?>
+                            <tr>
+                                <!-- row ga akan bisa diklik karena dia pake th bukan td -->
+                                <td class="th-sm" scope="row">
+                                    <?php echo $urut++;
+                                    ?>
+                                </td>
+                                <td scope="row">
+                                    <?php echo $fakultas; ?>
+                                </td>
+                                <td scope="row">
+                                    <?php 
+                                    echo $animo; 
+                                    ?>
+                                </td>
+                                <th scope="row">
+                                    <a href="edit.php?op=edit&id=<?php echo $id ?>">
+                                        <button type="button" class="btn btn-warning btn-sm">Edit</button>
+                                    </a>
+                                    <a href="index.php?op=delete&id=<?php echo $id ?>"
+                                        onclick="return confirm('Yakin akan menghapus data?')">
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </a>
+                                </th>
+                            </tr>
+                            <?php
+                            }
+                            ?>
+                        </tbody>
+                        </thead>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
 </body>
-<script src="script.js"></script>
+<script>
+    $(document).ready(function() {
+    $('#example').DataTable({
+        columnDefs: [{
+            orderable: false,
+            targets: 3
+        }]
+    });
+});
+</script>
 
 </html>
