@@ -13,6 +13,7 @@ $animo      = "";
 $sukses = "";
 $error = "";
 
+
 if(isset($_GET['op'])){
     $op = $_GET['op'];
 }else{
@@ -82,10 +83,9 @@ if(isset($_POST['simpan'])){ // untuk create
     <title>UTS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
     <style>
-    
     .mx-auto {
         width: 800px;
     }
@@ -101,6 +101,7 @@ if(isset($_POST['simpan'])){ // untuk create
         <!-- untuk memasukkan data -->
         <div class="card">
             <h5 class="card-header">Tambah Data</h5>
+            
             <div class="card-body">
                 <!-- alert error -->
                 <?php 
@@ -151,16 +152,16 @@ if(isset($_POST['simpan'])){ // untuk create
         <div class="card">
             <h5 class="card-header text-white bg-secondary">Data Animo</h5>
             <div class="card-body">
-                <table class="table table-sortable" id="sortTable">
+                <table class="table table-sortable">
                     <thead>
                         <tr>
                             <th class="th-sm" scope="col">No</th>
-                            <th class="th-sm" scope="col">Fakultas</th>
-                            <th class="th-sm" scope="col">Animo</th>
+                            <th scope="col">Fakultas</th>
+                            <th scope="col">Animo</th>
                             <th class="th-sm" scope="col">Aksi</th>
-                            </tr>
-                            <tbody>
-                <?php
+                        </tr>
+                    <tbody>
+                        <?php
                         $sql2 = "select * from animo order by id asc";
                         $q2 = mysqli_query($connect, $sql2);
                         $urut = 1;
@@ -169,37 +170,40 @@ if(isset($_POST['simpan'])){ // untuk create
                                 $fakultas   = $r2['fakultas'];
                                 $animo      = $r2['animo'];
                                 ?>
-                <tr>
-                    <th scope="row">
-                        <?php echo $urut++; ?>
-                    </th>
-                    <td scope="row">
-                        <?php echo $fakultas; ?>
-                    </td>
-                    <td scope="row">
-                        <?php echo $animo; ?>
-                    </td>
-                    <td scope="row">
-                        <a href="edit.php?op=edit&id=<?php echo $id ?>">
-                            <button type="button" class="btn btn-warning">Edit</button>
-                        </a>
-                        <a href="index.php?op=delete&id=<?php echo $id ?>"
-                            onclick="return confirm('Yakin akan menghapus data?')">
-                            <button type="button" class="btn btn-danger">Delete</button>
-                        </a>
-                    </td>
-                </tr>
-                <?php
+                        <tr>
+                            <!-- row ga akan bisa diklik karena dia pake th bukan td -->
+                            <td class="th-sm" scope="row">
+                                <?php echo $urut++; ?>
+                            </td>
+                            <td scope="row">
+                                <?php echo $fakultas; ?>
+                            </td>
+                            <td scope="row">
+                                <?php echo $animo; ?>
+                            </td>
+                            <th scope="row">
+                                <a href="edit.php?op=edit&id=<?php echo $id ?>">
+                                    <button type="button" class="btn btn-warning">Edit</button>
+                                </a>
+                                <a href="index.php?op=delete&id=<?php echo $id ?>"
+                                    onclick="return confirm('Yakin akan menghapus data?')">
+                                    <button type="button" class="btn btn-danger">Delete</button>
+                                </a>
+                            </th>
+                        </tr>
+                        <?php
                         }
                         ?>
-            </tbody>
-            </thead>
-            </table>
+                    </tbody>
+                    </thead>
+                </table>
+                <div id="pagination"></div>
+                <input type="hidden" id="totalPages" value="<?php echo $totalPages; ?>">
+            </div>
         </div>
     </div>
     </div>
 </body>
-<script src="script.js">
-</script>
+<script src="script.js"></script>
 
 </html>

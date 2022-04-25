@@ -83,7 +83,8 @@ if(isset($_POST['simpan'])){ // untuk create
     <title>UTS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/assets/favicon.ico">F
     <style>
     .mx-auto {
         width: 800px;
@@ -145,7 +146,7 @@ if(isset($_POST['simpan'])){ // untuk create
                             <input type="button" value="Kembali" class="btn btn-secondary">
                         </a>
                     </div>
-                    
+
                 </form>
             </div>
         </div>
@@ -154,12 +155,12 @@ if(isset($_POST['simpan'])){ // untuk create
         <div class="card">
             <h5 class="card-header text-white bg-secondary">Data Animo</h5>
             <div class="card-body">
-            <table class="table table-striped table-bordered table-sm" id="sortTable">
+                <table class="table table-sortable" id="sortTable">
                     <thead>
                         <tr>
                             <th class="th-sm" scope="col">No</th>
-                            <th class="th-sm" scope="col">Fakultas</th>
-                            <th class="th-sm" scope="col">Animo</th>
+                            <th scope="col">Fakultas</th>
+                            <th scope="col">Animo</th>
                             <th class="th-sm" scope="col">Aksi</th>
                         </tr>
                     <tbody>
@@ -173,7 +174,8 @@ if(isset($_POST['simpan'])){ // untuk create
                                 $animo      = $r2['animo'];
                                 ?>
                         <tr>
-                            <th scope="row">
+                            <!-- row ga akan bisa diklik karena dia pake th bukan td -->
+                            <th class="th-sm" scope="row">
                                 <?php echo $urut++; ?>
                             </th>
                             <td scope="row">
@@ -182,7 +184,7 @@ if(isset($_POST['simpan'])){ // untuk create
                             <td scope="row">
                                 <?php echo $animo; ?>
                             </td>
-                            <td scope="row">
+                            <th scope="row">
                                 <a href="edit.php?op=edit&id=<?php echo $id ?>">
                                     <button type="button" class="btn btn-warning">Edit</button>
                                 </a>
@@ -190,7 +192,7 @@ if(isset($_POST['simpan'])){ // untuk create
                                     onclick="return confirm('Yakin akan menghapus data?')">
                                     <button type="button" class="btn btn-danger">Delete</button>
                                 </a>
-                            </td>
+                            </th>
                         </tr>
                         <?php
                         }
@@ -202,5 +204,6 @@ if(isset($_POST['simpan'])){ // untuk create
         </div>
     </div>
 </body>
+<script src="script.js"></script>
 
 </html>

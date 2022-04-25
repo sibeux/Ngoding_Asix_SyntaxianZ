@@ -2,6 +2,10 @@
     cursor: pointer;
 }
 
+.table-sortable th.th-sm{
+    cursor: default;
+}
+
 .table-sortable .th-sort-asc::after {
     content: "\25b4";
 }
@@ -21,7 +25,7 @@
 }
 
 .table-sortable {
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
     margin: 25px 0;
     font-size: 0.9em;
     font-family: sans-serif;
@@ -41,7 +45,7 @@
 }
 
 .table-sortable tbody tr {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: thin solid #dddddd;
 }
 
 .table-sortable tbody tr:nth-of-type(even) {
