@@ -11,7 +11,7 @@
 body {
     /* background: #51489a; */
     background-image: url(img/bg.jpg);
-    background-size: contain;
+    background-size: cover;
 }
 
 .sidebar {
@@ -373,15 +373,15 @@ ul {
 
 .product-card {
     position: relative;
-    display: flex;
+    display: block;
 	margin-top: 50px;
     padding-left: 55px; /* jarak gambar dengan tulisan title, desk, rating */
     justify-content: space-between;
     align-items: center;
-	width: 400px; /* lebar kartu*/
-    height: 180px; /* tinggi kartu */
+	width: 63vw; /* lebar kartu*/
+    height: 55vh; /* tinggi kartu */
 	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-	border-radius: 2rem;
+	border-radius: 4rem;
     background-color: #322f59;
 }
 
@@ -389,38 +389,44 @@ ul {
 	padding-bottom: 100%;
 } */
 
-a img:hover{
-    cursor: pointer;
-}
-
 a img {
 	position: absolute;
     margin-left: 25px;
     margin-top: auto;
     margin-bottom: auto;
+    float: left;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	border-radius: 2em;
+	border-radius: 3em;
+}
+
+.overview{
+    font-size: 2.1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.product-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
 }
 
 .product-body {
     position: absolute;
-    padding-top: -1px;
+    padding-top: 30px;
     padding-right: 0px;
-    left: 136px; /* menggeser tulisan ke kanan */
+    left: 276px; /* menggeser tulisan ke kanan */
 }
 
 .product-body a .product-title{
-    font-size: 15px;
+    font-size: 35px;
     color: #fff;
     white-space: nowrap;
-}
-
-.product-body a .product-title:hover{
-    color: #f65065;
-    cursor: pointer;
 }
 
 .product-body *:not(:first-child) {
@@ -437,6 +443,11 @@ a img {
 	font-size: 0.8rem;
 }
 
+.product-discount .features{
+    color: wheat;
+    font-size: 0.8rem;
+}
+
 .product-discount .PG{
     padding: 0.1rem 0.7rem;
 	border-radius: 0.8rem;
@@ -445,26 +456,11 @@ a img {
 	background-color: #eb8052;
 }
 
-.product-discount .PG:hover{
-    background-color: aliceblue;
-    text-decoration: underline;
-    color: black;
-}
-
 .product-discount .cost{
     padding: 0.1rem 0.7rem;
 	border-radius: 0.8rem;
 	color: white;
-    margin-right: 5px;
 	background-color: #eb5252;
-}
-
-.product-discount .school{
-    padding: 0.1rem 0.7rem;
-	border-radius: 0.8rem;
-	color: white;
-    margin-right: 5px;
-	background-color: #ebdc52;
 }
 
 .product-discount .detail{
@@ -475,17 +471,15 @@ a img {
     margin-right: 5px;
 }
 
-.product-discount .detail:hover{
-    background-color: #1260b8;
-}
-
-.product-discount .year{
+.year{
     /* padding - jarak konten dengan wadah */
     padding: 0.1rem 0.7rem;
 	border-radius: 0.8rem;
 	color: white;
 	background-color: #4497b9;
-    margin-right: 5px;
+    margin-left: 15px;
+    top: 35px;
+    position: absolute;
 }
 
 .product-discount .PG-13{
@@ -497,12 +491,6 @@ a img {
     margin-right: 5px;
 }
 
-.product-discount .PG-13:hover{
-    background-color: aliceblue;
-    text-decoration: underline;
-    color: black;
-}
-
 .product-discount .NC-17 {
     /* padding - jarak konten dengan wadah */
     padding: 0.1rem 0.7rem;
@@ -510,12 +498,6 @@ a img {
 	color: white;
 	background-color: #6647bf;
     margin-right: 5px;
-}
-
-.product-discount .NC-17:hover{
-    background-color: aliceblue;
-    text-decoration: underline;
-    color: black;
 }
 
 .product-discount .G{
@@ -526,12 +508,6 @@ a img {
     margin-right: 5px;
 }
 
-.product-discount .G:hover{
-    background-color: aliceblue;
-    text-decoration: underline;
-    color: black;
-}
-
 .product-discount .R {
     padding: 0.1rem 0.7rem;
 	border-radius: 0.8rem;
@@ -539,12 +515,6 @@ a img {
 	background-color: #4ad994;
     /* margin - jarak wadah dengan sekeliling */
     margin-right: 5px;
-}
-
-.product-discount .R:hover{
-    background-color: aliceblue;
-    text-decoration: underline;
-    color: black;
 }
 
 .product-rates {

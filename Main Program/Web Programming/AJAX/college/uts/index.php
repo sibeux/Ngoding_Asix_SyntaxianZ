@@ -172,7 +172,7 @@ if(isset($_POST['simpan'])){ // untuk create
                             </tr>
                         <tbody>
                             <?php
-                $sql2 = "select * from animo order by id asc";
+                $sql2 = "SELECT * from animo order by id asc";
                 $q2 = mysqli_query($connect, $sql2);
                 $urut = 1;
                 while($r2 = mysqli_fetch_array($q2)){
