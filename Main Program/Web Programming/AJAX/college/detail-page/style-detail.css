@@ -160,7 +160,7 @@ ul {
     width: 100%;
 }
 
-.sidebar.open select{
+.sidebar.open select {
     padding: 0 20px 0 50px;
     width: 100%;
 }
@@ -333,7 +333,7 @@ ul {
     background: none;
 }
 
-.home .text{
+.home .text {
     color: #FFF;
     font-size: 20px;
     margin-left: -30px;
@@ -353,8 +353,10 @@ ul {
 }
 
 .sidebar.open~.home {
-    left: 140px; /* lebar bukaan sidebar */
-    width: calc(100% - 100px); /* lebar geseran sidebar */
+    left: 140px;
+    /* lebar bukaan sidebar */
+    width: calc(100% - 100px);
+    /* lebar geseran sidebar */
 }
 
 /* .home-section .text {
@@ -374,14 +376,17 @@ ul {
 .product-card {
     position: relative;
     display: block;
-	margin-top: 50px;
-    padding-left: 55px; /* jarak gambar dengan tulisan title, desk, rating */
+    margin-top: 50px;
+    padding-left: 55px;
+    /* jarak gambar dengan tulisan title, desk, rating */
     justify-content: space-between;
     align-items: center;
-	width: 63vw; /* lebar kartu*/
-    height: 55vh; /* tinggi kartu */
-	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-	border-radius: 4rem;
+    width: 63vw;
+    /* lebar kartu*/
+    height: 55vh;
+    /* tinggi kartu */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4rem;
     background-color: #322f59;
 }
 
@@ -390,25 +395,25 @@ ul {
 } */
 
 a img {
-	position: absolute;
+    position: absolute;
     margin-left: 25px;
     margin-top: auto;
     margin-bottom: auto;
     float: left;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	border-radius: 3em;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 3em;
 }
 
-.overview{
+.overview {
     font-size: 2.1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(255, 255, 255);
 }
 
-.product-container{
+.product-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -420,17 +425,18 @@ a img {
     position: absolute;
     padding-top: 30px;
     padding-right: 0px;
-    left: 276px; /* menggeser tulisan ke kanan */
+    left: 276px;
+    /* menggeser tulisan ke kanan */
 }
 
-.product-body a .product-title{
+.product-body a .product-title {
     font-size: 35px;
     color: #fff;
     white-space: nowrap;
 }
 
 .product-body *:not(:first-child) {
-	margin-top: 0.4rem;
+    margin-top: 0.4rem;
 }
 
 .product-price {
@@ -440,30 +446,30 @@ a img {
 }
 
 .product-discount {
-	font-size: 0.8rem;
+    font-size: 0.8rem;
 }
 
-.product-discount .features{
+.product-discount .features {
     color: wheat;
     font-size: 0.8rem;
 }
 
-.product-discount .PG{
+.product-discount .PG {
     padding: 0.1rem 0.7rem;
-	border-radius: 0.8rem;
-	color: white;
+    border-radius: 0.8rem;
+    color: white;
     margin-right: 5px;
-	background-color: #eb8052;
+    background-color: #eb8052;
 }
 
-.product-discount .cost{
+.product-discount .cost {
     padding: 0.1rem 0.7rem;
-	border-radius: 0.8rem;
-	color: white;
-	background-color: #eb5252;
+    border-radius: 0.8rem;
+    color: white;
+    background-color: #eb5252;
 }
 
-.product-discount .detail{
+.product-discount .detail {
     padding: 0.1rem 0.7rem;
     /* border-radius: 0.8rem; */
     color: white;
@@ -471,65 +477,65 @@ a img {
     margin-right: 5px;
 }
 
-.year{
+.year {
     /* padding - jarak konten dengan wadah */
     padding: 0.1rem 0.7rem;
-	border-radius: 0.8rem;
-	color: white;
-	background-color: #4497b9;
+    border-radius: 0.8rem;
+    color: white;
+    background-color: #4497b9;
     margin-left: 15px;
     top: 35px;
     position: absolute;
 }
 
-.product-discount .PG-13{
+.product-discount .PG-13 {
     /* padding - jarak konten dengan wadah */
     padding: 0.1rem 0.7rem;
-	border-radius: 0.8rem;
-	color: white;
-	background-color: #70b944;
+    border-radius: 0.8rem;
+    color: white;
+    background-color: #70b944;
     margin-right: 5px;
 }
 
 .product-discount .NC-17 {
     /* padding - jarak konten dengan wadah */
     padding: 0.1rem 0.7rem;
-	border-radius: 0.8rem;
-	color: white;
-	background-color: #6647bf;
+    border-radius: 0.8rem;
+    color: white;
+    background-color: #6647bf;
     margin-right: 5px;
 }
 
-.product-discount .G{
+.product-discount .G {
     padding: 0.1rem 0.7rem;
-	border-radius: 0.8rem;
-	color: white;
-	background-color: #f750a9;
+    border-radius: 0.8rem;
+    color: white;
+    background-color: #f750a9;
     margin-right: 5px;
 }
 
 .product-discount .R {
     padding: 0.1rem 0.7rem;
-	border-radius: 0.8rem;
-	color: white;
-	background-color: #4ad994;
+    border-radius: 0.8rem;
+    color: white;
+    background-color: #4ad994;
     /* margin - jarak wadah dengan sekeliling */
     margin-right: 5px;
 }
 
 .product-rates {
-	color: rgb(102, 98, 98);
+    color: rgb(102, 98, 98);
 }
 
 .yellow-star {
-	color: rgb(255, 166, 0);
+    color: rgb(255, 166, 0);
 }
 
 .btn i:hover {
     color: #f65065;
 }
 
-.btn i{
+.btn i {
     margin-right: 5px;
 }
 
@@ -538,13 +544,13 @@ a img {
     height: 60px;
 }
 
-.footer .copy{
+.footer .copy {
     color: #eaeaea;
     padding: 20px;
     text-align: center;
 }
 
-.product-card .btn{
+.product-card .btn {
     float: right;
     margin-right: 30px;
     margin-bottom: 40px;
@@ -555,7 +561,7 @@ a img {
     position: absolute;
 }
 
-footer{
+footer {
     position: absolute;
     left: 0px;
     margin-top: 90px;
@@ -567,7 +573,7 @@ footer{
     color: #FFF;
 }
 
-.footer-content{
+.footer-content {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -575,21 +581,21 @@ footer{
     text-align: center;
 }
 
-.footer-content h3{
+.footer-content h3 {
     font-size: 1.8rem;
     font-weight: 400;
     text-transform: capitalize;
     line-height: 3rem;
 }
 
-.footer-content p{
+.footer-content p {
     max-width: 500px;
     margin: 10px auto;
     line-height: 28px;
     font-size: 14px;
 }
 
-.socials{
+.socials {
     list-style: none;
     display: flex;
     align-items: center;
@@ -597,26 +603,26 @@ footer{
     margin: 1rem 0 3rem 0;
 }
 
-.socials li{
+.socials li {
     margin: 0 10px;
 }
 
-.socials a{
+.socials a {
     text-decoration: none;
     color: #FFF;
 }
 
-.socials a i{
+.socials a i {
     font-size: 1.1rem;
     transition: color .4s ease;
     /* margin-right: 5px; */
 }
 
-.socials a:hover i{
+.socials a:hover i {
     color: aqua;
 }
 
-.footer-bottom{
+.footer-bottom {
     background: #000;
     width: 100%;
     height: 60px;
@@ -636,19 +642,30 @@ footer{
     text-transform: capitalize;
 }
 
-.header-content h1{
+.header-content h1 {
     text-align: center;
     color: #FFF;
 }
 
-.header-content h1 span{
+.header-content h1 span {
     color: salmon;
 }
 
-.footer-bottom span{
+.footer-bottom span {
     color: #3eacae;
 }
 
 img {
-	max-width: 100%;
+    max-width: 100%;
+}
+
+.row {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.row1 .col {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
 }

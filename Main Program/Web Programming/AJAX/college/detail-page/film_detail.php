@@ -176,36 +176,28 @@ if($op == 'detail'){
                                     <div class="col">
                                         <div class="product-discount">
                                             <?php
-                                                $duration_minute = $length % 60;
-                                                $duration_hour = ($length - $duration_minute) / 60;
-                                                echo "<span class='cost'>{$duration_hour}h {$duration_minute}m</span>";
+                                                echo "<span class='features'>• Langauge • </span>";
                                                 ?>
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="product-discount">
                                             <?php
-                                                $duration_minute = $length % 60;
-                                                $duration_hour = ($length - $duration_minute) / 60;
-                                                echo "<span class='cost'>{$duration_hour}h {$duration_minute}m</span>";
+                                                echo "<span class='features'>• Langauge • </span>";
                                                 ?>
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="product-discount">
                                             <?php
-                                                $duration_minute = $length % 60;
-                                                $duration_hour = ($length - $duration_minute) / 60;
-                                                echo "<span class='cost'>{$duration_hour}h {$duration_minute}m</span>";
+                                                echo "<span class='features'>• Langauge • </span>";
                                                 ?>
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="product-discount">
                                             <?php
-                                                $duration_minute = $length % 60;
-                                                $duration_hour = ($length - $duration_minute) / 60;
-                                                echo "<span class='cost'>{$duration_hour}h {$duration_minute}m</span>";
+                                                echo "<span class='features'>• Langauge • </span>";
                                                 ?>
                                         </div>
                                     </div>
