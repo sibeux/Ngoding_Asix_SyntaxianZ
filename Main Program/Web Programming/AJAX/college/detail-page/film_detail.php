@@ -180,6 +180,7 @@ if($op == 'detail'){
                                             <th scope="row" class="text-center">Rental Duration</th>
                                             <th scope="row" class="text-center">Rental Rate</th>
                                             <th scope="row" class="text-center">Replacement Cost</th>
+                                            <th></th>
                                         </tr>
                                     <tbody>
                                         <tr>
@@ -194,27 +195,38 @@ if($op == 'detail'){
                                             <td style="text-align:center">
                                                 <?php echo "<span class='cost'>{$row['replacement_cost']}</span>"; ?>
                                             </td>
+                                            <td></td>
                                         </tr>
                                         <tr>
-                                            <th style="text-align:center" colspan="4">
+                                            <td style="text-align:center" colspan="2">
                                                 <div class="input-group" style="width: 100%; height: 100%;">
-                                                <br>
+                                                    <br><br>
                                                     <input type="button" style="width: 100%; height: 100%;"
-                                                        value="Back" />
-                                                        <span class="fa-solid fa-arrow-left-long"></span>
+                                                        value="<-  Back" />
+
                                                 </div>
-                                            </th>
+                                            </td>
+                                            <td></td>
+                                            <td style="text-align:center;">
+                                                <div class="input-group" style="width: 100%; height: 100%;">
+                                                    <br><br>
+                                                    <input type="button" class="edit" style="width: 100%; height: 100%;"
+                                                        value="Edit" />
+
+                                                </div>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <div class="input-group" style="width: 100%; height: 100%;">
+                                                    <br><br>
+                                                    <input type="button" class="delete" style="width: 100%; height: 100%;"
+                                                        value="Delete" />
+
+                                                </div>
+                                            </td>
                                         </tr>
                                     </tbody>
                                     </thead>
                                 </table>
-                                <br>
-                                <div class="col-md">
-                                    <div class="btn">
-                                        <i class='bx bxs-edit-alt'></i>
-                                        <i class='bx bxs-trash'></i>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -293,6 +305,5 @@ function menuBtnChange() {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
 </script>
-<script src="script.js"></script>
 
 </html>
