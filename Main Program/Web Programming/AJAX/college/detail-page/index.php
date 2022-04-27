@@ -248,7 +248,6 @@
     <script src="script.js"></script>
     <script src="script-sort.js"></script>
     <script src="script-filter.js"></script>
-    <script src="script-detail.js"></script>
     <!-- <script src="script-search-sort.js"></script> -->
 </body>
 

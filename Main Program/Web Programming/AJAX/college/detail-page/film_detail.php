@@ -11,6 +11,11 @@ if(isset($_GET['op'])){
 if($op == 'detail'){
     $id = $_GET['id'];
     $sql = "SELECT * FROM film WHERE film_id = '$id'";
+    $language = "SELECT film.film_id, film.language_id, language.name
+    from language
+    join film 
+    on language.language_id = film.language_id where film.film_id = '$id'";
+    $query_language = mysqli_query($db, $language) or die( mysqli_error($db));
     $query = mysqli_query($db, $sql) or die( mysqli_error($db));
 }
 ?>
@@ -28,7 +33,6 @@ if($op == 'detail'){
     <link rel="stylesheet" href="style-detil.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body>
@@ -180,47 +184,51 @@ if($op == 'detail'){
                                             <th scope="row" class="text-center">Rental Duration</th>
                                             <th scope="row" class="text-center">Rental Rate</th>
                                             <th scope="row" class="text-center">Replacement Cost</th>
-                                            <th></th>
                                         </tr>
                                     <tbody>
                                         <tr>
                                             <td style="text-align:center">
-                                                <?php echo "<span class='language'>{$row['release_year']}</span>"; ?>
+                                            <?php 
+                                            while ($row2 = $query_language->fetch_assoc()) :
+                                                ?>
+                                                <?php echo "<span class='language'>{$row2['name']}</span>"; ?>
+                                            <?php endwhile; ?>
                                             </td>
                                             <td style="text-align:center">
-                                                <?php echo "<span class='duration'>{$row['rental_duration']}</span>"; ?>
+                                                <?php echo "<span class='duration'>{$row['rental_duration']} Days</span>"; ?>
                                             </td>
                                             <td style="text-align:center">
-                                                <?php echo "<span class='rate'>{$row['rental_rate']}</span>"; ?></td>
+                                                <?php echo "<span class='rate'>$ {$row['rental_rate']}</span>"; ?></td>
                                             <td style="text-align:center">
-                                                <?php echo "<span class='cost'>{$row['replacement_cost']}</span>"; ?>
+                                                <?php echo "<span class='cost'>$ {$row['replacement_cost']}</span>"; ?>
                                             </td>
-                                            <td></td>
                                         </tr>
                                         <tr>
-                                            <td style="text-align:center" colspan="2">
+                                            <td class="button" style="text-align:center" colspan="2">
                                                 <div class="input-group" style="width: 100%; height: 100%;">
-                                                    <br><br>
+                                                <br><br>
+                                                <div class="spacer"></div>
+                                                <a href="index.php">
                                                     <input type="button" style="width: 100%; height: 100%;"
                                                         value="<-  Back" />
-
+                                                </a>
                                                 </div>
                                             </td>
-                                            <td></td>
-                                            <td style="text-align:center;">
+                                            <td class="button" style="text-align:center;">
                                                 <div class="input-group" style="width: 100%; height: 100%;">
-                                                    <br><br>
+                                                <br><br>
+                                                <div class="spacer"></div>
                                                     <input type="button" class="edit" style="width: 100%; height: 100%;"
                                                         value="Edit" />
 
                                                 </div>
                                             </td>
-                                            <td style="text-align:center;">
+                                            <td class="button" style="text-align:center;">
                                                 <div class="input-group" style="width: 100%; height: 100%;">
-                                                    <br><br>
+                                                <br><br>
+                                                <div class="spacer"></div>
                                                     <input type="button" class="delete" style="width: 100%; height: 100%;"
-                                                        value="Delete" />
-
+                                                        value="Remove" />
                                                 </div>
                                             </td>
                                         </tr>

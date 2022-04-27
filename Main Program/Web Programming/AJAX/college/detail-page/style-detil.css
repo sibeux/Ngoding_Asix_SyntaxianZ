@@ -376,12 +376,12 @@ ul {
 .product-card {
     position: relative;
     display: block;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     padding-left: 55px;
     /* jarak gambar dengan tulisan title, desk, rating */
     justify-content: space-between;
     align-items: center;
-    width: 63vw;
+    width: 68vw;
     /* lebar kartu*/
     height: 55vh;
     /* tinggi kartu */
@@ -588,7 +588,7 @@ a img {
 footer {
     position: absolute;
     left: 0px;
-    margin-top: 90px;
+    margin-top: -220px;
     background: rgb(29, 16, 49);
     height: auto;
     width: 100%;
@@ -699,6 +699,34 @@ input[type=button]{
     cursor: pointer;
 }
 
+input[type=button][class=edit]{
+    background-color: #fdc517;
+    color: #fff;
+    padding: 5px 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type=button][class=delete]{
+    background-color: #da3547;
+    color: #fff;
+    padding: 5px 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 input[type=button]:hover{
     background-color: #0b5fd9;
+}
+
+input[type=button][class=edit]:hover{
+    background-color: #fccb2d;
+}
+
+input[type=button][class=delete]:hover{
+    background-color: #bb2d3b;
+}
+
+td{
+    border-style : hidden!important;
 }
