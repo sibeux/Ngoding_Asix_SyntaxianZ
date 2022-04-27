@@ -462,7 +462,7 @@ a img {
     background-color: #eb8052;
 }
 
-.product-discount .cost {
+.cost {
     padding: 0.1rem 0.7rem;
     border-radius: 0.8rem;
     color: white;
@@ -486,6 +486,30 @@ a img {
     margin-left: 15px;
     top: 35px;
     position: absolute;
+}
+
+.rate {
+    /* padding - jarak konten dengan wadah */
+    padding: 0.1rem 0.7rem;
+    border-radius: 0.8rem;
+    color: white;
+    background-color: #a944b9;
+}
+
+.language {
+    /* padding - jarak konten dengan wadah */
+    padding: 0.1rem 0.7rem;
+    border-radius: 0.8rem;
+    color: white;
+    background-color: #dfb43f;
+}
+
+.duration {
+    /* padding - jarak konten dengan wadah */
+    padding: 0.1rem 0.7rem;
+    border-radius: 0.8rem;
+    color: white;
+    background-color: #3fdf77;
 }
 
 .product-discount .PG-13 {
@@ -659,13 +683,14 @@ img {
     max-width: 100%;
 }
 
-.row {
-    text-align: center;
-    margin: 0 auto;
+.table th{
+    color: white;
 }
 
-.row1 .col {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
+td{
+    height: 100%;
+}
+.table .btn {
+    width: 100%;
+    height: 100%;
 }

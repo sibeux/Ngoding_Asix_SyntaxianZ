@@ -25,9 +25,10 @@ if($op == 'detail'){
     <title>Document</title>
     <!-- bootstrap css -->
     <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="style-detail.css">
+    <link rel="stylesheet" href="style-detil.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body>
@@ -172,39 +173,47 @@ if($op == 'detail'){
                                 <span class="overview">Overview</span>
                                 <div class="product-price"><?= $row['description'] ?></div>
                                 <br>
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="product-discount">
-                                            <?php
-                                                echo "<span class='features'>• Langauge • </span>";
-                                                ?>
-                                        </div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="row" class="text-center">Language</th>
+                                            <th scope="row" class="text-center">Rental Duration</th>
+                                            <th scope="row" class="text-center">Rental Rate</th>
+                                            <th scope="row" class="text-center">Replacement Cost</th>
+                                        </tr>
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align:center">
+                                                <?php echo "<span class='language'>{$row['release_year']}</span>"; ?>
+                                            </td>
+                                            <td style="text-align:center">
+                                                <?php echo "<span class='duration'>{$row['rental_duration']}</span>"; ?>
+                                            </td>
+                                            <td style="text-align:center">
+                                                <?php echo "<span class='rate'>{$row['rental_rate']}</span>"; ?></td>
+                                            <td style="text-align:center">
+                                                <?php echo "<span class='cost'>{$row['replacement_cost']}</span>"; ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th style="text-align:center" colspan="4">
+                                                <div class="input-group" style="width: 100%; height: 100%;">
+                                                <br>
+                                                    <input type="button" style="width: 100%; height: 100%;"
+                                                        value="Back" />
+                                                        <span class="fa-solid fa-arrow-left-long"></span>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </tbody>
+                                    </thead>
+                                </table>
+                                <br>
+                                <div class="col-md">
+                                    <div class="btn">
+                                        <i class='bx bxs-edit-alt'></i>
+                                        <i class='bx bxs-trash'></i>
                                     </div>
-                                    <div class="col">
-                                        <div class="product-discount">
-                                            <?php
-                                                echo "<span class='features'>• Langauge • </span>";
-                                                ?>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="product-discount">
-                                            <?php
-                                                echo "<span class='features'>• Langauge • </span>";
-                                                ?>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="product-discount">
-                                            <?php
-                                                echo "<span class='features'>• Langauge • </span>";
-                                                ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="btn">
-                                    <i class='bx bxs-edit-alt'></i>
-                                    <i class='bx bxs-trash'></i>
                                 </div>
                             </div>
                         </div>
