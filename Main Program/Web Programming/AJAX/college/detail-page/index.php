@@ -126,6 +126,7 @@
 
                 $result =  $db->query($sql);
                 
+                $lazy = 1;
                 while ($row = $result->fetch_assoc()) :
                 
                 ?>
@@ -133,9 +134,18 @@
                     <div class="product-container">
                         <div class="product-card">
                             <a href="film_detail.php?op=detail&id=<?=$row['film_id']?>" style="text-decoration: none">
-                                <img width="95" height="135"
-                                    src='https://picsum.photos/95/135?random=<?=$row['film_id']?>' alt=""
-                                    title="<?= ucwords($row['title']) ?>" />
+                            <?php 
+                            if ($lazy < 10){
+                            echo    "<img width='95' height='135'
+                                    src='https://picsum.photos/95/135?random={$row['film_id']}' alt=''
+                                    title='{$row['title']}' />";
+                                    $lazy++;
+                            }else{
+                                echo    "<img width='95' height='135' class='lazy'
+                                    data-src='https://picsum.photos/95/135?random={$row['film_id']}' alt=''
+                                    title='{$row['title']}' />";
+                            }
+                            ?>
                             </a>
                             <div class="product-body">
                                 <a href="film_detail.php?op=detail&id=<?=$row['film_id']?>"
@@ -248,6 +258,7 @@
     <script src="script.js"></script>
     <script src="script-sort.js"></script>
     <script src="script-filter.js"></script>
+    <script src="lazy-load.js"></script>
     <!-- <script src="script-search-sort.js"></script> -->
 </body>
 
