@@ -119,71 +119,7 @@
                 </div>
             </header>
             <div class="row" id="data">
-                <?php
-                require_once('./db.php');
 
-                $sql = "SELECT * FROM film";
-
-                $result =  $db->query($sql);
-                
-                $lazy = 1;
-                while ($row = $result->fetch_assoc()) :
-                
-                ?>
-                <div class="col col-lg-6 col-xl-4">
-                    <div class="product-container">
-                        <div class="product-card">
-                            <a href="film_detail.php?op=detail&id=<?=$row['film_id']?>" style="text-decoration: none">
-                            <?php 
-                            if ($lazy < 10){
-                            echo    "<img width='95' height='135'
-                                    src='https://picsum.photos/95/135?random={$row['film_id']}' alt=''
-                                    title='{$row['title']}' />";
-                                    $lazy++;
-                            }else{
-                                echo    "<img width='95' height='135' class='lazy'
-                                    data-src='https://picsum.photos/95/135?random={$row['film_id']}' alt=''
-                                    title='{$row['title']}' />";
-                            }
-                            ?>
-                            </a>
-                            <div class="product-body">
-                                <a href="film_detail.php?op=detail&id=<?=$row['film_id']?>"
-                                    style="text-decoration: none;">
-                                    <span class="product-title"><?= ucwords($row['title']) ?></span>
-                                </a>
-                                <div class="product-price"><?= $row['description'] ?>
-                                </div>
-                                <div class="product-discount">
-                                    <?php
-                                        $genre = explode(" ", $row['rating']);
-                                        for ($i = 0; $i < count($genre); $i++){
-                                            echo "<a style='text-decoration: none;'>";
-                                            echo "<span class='$genre[$i]'>$genre[$i]</span>";
-                                            echo "</a>";
-                                        }
-                                        $year = $row['release_year'];
-                                        $length = $row['length'];
-                                        $id = $row['film_id'];
-                                        echo "<span class='year'>$year</span>";
-                                        $duration_minute = $length % 60;
-                                        $duration_hour = ($length - $duration_minute) / 60;
-                                        echo "<span class='cost'>{$duration_hour}h {$duration_minute}m</span>";
-                                        echo "<br><br>";
-                                        echo "<a href='film_detail.php?op=detail&id={$id}' style='text-decoration: none;'>";
-                                        echo "<span class='detail'>Detail</span>";
-                                        echo "</a>";
-                                        ?>
-                                </div>
-                                <div class="btn">
-                                    <i class='bx bxs-edit-alt'></i>
-                                    <i class='bx bxs-trash'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php endwhile; ?>
             </div>
         </div>
         <footer>
@@ -254,6 +190,42 @@
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
+    <script>
+    $(document).ready(function() {
+
+        var flag = 0;
+        $.ajax({
+            type: "GET",
+            url: "get-data.php",
+            data: {
+                'offset': 0,
+                'limit': 9
+            },
+            success: function(data) {
+                $("body .row").append(data);
+                flag += 9;
+            }
+        });
+
+        $(window).scroll(function() {
+
+            if ($(window).scrollTop() >= $(document).height() - $(window).height()) {
+                $.ajax({
+                    type: "GET",
+                    url: "get-data.php",
+                    data: {
+                        'offset': flag,
+                        'limit': 9
+                    },
+                    success: function(data) {
+                        $("body .row").append(data);
+                        flag += 9;
+                    }
+                });
+            }
+        })
+    });
     </script>
     <script src="script.js"></script>
     <script src="script-sort.js"></script>
