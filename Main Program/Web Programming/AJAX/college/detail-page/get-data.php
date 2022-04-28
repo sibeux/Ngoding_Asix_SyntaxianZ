@@ -10,10 +10,9 @@ if(isset($_GET['offset']) && isset($_GET['limit'])){
     $data = mysqli_query($connect, "SELECT * FROM film LIMIT $limit OFFSET $offset");
 
     while($row = mysqli_fetch_array($data)){
-        $genre = explode(" ", $row['rating']);
+    $genre = explode(" ", $row['rating']);
     $title = ucwords($row['title']);
     echo "
-    
     <div class='col col-lg-6 col-xl-4'>
                     <div class='product-container'>
                         <div class='product-card'>
