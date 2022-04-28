@@ -119,7 +119,21 @@
                 </div>
             </header>
             <div class="row" id="data">
-
+                <!-- ================================================================================= -->
+                <!-- lazy load omage -->
+                <!-- <?php 
+                            if ($lazy < 10){
+                            echo    "<img width='95' height='135'
+                                    src='https://picsum.photos/95/135?random={$row['film_id']}' alt=''
+                                    title='{$row['title']}' />";
+                                    $lazy++;
+                            }else{
+                                echo    "<img width='95' height='135' class='lazy'
+                                    data-src='https://picsum.photos/95/135?random={$row['film_id']}' alt=''
+                                    title='{$row['title']}' />";
+                            }
+                            ?> -->
+                <!-- ================================================================================= -->
             </div>
         </div>
         <footer>
@@ -210,7 +224,7 @@
 
         $(window).scroll(function() {
 
-            if($(window).scrollTop() + $(window).height() > $(document).height() - 900) {
+            if ($(window).scrollTop() + $(window).height() > $(document).height() - 300) {
                 $.ajax({
                     type: "GET",
                     url: "get-data.php",
