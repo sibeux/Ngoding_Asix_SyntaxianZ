@@ -1,16 +1,16 @@
 <?php
 
-if(isset($_GET['offset']) && isset($_GET['limit']) && isset($_GET['milih'])){
+require_once "./db.php";
 
-    $limit = $_GET['limit'];
-    $offset = $_GET['offset'];
-    $milih = $_GET['milih'];
+$milih = $_GET["milih"];
 
-    $connect = mysqli_connect('localhost', 'root', '', 'sakila');
+$sql = "SELECT * FROM film
+        ORDER BY {$milih};
+";
 
-    $data = mysqli_query($connect, "SELECT * FROM film ORDER BY $milih LIMIT $limit OFFSET $offset");
+$result = $db->query($sql);
 
-    while($row = mysqli_fetch_array($data)){
+while ($row =  $result->fetch_assoc()) {
     $genre = explode(" ", $row['rating']);
     $title = ucwords($row['title']);
     echo "
@@ -54,7 +54,5 @@ if(isset($_GET['offset']) && isset($_GET['limit']) && isset($_GET['milih'])){
                         </div>
                     </div>
                 </div>
-                
     ";
-    }
 }

@@ -205,47 +205,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
     </script>
-    <script>
-    $(document).ready(function() {
-
-        var flag = 0;
-        $.ajax({
-            type: "GET",
-            url: "get-data.php",
-            data: {
-                'offset': 0,
-                'limit': 9
-            },
-            success: function(data) {
-                $("body .row").append(data);
-                flag += 9;
-            }
-        });
-
-        $(window).scroll(function() {
-
-            if ($(window).scrollTop() + $(window).height() > $(document).height() - 300) {
-                $.ajax({
-                    type: "GET",
-                    url: "get-data.php",
-                    data: {
-                        'offset': flag,
-                        'limit': 9
-                    },
-                    success: function(data) {
-                        $("body .row").append(data);
-                        flag += 9;
-                    }
-                });
-            }
-        })
-    });
-    </script>
     <script src="script.js"></script>
     <script src="script-sort.js"></script>
     <script src="script-filter.js"></script>
     <script src="lazy-load.js"></script>
-    <!-- <script src="script-search-sort.js"></script> -->
+    <script src="get-data.js"></script>
 </body>
 
 </html>
