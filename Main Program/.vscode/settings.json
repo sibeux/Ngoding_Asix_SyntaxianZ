@@ -1,0 +1,93 @@
+{
+    "editor.fontSize": 14,
+    "window.zoomLevel": 0,
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.cursorStyle": "block",
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.inlineSuggest.enabled": true,
+    "workbench.colorCustomizations": {
+        "editorHoverWidget.highlightForeground": "#00ffff",
+        "editorInlayHint.parameterForeground": "#ff0000",
+        "editorCursor.foreground": "#ff9100",
+        "terminal.ansiBrightCyan": "#00e1ff"
+    },
+    "editor.tokenColorCustomizations": {"comments": "#00ffc8"},
+    "bracketPairColorizer.colorMode": "Consecutive",
+    "editor.find.autoFindInSelection": "multiline",
+    "editor.multiCursorPaste": "spread",
+    "editor.fastScrollSensitivity": 30,
+    "editor.matchBrackets": "always",
+    "editor.padding.bottom": 0,
+    "editor.multiCursorModifier": "alt",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorWidth": 1,
+    "gitlens.remotes": null,
+    "csv-preview.lineNumbers": "source",
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        }
+    },
+    "editor.hover.enabled": true,
+    "editor.cursorBlinking": "blink",
+    "editor.cursorWidth": 2,
+    "editor.cursorStyle": "line",
+    "editor.lineNumbers": "on",
+    "editor.inlayHints.enabled": true,
+    "editor.parameterHints.enabled": true,
+    "editor.suggest.showTypeParameters": true,
+    "editor.minimap.enabled": false,
+    "editor.guides.bracketPairs": true,
+    "inline-parameters.enabled": true,
+    "inline-parameters.border": "none",
+    "vsintellicode.java.completionsEnabled": true,
+    "git.postCommitCommand": "push",
+    "git.autorefresh": true,
+    "git.autofetch": "all",
+    "git.enableStatusBarSync": true,
+    "git.smartCommitChanges": "all",
+    "git.allowNoVerifyCommit": true,
+    "rainbow_csv.autodetect_separators": [
+        "\t",
+        ",",
+        ";",
+        "|"
+
+    ],
+    "rainbow_csv.enable_separator_autodetection" : true,
+    "rainbow_csv.enable_tooltip_column_names": true,
+    "rainbow_csv.enable_context_menu_head": true,
+    "java.project.sourcePaths": [
+        "JAVA_OOP/src"
+    ],
+    "C_Cpp.errorSquiggles": "Disabled",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "JAVA_OOP/src/com/javaoop/Database/Driver JDBC/postgresql-42.3.1.jar",
+        "JAVA_OOP/src/com/javaoop/materi/Database/Driver JDBC/postgresql-42.3.1.jar",
+        "/home/nasrulwahabi/Downloads/Compressed/commons-lang3-3.12.0-bin/commons-lang3-3.12.0/commons-lang3-3.12.0.jar",
+        "JAVA_OOP/src/com/javaoop/materi/Pretty_Table/commons-lang3-3.12.0-bin/commons-lang3-3.12.0/commons-lang3-3.12.0.jar",
+        "JAVA_OOP/src/com/javaoop/tugas/SMT_3/Project_Akhir/Model/db4o/db4o-7.2.44.10827-osgi.jar",
+        "JAVA_OOP/src/com/javaoop/tugas/SMT_3/Project_Akhir/Model/db4o/jpox-db4o-1.2.0-beta-5.jar",
+        "JAVA_OOP/src/com/javaoop/tugas/SMT_3/Project_Akhir/Model/db4o/objectmanager-7.2-java/7.2/lib/db4o-java1.2.jar",
+        "JAVA_OOP/src/com/javaoop/tugas/SMT_3/Project_Akhir/Entities/db4o/objectmanager-7.2-java/7.2/lib/db4o-sql.jar"
+    ]
+}
