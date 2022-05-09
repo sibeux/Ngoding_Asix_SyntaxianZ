@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ComparatorApp",
+            "request": "launch",
+            "mainClass": "com.javaoop.programmer_zaman_now.java_generic.application.ComparatorApp",
+            "projectName": "PEMROGRAMAN_ff228122"
+        },
+        {
+            "type": "java",
             "name": "Launch ComparableApp",
             "request": "launch",
             "mainClass": "com.javaoop.programmer_zaman_now.java_generic.application.ComparableApp",
