@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch WildcardApp",
+            "request": "launch",
+            "mainClass": "com.javaoop.programmer_zaman_now.java_generic.application.WildcardApp",
+            "projectName": "PEMROGRAMAN_ff228122"
+        },
+        {
+            "type": "java",
+            "name": "Launch contoh2",
+            "request": "launch",
+            "mainClass": "com.javaoop.materi.contoh2",
+            "projectName": "PEMROGRAMAN_ff228122"
+        },
+        {
+            "type": "java",
             "name": "Launch test",
             "request": "launch",
             "mainClass": "com.javaoop.materi.Pretty_Table.test",
