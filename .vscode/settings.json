@@ -44,7 +44,7 @@
     "editor.inlineSuggest.enabled": true,
     "workbench.colorCustomizations": {
         "editorHoverWidget.highlightForeground": "#00ffff",
-        "editorInlayHint.parameterForeground": "#ff0000",
+        "editorInlayHint.parameterForeground": "#00ffb3", // untuk mengubah warna parameter
         "editorCursor.foreground": "#ff9100",
         "terminal.ansiBrightCyan": "#00e1ff"
     },

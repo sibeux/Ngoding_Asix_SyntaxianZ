@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TypeErasureApp",
+            "request": "launch",
+            "mainClass": "com.javaoop.programmer_zaman_now.java_generic.application.TypeErasureApp",
+            "projectName": "PEMROGRAMAN_ff228122"
+        },
+        {
+            "type": "java",
             "name": "Launch WildcardApp",
             "request": "launch",
             "mainClass": "com.javaoop.programmer_zaman_now.java_generic.application.WildcardApp",
