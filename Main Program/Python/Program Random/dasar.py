@@ -1,17 +1,14 @@
-print('test')
-
-print('sibeux')
-
-# fizzbuzz
-for i in range(1, 101):
-    if i % 3 == 0 and i % 5 == 0:
-        print('FizzBuzz')
-    elif i % 3 == 0:
-        print('Fizz')
-    elif i % 5 == 0:
-        print('Buzz')
-    else:
-        print(i)
+import pandas as pd
+import numpy as np
 
 
-print("dari vs cdo")
+# Creating empty series
+ser = pd.Series()
+
+print(ser)
+
+# simple array
+data = np.array(['g', 'e', 'e', 'k', 's'])
+
+ser = pd.Series(data)
+print(ser)
