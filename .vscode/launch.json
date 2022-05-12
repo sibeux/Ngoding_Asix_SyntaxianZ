@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ArrayHelperApp",
+      "request": "launch",
+      "mainClass": "com.javaoop.programmer_zaman_now.java_generic.application.ArrayHelperApp",
+      "projectName": "PEMROGRAMAN_ff228122"
+    },
+    {
+      "type": "java",
+      "name": "Launch CollectionApp",
+      "request": "launch",
+      "mainClass": "CollectionApp",
+      "projectName": "PEMROGRAMAN_ff228122"
+    },
+    {
+      "type": "java",
       "name": "Launch CollectionApp",
       "request": "launch",
       "mainClass": "com.javaoop.programmer_zaman_now.java_collection.CollectionApp",
