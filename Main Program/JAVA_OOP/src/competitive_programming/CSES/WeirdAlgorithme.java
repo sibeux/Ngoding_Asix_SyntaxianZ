@@ -1,4 +1,4 @@
-package CSES;
+package competitive_programming.CSES;
 import java.util.Scanner;
 public class WeirdAlgorithme{
     public static void main(String[] args) {

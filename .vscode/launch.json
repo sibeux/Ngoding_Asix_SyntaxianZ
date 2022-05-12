@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch a",
+      "request": "launch",
+      "mainClass": "competitive_programming.CSES.a",
+      "projectName": "PEMROGRAMAN_ff228122"
+    },
+    {
+      "type": "java",
       "name": "Launch ArrayHelperApp",
       "request": "launch",
       "mainClass": "com.javaoop.programmer_zaman_now.java_generic.application.ArrayHelperApp",
