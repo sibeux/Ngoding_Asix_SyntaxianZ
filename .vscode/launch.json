@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Penjumlahan",
+      "request": "launch",
+      "mainClass": "competitive_programming.TLX.Penjumlahan",
+      "projectName": "PEMROGRAMAN_ff228122"
+    },
+    {
+      "type": "java",
+      "name": "Launch PasarRakyat",
+      "request": "launch",
+      "mainClass": "competitive_programming.TLX.PasarRakyat",
+      "projectName": "PEMROGRAMAN_ff228122"
+    },
+    {
+      "type": "java",
       "name": "Launch a",
       "request": "launch",
       "mainClass": "competitive_programming.CSES.a",
