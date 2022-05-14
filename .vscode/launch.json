@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "com.javaoop.kelas_terbuka.dasarJava.Main",
+      "projectName": "PEMROGRAMAN_ff228122"
+    },
+    {
+      "type": "java",
       "name": "Launch Penjumlahan",
       "request": "launch",
       "mainClass": "competitive_programming.TLX.Penjumlahan",
