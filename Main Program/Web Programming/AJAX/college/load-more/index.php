@@ -8,7 +8,7 @@
     <title>Document</title>
     <!-- bootstrap css -->
     <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="setel.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -120,7 +120,7 @@
             </header>
             <div class="row" id="data">
                 <!-- ================================================================================= -->
-                <!-- lazy load omage -->
+                <!-- lazy load image -->
                 <!-- <?php 
                             if ($lazy < 10){
                             echo    "<img width='95' height='135'
@@ -134,6 +134,10 @@
                             }
                             ?> -->
                 <!-- ================================================================================= -->
+            </div>
+            <div class="d-grid gap-2 col-2 mx-auto">
+                <button class="btn btn-danger center-block loadMore">
+                    Load More</button>
             </div>
         </div>
         <footer>
@@ -209,7 +213,7 @@
     <script src="script-sort.js"></script>
     <script src="script-filter.js"></script>
     <script src="lazy-load.js"></script>
-    <script src="get-data.js"></script>
+    <script src="get-dataa.js"></script>
 </body>
 
 </html>
