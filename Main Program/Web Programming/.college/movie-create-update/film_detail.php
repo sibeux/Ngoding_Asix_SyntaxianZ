@@ -107,13 +107,6 @@ if($op == 'detail'){
                     <span class="tooltip">LinkedIn</span>
                 </li>
                 <li>
-                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
-                        <i class='bx bxl-google'></i>
-                        <span class="links_name">wahabinasrul</span>
-                    </a>
-                    <span class="tooltip">Google</span>
-                </li>
-                <li>
                     <a href="#">
                         <i class='bx bx-cog'></i>
                         <span class="links_name">Setting</span>
@@ -211,7 +204,7 @@ if($op == 'detail'){
                                                 <a href="index.php">
                                                     <input type="button" style="width: 100%; height: 100%;"
                                                         value="<-  Back" />
-                                                </a>
+                                                    </a>
                                                 </div>
                                             </td>
                                             <td class="button" style="text-align:center;">
@@ -219,16 +212,18 @@ if($op == 'detail'){
                                                 <br><br>
                                                 <div class="spacer"></div>
                                                     <input type="button" class="edit" style="width: 100%; height: 100%;"
-                                                        value="Edit" />
-
+                                                        value="Edit" onclick="href_edit()"/>
+                                                
                                                 </div>
                                             </td>
                                             <td class="button" style="text-align:center;">
                                                 <div class="input-group" style="width: 100%; height: 100%;">
                                                 <br><br>
                                                 <div class="spacer"></div>
+                                                
                                                     <input type="button" class="delete" style="width: 100%; height: 100%;"
                                                         value="Remove" />
+                                                
                                                 </div>
                                             </td>
                                         </tr>
@@ -300,6 +295,10 @@ function menuBtnChange() {
     } else {
         closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
     }
+}
+
+function href_edit(){
+    // location.href = "index.php"
 }
 </script>
 <!-- Jquery -->

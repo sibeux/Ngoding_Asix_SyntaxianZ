@@ -691,42 +691,76 @@ td {
     height: 100%;
 }
 
-input[type=button]{
+input[type=button] {
     background-color: #0a6ffd;
     color: #fff;
     padding: 5px 30px;
     text-decoration: none;
     cursor: pointer;
-}
-
-input[type=button][class=edit]{
-    background-color: #fdc517;
-    color: #fff;
-    padding: 5px 30px;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-input[type=button][class=delete]{
-    background-color: #da3547;
-    color: #fff;
-    padding: 5px 30px;
-    text-decoration: none;
-    cursor: pointer;
+    border-radius: 5px;
+    border: none;
 }
 
 input[type=button]:hover{
+    width: 0%;
+	height: 100%;
+	top: 0;
+	left: 0;
+    transition: all 0.5s ease-in-out;
+	background: #fff;
+}
+
+input[type=button]:hover,
+input[type=button]:active {
+	color: #0e83cd;
+}
+
+input[type=button][class=edit]:hover,
+input[type=button][class=edit]:active {
+	color: #fdc517;
+}
+
+input[type=button][class=delete]:hover,
+input[type=button][class=delete]:active {
+	color: #cd110e;
+}
+
+input[type=button]:hover:after,
+input[type=button]:active:after {
+	width: 100%;
+}
+
+input[type=button][class=edit] {
+    background-color: #fdc517;
+}
+
+input[type=button][class=delete] {
+    background-color: #da3547;
+}
+
+/* input[type=button]:hover {
     background-color: #0b5fd9;
+	top: -2px;
+} */
+
+input[type=button][class=edit]:hover {
+    width: 0%;
+	height: 100%;
+	top: 0;
+	left: 0;
+    transition: all 0.5s ease-in-out;
+	background: #fff;
 }
 
-input[type=button][class=edit]:hover{
-    background-color: #fccb2d;
+input[type=button][class=delete]:hover {
+    width: 0%;
+	height: 100%;
+	top: 0;
+	left: 0;
+    transition: all 0.5s ease-in-out;
+	background: #fff;
 }
 
-input[type=button][class=delete]:hover{
-    background-color: #bb2d3b;
-}
-
-td{
-    border-style : hidden!important;
+td {
+    border-style: hidden !important;
 }

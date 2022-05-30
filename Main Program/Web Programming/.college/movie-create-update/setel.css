@@ -195,6 +195,16 @@ ul {
     color: #FFF;
 }
 
+.sidebar .bx-folder-plus{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    background: #11101D;
+    color: #FFF;
+}
+
 .sidebar.open .bx-search:hover {
     background: #1d1b31;
     color: #FFF;
@@ -206,6 +216,11 @@ ul {
 }
 
 .sidebar.open .bx-filter-alt:hover {
+    background: #1d1b31;
+    color: #FFF;
+}
+
+.sidebar.open .bx-folder-plus:hover {
     background: #1d1b31;
     color: #FFF;
 }
@@ -223,6 +238,11 @@ ul {
 .sidebar .bx-filter-alt:hover {
     background: #FFF;
     color: #217dd9;
+}
+
+.sidebar .bx-folder-plus:hover {
+    background: #FFF;
+    color: #f65065;
 }
 
 .sidebar li a {

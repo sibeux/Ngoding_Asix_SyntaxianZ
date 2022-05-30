@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>movie-create-update</title>
     <!-- bootstrap css -->
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="setel.css">
@@ -22,6 +22,11 @@
                 <i class='bx bx-menu' id="btn"></i>
             </div>
             <ul class="nav-list">
+                <li>
+                    <i class='bx bx-folder-plus'></i>
+                    <input type="submit">
+                    <span class="tooltip">Add Film</span>
+                </li>
                 <li>
                     <i class='bx bx-search'></i>
                     <input type="text" placeholder="Search..." id="typing">
@@ -83,13 +88,6 @@
                         <span class="links_name">LinkedIn</span>
                     </a>
                     <span class="tooltip">LinkedIn</span>
-                </li>
-                <li>
-                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
-                        <i class='bx bxl-google'></i>
-                        <span class="links_name">wahabinasrul</span>
-                    </a>
-                    <span class="tooltip">Google</span>
                 </li>
                 <li>
                     <a href="#">
