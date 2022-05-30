@@ -29,7 +29,10 @@
 
             <!-- mb = margin bottom -->
             <div class="form-group mb-2 row">
-                <label for="exampleFormControlSelect1" class="col-sm-2 col-form-label control-label">Thumbnail</label>
+                <!-- <label for="exampleFormControlSelect1" class="col-sm-2 col-form-label control-label">Thumbnail</label> -->
+                <!-- kalo pake for="exampleFormControlSelect1", entar labelnya jadi bisa kepencet, harusnya ga bisa diapa2in karena cuma judul -->
+                <label for="form-control" class="col-sm-2 col-form-label control-label">Thumbnail</label>
+                <!-- makanya pake form-control biar ga bisa dipencet slebewwww -->
                 <div class="col-sm-10">
                     <input class="form-control" type="file" id="exampleFormControlSelect1">
                 </div>
@@ -157,7 +160,7 @@
                         Submit
                     </button>
                     <button type="button" class="btn btn-outline-secondary">
-                        <span class="fa-solid fa-arrow-left-long"></span> 
+                        <span class="fa-solid fa-arrow-left-long"></span>
                         Back</button>
                 </div>
             </div>
