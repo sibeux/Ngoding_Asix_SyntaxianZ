@@ -298,7 +298,7 @@ function menuBtnChange() {
 }
 
 function href_edit(){
-    // location.href = "index.php"
+    location.href = "form/edit.html"
 }
 </script>
 <!-- Jquery -->

@@ -22,9 +22,9 @@
                 <i class='bx bx-menu' id="btn"></i>
             </div>
             <ul class="nav-list">
-                <li>
+                <li class="new">
                     <i class='bx bx-folder-plus'></i>
-                    <input type="submit">
+                    <input type="submit" value="Add Film" onclick="addFilm()">
                     <span class="tooltip">Add Film</span>
                 </li>
                 <li>
@@ -166,6 +166,7 @@
     let searchBtn = document.querySelector(".bx-search");
     let sortBtn = document.querySelector(".bx-sort-alt-2");
     let filterBtn = document.querySelector(".bx-filter-alt");
+    let submitBtn = document.querySelector(".bx-folder-plus");
 
     closeBtn.addEventListener("click", () => {
         sidebar.classList.toggle("open");
@@ -187,6 +188,11 @@
         menuBtnChange(); //calling the function(optional)
     });
 
+    submitBtn.addEventListener("click", () => { // Sidebar open when you click on the filter iocn
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+    });
+
     // following are the code to change sidebar button(optional)
     function menuBtnChange() {
         if (sidebar.classList.contains("open")) {
@@ -194,6 +200,10 @@
         } else {
             closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
         }
+    }
+
+    function addFilm(){
+        location.href = "form/index.html";
     }
     </script>
     <!-- Jquery -->

@@ -155,6 +155,21 @@ ul {
     background: #11101D;
 }
 
+.sidebar input[type="submit"] {
+    font-size: 15px;
+    color: #FFF;
+    font-weight: 400;
+    text-align: left;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    width: 50px;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.5s ease;
+    background: #11101D;
+}
+
 .sidebar.open input {
     padding: 0 20px 0 50px;
     width: 100%;
@@ -163,6 +178,16 @@ ul {
 .sidebar.open select{
     padding: 0 20px 0 50px;
     width: 100%;
+}
+
+.sidebar.open input[type="submit"] {
+    padding: 0 20px 0 50px;
+    width: 100%;
+}
+
+.sidebar.open input[type="submit"]:hover {
+    background: #1d1b31;
+    color: #FFF;
 }
 
 .sidebar .bx-search {
@@ -242,7 +267,7 @@ ul {
 
 .sidebar .bx-folder-plus:hover {
     background: #FFF;
-    color: #f65065;
+    color: #1fe6d5;
 }
 
 .sidebar li a {
