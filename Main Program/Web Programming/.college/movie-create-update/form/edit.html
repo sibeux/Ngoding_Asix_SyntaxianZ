@@ -167,6 +167,11 @@
         </form>
     </div>
     <script>
+        $(document).ready(function(){
+            $("form").submit(function(event){
+                event.preventDefault();
+            })
+        })
         function backAdd() {
             location.href = "javascript:history.back()";
         }

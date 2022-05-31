@@ -202,8 +202,8 @@
         }
     }
 
-    function addFilm(){
-        location.href = "form/index.html";
+    function addFilm() {
+        location.href = "form/new.html";
     }
     </script>
     <!-- Jquery -->
