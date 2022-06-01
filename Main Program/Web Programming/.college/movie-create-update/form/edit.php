@@ -6,18 +6,18 @@
                 }else{
                     $op = "";
                 }
-                    $id = isset($_GET['id']) ? $_GET['id'] : '';
-                    $sql = "SELECT * FROM film WHERE film_id = '$id'";
-                    $table_language = "SELECT * FROM language";
-                    $language = "SELECT film.film_id, film.language_id, language.name
-                    from language
-                    join film 
-                    on language.language_id = film.language_id where film.film_id = '$id'";
-                    $query_language = mysqli_query($db, $language) or die( mysqli_error($db));
-                    $query = mysqli_query($db, $sql) or die( mysqli_error($db));
-                    $table_language = mysqli_query($db, $table_language) or die( mysqli_error($db));
-            
-                    $data = [];
+                $id = isset($_GET['id']) ? $_GET['id'] : '';
+                $sql = "SELECT * FROM film WHERE film_id = '$id'";
+                $table_language = "SELECT * FROM language";
+                $language = "SELECT film.film_id, film.language_id, language.name
+                from language
+                join film 
+                on language.language_id = film.language_id where film.film_id = '$id'";
+                $query_language = mysqli_query($db, $language) or die( mysqli_error($db));
+                $query = mysqli_query($db, $sql) or die( mysqli_error($db));
+                $table_language = mysqli_query($db, $table_language) or die( mysqli_error($db));
+
+                $data = [];
                 while ($row = mysqli_fetch_array($query)) {
                     array_push($data, $row);
             ?>
@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
-<body onload="selectedValue(<?php echo $row['language_id'] ?>)">
+<body">
     <!-- form bootstrap -->
     <div class="container">
         <h3>
@@ -186,8 +186,14 @@
                     </select>
                 </div>
             </div>
+
+            <div id="dom-target" style="display: none;">
+                <?php 
+                    $result =  json_encode($data);
+                    echo htmlspecialchars($result);
+                ?>
+            </div>
             <?php };
-            json_encode($data);
             ?>
             <div class="form-group mb-2 mt-md-4 row">
                 <label for="inputEmail3" class="col-sm-2 col-form-label control-label"></label>
@@ -218,18 +224,15 @@
     <script src="textareaLimit.js"></script>
 
     <script>
-    let language_id;
-    let rating_film;
+    var div = document.getElementById('dom-target');
+    var myData = div.textContent;
+    var data = JSON.parse(myData);
 
-    function selectedValue(id) {
-        language_id = id;
-        rating_film = "R";
-    }
     $(document).ready(function() { // syntax ini berfungsi jika ditambahkan 3 cdn di atas
         $.get("language.php", function(response) {
-            let id = language_id;
+            idLanguage = data[0]['language_id'];
             $.each(response, function(key, value) {
-                if (value.language_id == id) {
+                if (value.language_id == idLanguage) {
                     $('#language_id').append("<option selected value='" + value.language_id +
                         "'>" +
                         value
@@ -248,22 +251,27 @@
             });
         })
 
-        $.get("edit.php", function (response){
-            $.each(response, function(key, value){
-                $("#rating").append("<option value='" + value.rating + "'>" + value.rating + "</option>");
-            })
-        })
+        const ratings = ["G", "PG", "PG-13", "R", "NC-17"];
+        var rating = data[0]['rating'];
+        ratings.forEach(myFunction);
+        function myFunction(item, index) {
+            if (item == rating) {
+                $('#rating').append("<option selected value='" + item + "'>" + item + "</option>");
+            } else {
+                $('#rating').append("<option value='" + item + "'>" + item + "</option>");
+            }
+        }
 
-        // let rating = "NC-17";
-        // const ratings = ["G", "PG", "PG-13", "R", "NC-17"];
-        // ratings.forEach(myFunction);
-        // function myFunction(item, index) {
-        //     if (item == rating) {
-        //         $('#rating').append("<option selected value='" + item + "'>" + item + "</option>");
-        //     } else {
-        //         $('#rating').append("<option value='" + item + "'>" + item + "</option>");
-        //     }
-        // }
+        const features = ["Trailers", "Commentaries", "Deleted Scenes", "Behind the Scenes"];
+        var special_features = data[0]['special_features'];
+        features.forEach(myFunction);
+        function myFunction(item, index) {
+            if (item == special_features) {
+                $('#special_features').append("<option selected value='" + item + "'>" + item + "</option>");
+            } else {
+                $('#special_features').append("<option value='" + item + "'>" + item + "</option>");
+            }
+        }
 
         $("form").submit(function(event) {
             event.preventDefault();
@@ -286,6 +294,6 @@
         location.href = "../index.php";
     }
     </script>
-</body>
+    </body>
 
 </html>

@@ -226,7 +226,7 @@ if($op == 'detail'){
                                                     <br><br>
                                                     <div class="spacer"></div>
                                                     <input type="button" class="delete"
-                                                        style="width: 100%; height: 100%;" value="Remove" />
+                                                        style="width: 100%; height: 100%;" value="Remove"/>
                                                 </div>
                                             </td>
                                         </tr>
@@ -305,7 +305,6 @@ function menuBtnChange() {
         closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
     }
 }
-
 function addFilm() {
         location.href = "form/new.html";
     }
