@@ -1,3 +1,27 @@
+<?php
+                require_once("../db.php");
+
+                if(isset($_GET['op'])){
+                    $op = $_GET['op'];
+                }else{
+                    $op = "";
+                }
+                    $id = isset($_GET['id']) ? $_GET['id'] : '';
+                    $sql = "SELECT * FROM film WHERE film_id = '$id'";
+                    $table_language = "SELECT * FROM language";
+                    $language = "SELECT film.film_id, film.language_id, language.name
+                    from language
+                    join film 
+                    on language.language_id = film.language_id where film.film_id = '$id'";
+                    $query_language = mysqli_query($db, $language) or die( mysqli_error($db));
+                    $query = mysqli_query($db, $sql) or die( mysqli_error($db));
+                    $table_language = mysqli_query($db, $table_language) or die( mysqli_error($db));
+            
+                    $data = [];
+                while ($row = mysqli_fetch_array($query)) {
+                    array_push($data, $row);
+            ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,12 +36,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
-<body>
+<body onload="selectedValue(<?php echo $row['language_id'] ?>)">
     <!-- form bootstrap -->
     <div class="container">
         <h3>
             <span class="fa-solid fa-pen-to-square"></span>
-            Add New Film
+            Update Existing Film
         </h3>
         <form>
 
@@ -28,6 +52,7 @@
             </div> -->
 
             <!-- mb = margin bottom -->
+
             <div class="form-group mb-2 row">
                 <!-- <label for="exampleFormControlSelect1" class="col-sm-2 col-form-label control-label">Thumbnail</label> -->
                 <!-- kalo pake for="exampleFormControlSelect1", entar labelnya jadi bisa kepencet, harusnya ga bisa diapa2in karena cuma judul -->
@@ -41,30 +66,39 @@
             <div class="form-group mb-2 required row">
                 <label for="title" class="col-sm-2 col-form-label control-label">Title</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" placeholder="Insert Title" id="title" name="title" required="required">
+                    <input type="text" class="form-control" placeholder="Insert Title" id="title" name="title"
+                        value="<?php echo $row['title']; ?>" required="required">
                 </div>
             </div>
 
             <div class="form-group mb-2 row">
-                <label for="description"
-                    class="col-sm-2 col-form-label control-label">Description</label>
+                <label for="description" class="col-sm-2 col-form-label control-label">Description</label>
                 <div class="col-sm-10">
-                    <textarea class="form-control" placeholder="Description" id="descriptiom" name="description"></textarea>
+                    <textarea class="form-control" id="description" maxlength="150" name="description"
+                        value="<?php echo $row['description']; ?>"><?php echo $row['description']; ?></textarea>
+                    <div id="the-count">
+                        <span id="current"><?php echo strlen($row['description']); ?></span>
+                        <span id="maximum">/ 150</span>
+                    </div>
                 </div>
             </div>
 
             <div class="form-group mb-2 row">
                 <label for="release_year" class="col-sm-2 col-form-label control-label">Release Year</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" placeholder="Year" id="release_year" name="release_year">
+                    <input type="number" class="form-control" value="<?php echo $row['release_year']; ?>"
+                        id="release_year" name="release_year">
                 </div>
             </div>
 
+            <?php 
+            while ($rowLanguage = mysqli_fetch_array($query_language)) {
+            ?>
             <div class="form-group mb-2 required row">
                 <label class="col-sm-2 col-form-label control-label" for="language_id">Language</label>
                 <div class="col-sm-10">
                     <select class="form-select" id="language_id" name="language_id" required>
-                        <option value="" selected="selected">-</option>
+
                     </select>
                 </div>
             </div>
@@ -74,17 +108,19 @@
                     Language</label>
                 <div class="col-sm-10">
                     <select class="form-select" id="original_language_id" name="original_language_id">
-                        <option value="" selected="selected">-</option>
+                        <option value="NULL" selected="selected">-</option>
                     </select>
                 </div>
             </div>
+            <?php } ?>
 
             <div class="form-group mb-2 required row">
                 <label for="rental_duration" class="col-sm-2 col-form-label control-label">Rental Duration</label>
                 <div class="col-sm-10">
                     <div class="input-group">
                         <input type="number" class="form-control" placeholder="" aria-label="Recipient's username"
-                            aria-describedby="basic-addon2" required="required" id="rental_duration" name="rental_duration">
+                            aria-describedby="basic-addon2" required="required" id="rental_duration"
+                            name="rental_duration" value="<?php echo $row['rental_duration']; ?>">
                         <span class="input-group-text" id="inputGroup-sizing-default">Days</span>
                     </div>
                 </div>
@@ -97,7 +133,8 @@
                         <span class="input-group-text" id="inputGroup-sizing-default">$</span>
                         <input type="number" step="0.01" class="form-control" placeholder=""
                             aria-label="Amount (to the nearest dollar)" aria-describedby="basic-addon2"
-                            required="required" id="rental_rate" name="rental_rate">
+                            required="required" id="rental_rate" name="rental_rate"
+                            value="<?php echo $row['rental_rate']; ?>">
                     </div>
                 </div>
             </div>
@@ -107,7 +144,8 @@
                 <div class="col-sm-10">
                     <div class="input-group">
                         <input type="number" class="form-control" placeholder=""
-                            aria-label="Amount (to the nearest dollar)" aria-describedby="basic-addon2" id="length" name="length">
+                            aria-label="Amount (to the nearest dollar)" aria-describedby="basic-addon2" id="length"
+                            name="length" value="<?php echo $row['length']; ?>">
                         <span class="input-group-text" id="inputGroup-sizing-default">Minutes</span>
                     </div>
                 </div>
@@ -120,7 +158,8 @@
                         <span class="input-group-text" id="inputGroup-sizing-default">$</span>
                         <input type="number" step="0.01" class="form-control" placeholder=""
                             aria-label="Amount (to the nearest dollar)" aria-describedby="basic-addon2"
-                            required="required" id="replacement_cost" name="replacement_cost">
+                            required="required" id="replacement_cost" name="replacement_cost"
+                            value="<?php echo $row['replacement_cost']; ?>">
                     </div>
                 </div>
             </div>
@@ -129,12 +168,7 @@
                 <label class="col-sm-2 col-form-label control-label" for="rating">Rating</label>
                 <div class="col-sm-10">
                     <select class="form-select" id="rating" name="rating" required>
-                        <option value="">-</option>
-                        <option value="1">G</option>
-                        <option value="2">PG</option>
-                        <option value="3">PG-13</option>
-                        <option value="4">R</option>
-                        <option value="5">NC-17</option>
+
                     </select>
                 </div>
             </div>
@@ -142,14 +176,19 @@
             <div class="form-group mb-2 row">
                 <label for="special_features" class="col-sm-2 col-form-label control-label">Special Features</label>
                 <div class="col-sm-10">
-                    <select class="form-select" multiple aria-label="multiple select example" id="special_features" name="special_features[]">
-                        <option selected>Trailers</option>
-                        <option value="1">Speed</option>
-                        <option value="2">Graphic</option>
-                        <option value="3">Performance</option>
+                    <select class="form-select" multiple aria-label="multiple select example" id="special_features"
+                        name="special_features[]">
+                        <option selected value="<?php echo $row['special_features']; ?>">-</option>
+                        <option value="Trailers">Trailers</option>
+                        <option value="Commentaries">Commentaries</option>
+                        <option value="Deleted Scenes">Deleted Scenes</option>
+                        <option value="Behind the Scenes">Behind the Scenes</option>
                     </select>
                 </div>
             </div>
+            <?php };
+            json_encode($data);
+            ?>
             <div class="form-group mb-2 mt-md-4 row">
                 <label for="inputEmail3" class="col-sm-2 col-form-label control-label"></label>
                 <div class="col-sm-10">
@@ -176,32 +215,76 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
     </script>
 
+    <script src="textareaLimit.js"></script>
+
     <script>
-        $(document).ready(function () { // syntax ini berfungsi jika ditambahkan 3 cdn di atas
-            $.get("language.php", function (response) {
-                $.each(response, function (key, value) {
+    let language_id;
+    let rating_film;
+
+    function selectedValue(id) {
+        language_id = id;
+        rating_film = "R";
+    }
+    $(document).ready(function() { // syntax ini berfungsi jika ditambahkan 3 cdn di atas
+        $.get("language.php", function(response) {
+            let id = language_id;
+            $.each(response, function(key, value) {
+                if (value.language_id == id) {
+                    $('#language_id').append("<option selected value='" + value.language_id +
+                        "'>" +
+                        value
+                        .name +
+                        "</option>");
+                    // $("#original_language_id").append("<option selected value='" + value.original_language_id +
+                    // "'>" + value
+                    // .name +
+                    // "</option>");
+                } else {
                     $("#language_id").append("<option value='" + value.language_id + "'>" +
                         value
                         .name +
                         "</option>");
-                    $("#original_language_id").append("<option value='" + value.language_id +
-                        "'>" + value
-                        .name +
-                        "</option>");
-                });
-            })
-            $("form").submit(function (event) {
-                event.preventDefault();
-                var data = $(this).serialize();
-                $.post("film.php?action=create", data, function (response) {
-                    alert("Success add film");
-                });
+                }
+            });
+        })
+
+        $.get("edit.php", function (response){
+            $.each(response, function(key, value){
+                $("#rating").append("<option value='" + value.rating + "'>" + value.rating + "</option>");
             })
         })
 
-        function backAdd() {
-            location.href = "../index.php";
-        }
+        // let rating = "NC-17";
+        // const ratings = ["G", "PG", "PG-13", "R", "NC-17"];
+        // ratings.forEach(myFunction);
+        // function myFunction(item, index) {
+        //     if (item == rating) {
+        //         $('#rating').append("<option selected value='" + item + "'>" + item + "</option>");
+        //     } else {
+        //         $('#rating').append("<option value='" + item + "'>" + item + "</option>");
+        //     }
+        // }
+
+        $("form").submit(function(event) {
+            event.preventDefault();
+        });
+
+        // $("form").submit(function(event) {
+        //     event.preventDefault();
+        //     var data = $(this).serialize();
+        //     $.post("film.php?action=create", data, function(response) {
+        //         alert("Success add film");
+        //     });
+        // })
+    })
+
+    function backAdd() {
+        location.href = "javascript:history.go(-1)";
+    }
+
+    function submitBtn() {
+        location.href = "../index.php";
+    }
     </script>
 </body>
 

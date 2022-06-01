@@ -44,6 +44,11 @@ if($op == 'detail'){
                 <i class='bx bx-menu' id="btn"></i>
             </div>
             <ul class="nav-list">
+                <li class="new">
+                    <i class='bx bx-folder-plus'></i>
+                    <input type="submit" value="Add Film" onclick="addFilm()">
+                    <span class="tooltip">Add Film</span>
+                </li>
                 <li>
                     <i class='bx bx-search'></i>
                     <input type="text" placeholder="Search...">
@@ -181,11 +186,11 @@ if($op == 'detail'){
                                     <tbody>
                                         <tr>
                                             <td style="text-align:center">
-                                            <?php 
+                                                <?php 
                                             while ($row2 = $query_language->fetch_assoc()) :
                                                 ?>
                                                 <?php echo "<span class='language'>{$row2['name']}</span>"; ?>
-                                            <?php endwhile; ?>
+                                                <?php endwhile; ?>
                                             </td>
                                             <td style="text-align:center">
                                                 <?php echo "<span class='duration'>{$row['rental_duration']} Days</span>"; ?>
@@ -199,31 +204,29 @@ if($op == 'detail'){
                                         <tr>
                                             <td class="button" style="text-align:center" colspan="2">
                                                 <div class="input-group" style="width: 100%; height: 100%;">
-                                                <br><br>
-                                                <div class="spacer"></div>
-                                                <a href="index.php">
-                                                    <input type="button" style="width: 100%; height: 100%;"
-                                                        value="<-  Back" />
+                                                    <br><br>
+                                                    <div class="spacer"></div>
+                                                    <a href="index.php">
+                                                        <input type="button" style="width: 100%; height: 100%;"
+                                                            value="<-  Back" />
                                                     </a>
                                                 </div>
                                             </td>
                                             <td class="button" style="text-align:center;">
                                                 <div class="input-group" style="width: 100%; height: 100%;">
-                                                <br><br>
-                                                <div class="spacer"></div>
+                                                    <br><br>
+                                                    <div class="spacer"></div>
                                                     <input type="button" class="edit" style="width: 100%; height: 100%;"
-                                                        value="Edit" onclick="href_edit()"/>
-                                                
+                                                        value="Edit" onclick="href_edit(<?php echo $row['film_id'] ?>)" />
+
                                                 </div>
                                             </td>
                                             <td class="button" style="text-align:center;">
                                                 <div class="input-group" style="width: 100%; height: 100%;">
-                                                <br><br>
-                                                <div class="spacer"></div>
-                                                
-                                                    <input type="button" class="delete" style="width: 100%; height: 100%;"
-                                                        value="Remove" />
-                                                
+                                                    <br><br>
+                                                    <div class="spacer"></div>
+                                                    <input type="button" class="delete"
+                                                        style="width: 100%; height: 100%;" value="Remove" />
                                                 </div>
                                             </td>
                                         </tr>
@@ -267,6 +270,7 @@ let closeBtn = document.querySelector("#btn");
 let searchBtn = document.querySelector(".bx-search");
 let sortBtn = document.querySelector(".bx-sort-alt-2");
 let filterBtn = document.querySelector(".bx-filter-alt");
+let submitBtn = document.querySelector(".bx-folder-plus");
 
 closeBtn.addEventListener("click", () => {
     sidebar.classList.toggle("open");
@@ -288,6 +292,11 @@ filterBtn.addEventListener("click", () => { // Sidebar open when you click on th
     menuBtnChange(); //calling the function(optional)
 });
 
+submitBtn.addEventListener("click", () => { // Sidebar open when you click on the filter iocn
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+    });
+
 // following are the code to change sidebar button(optional)
 function menuBtnChange() {
     if (sidebar.classList.contains("open")) {
@@ -297,8 +306,13 @@ function menuBtnChange() {
     }
 }
 
-function href_edit(){
-    location.href = "form/edit.html"
+function addFilm() {
+        location.href = "form/new.html";
+    }
+
+function href_edit(id) {
+    let addres = "form/edit.php?op=edit&id=" + id;
+    location.href = addres;
 }
 </script>
 <!-- Jquery -->

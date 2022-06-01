@@ -28,6 +28,12 @@ h3 {
     color: red;
 }
 
-button{
+button {
     margin-right: 15px;
+}
+
+#the-count {
+    float: right;
+    padding: 0.1rem 0 0 0;
+    font-size: 0.875rem;
 }

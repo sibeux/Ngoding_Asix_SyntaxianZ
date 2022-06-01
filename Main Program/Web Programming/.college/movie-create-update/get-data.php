@@ -7,7 +7,7 @@ if(isset($_GET['offset']) && isset($_GET['limit'])){
 
     $connect = mysqli_connect('localhost', 'root', '', 'sakila');
 
-    $data = mysqli_query($connect, "SELECT * FROM film LIMIT $limit OFFSET $offset");
+    $data = mysqli_query($connect, "SELECT * FROM film ORDER BY title LIMIT $limit OFFSET $offset");
 
     while($row = mysqli_fetch_array($data)){
     $genre = explode(" ", $row['rating']);
