@@ -1,6 +1,6 @@
 <?php
 
-require_once "./db.php";
+require_once "db.php";
 
 if(isset($_GET['op'])){
     $op = $_GET['op'];
@@ -306,7 +306,7 @@ function menuBtnChange() {
     }
 }
 function addFilm() {
-        location.href = "form/new.html";
+        location.href = "form/new.php";
     }
 
 function href_edit(id) {

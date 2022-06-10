@@ -203,7 +203,7 @@
     }
 
     function addFilm() {
-        location.href = "form/new.html";
+        location.href = "form/new.php";
     }
     </script>
     <!-- Jquery -->

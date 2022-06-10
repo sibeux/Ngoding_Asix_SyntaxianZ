@@ -41,15 +41,24 @@
             <div class="form-group mb-2 required row">
                 <label for="title" class="col-sm-2 col-form-label control-label">Title</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" placeholder="Insert Title" id="title" name="title" required="required">
+                    <input type="text" class="form-control" placeholder="Insert Title" id="title" name="title"
+                        maxlength="30" required="required">
+                    <div id="the-count-title">
+                        <span id="current-title">0</span>
+                        <span id="maximum-title">/ 30</span>
+                    </div>
                 </div>
             </div>
 
             <div class="form-group mb-2 row">
-                <label for="description"
-                    class="col-sm-2 col-form-label control-label">Description</label>
+                <label for="description" class="col-sm-2 col-form-label control-label">Description</label>
                 <div class="col-sm-10">
-                    <textarea class="form-control" placeholder="Description" id="descriptiom" name="description"></textarea>
+                    <textarea class="form-control" placeholder="Description" id="description" name="description"
+                        maxlength="150"></textarea>
+                    <div id="the-count">
+                        <span id="current">0</span>
+                        <span id="maximum">/ 150</span>
+                    </div>
                 </div>
             </div>
 
@@ -64,7 +73,7 @@
                 <label class="col-sm-2 col-form-label control-label" for="language_id">Language</label>
                 <div class="col-sm-10">
                     <select class="form-select" id="language_id" name="language_id" required>
-                        <option value="" selected="selected">-</option>
+                        <option value="" selected="selected">--</option>
                     </select>
                 </div>
             </div>
@@ -74,7 +83,7 @@
                     Language</label>
                 <div class="col-sm-10">
                     <select class="form-select" id="original_language_id" name="original_language_id">
-                        <option value="" selected="selected">-</option>
+                        <option value="" selected="selected">--</option>
                     </select>
                 </div>
             </div>
@@ -83,8 +92,9 @@
                 <label for="rental_duration" class="col-sm-2 col-form-label control-label">Rental Duration</label>
                 <div class="col-sm-10">
                     <div class="input-group">
-                        <input type="number" class="form-control" placeholder="" aria-label="Recipient's username"
-                            aria-describedby="basic-addon2" required="required" id="rental_duration" name="rental_duration">
+                        <input type="number" class="form-control" placeholder="Rental Duration"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2" required="required"
+                            id="rental_duration" name="rental_duration">
                         <span class="input-group-text" id="inputGroup-sizing-default">Days</span>
                     </div>
                 </div>
@@ -95,7 +105,7 @@
                 <div class="col-sm-10">
                     <div class="input-group">
                         <span class="input-group-text" id="inputGroup-sizing-default">$</span>
-                        <input type="number" step="0.01" class="form-control" placeholder=""
+                        <input type="number" step="0.01" class="form-control" placeholder="Rental Rate"
                             aria-label="Amount (to the nearest dollar)" aria-describedby="basic-addon2"
                             required="required" id="rental_rate" name="rental_rate">
                     </div>
@@ -106,8 +116,9 @@
                 <label for="length" class="col-sm-2 col-form-label control-label">Length</label>
                 <div class="col-sm-10">
                     <div class="input-group">
-                        <input type="number" class="form-control" placeholder=""
-                            aria-label="Amount (to the nearest dollar)" aria-describedby="basic-addon2" id="length" name="length">
+                        <input type="number" class="form-control" placeholder="Length"
+                            aria-label="Amount (to the nearest dollar)" aria-describedby="basic-addon2" id="length"
+                            name="length">
                         <span class="input-group-text" id="inputGroup-sizing-default">Minutes</span>
                     </div>
                 </div>
@@ -118,7 +129,7 @@
                 <div class="col-sm-10">
                     <div class="input-group">
                         <span class="input-group-text" id="inputGroup-sizing-default">$</span>
-                        <input type="number" step="0.01" class="form-control" placeholder=""
+                        <input type="number" step="0.01" class="form-control" placeholder="Replacement Cost"
                             aria-label="Amount (to the nearest dollar)" aria-describedby="basic-addon2"
                             required="required" id="replacement_cost" name="replacement_cost">
                     </div>
@@ -129,12 +140,12 @@
                 <label class="col-sm-2 col-form-label control-label" for="rating">Rating</label>
                 <div class="col-sm-10">
                     <select class="form-select" id="rating" name="rating" required>
-                        <option value="">-</option>
-                        <option value="1">G</option>
-                        <option value="2">PG</option>
-                        <option value="3">PG-13</option>
-                        <option value="4">R</option>
-                        <option value="5">NC-17</option>
+                        <option>--</option>
+                        <option value="G">G</option>
+                        <option value="PG">PG</option>
+                        <option value="PG-13">PG-13</option>
+                        <option value="R">R</option>
+                        <option value="NC-17">NC-17</option>
                     </select>
                 </div>
             </div>
@@ -142,11 +153,12 @@
             <div class="form-group mb-2 row">
                 <label for="special_features" class="col-sm-2 col-form-label control-label">Special Features</label>
                 <div class="col-sm-10">
-                    <select class="form-select" multiple aria-label="multiple select example" id="special_features" name="special_features[]">
-                        <option>Tractors</option>
-                        <option>Speed</option>
-                        <option>Graphic</option>
-                        <option>Performance</option>
+                    <select class="form-select" multiple aria-label="multiple select example" id="special_features"
+                        name="special_features[]">
+                        <option value="Trailers">Trailers</option>
+                        <option value="Commentaries">Commentaries</option>
+                        <option value="Deleted Scenes">Deleted Scenes</option>
+                        <option value="Behind the Scenes">Behind the Scenes</option>
                     </select>
                 </div>
             </div>
@@ -162,6 +174,14 @@
                         Back</button>
                 </div>
             </div>
+
+            <div class="alert hide">
+                <span class="fas fa-exclamation-circle"></span>
+                <span class="msg">Success: Film has been added!</span>
+                <div class="close-btn">
+                    <span class="fas fa-times"></span>
+                </div>
+            </div>
         </form>
     </div>
     <!-- Jquery -->
@@ -175,33 +195,48 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
     </script>
+    <script src="textareaLimit.js"></script>
 
     <script>
-        $(document).ready(function () { // syntax ini berfungsi jika ditambahkan 3 cdn di atas
-            $.get("language.php", function (response) {
-                $.each(response, function (key, value) {
-                    $("#language_id").append("<option value='" + value.language_id + "'>" +
-                        value
-                        .name +
-                        "</option>");
-                    $("#original_language_id").append("<option value='" + value.language_id +
-                        "'>" + value
-                        .name +
-                        "</option>");
-                });
-            })
-            $("form").submit(function (event) {
-                event.preventDefault();
-                var data = $(this).serialize();
-                $.post("film.php?action=create", data, function (response) {
-                    alert("Success add film");
-                });
-            })
+    $(document).ready(function() { // syntax ini berfungsi jika ditambahkan 3 cdn di atas
+        $.get("language.php", function(response) {
+            $.each(response, function(key, value) {
+                $("#language_id").append("<option value='" + value.language_id + "'>" +
+                    value
+                    .name +
+                    "</option>");
+                // $("#original_language_id").append("<option value='" + value.language_id +
+                //     "'>" + value
+                //     .name +
+                //     "</option>");
+            });
         })
 
-        function backAdd() {
-            location.href = "../index.php";
-        }
+        $("form").submit(function(event) {
+                event
+            .preventDefault(); // syntax ini berfungsi untuk menghentikan fungsi default dari form (singkatnya tidak akan terjadi apa2)
+                var data = $(this).serialize();
+                $.post("film.php?action=create", data, function(response) {
+                    // script success notification
+                    $('.alert').addClass("show");
+                    $('.alert').removeClass("hide");
+                    $('.alert').addClass("showAlert");
+                    setTimeout(function() {
+                        $('.alert').removeClass("show");
+                        $('.alert').addClass("hide");
+                    }, 5000);
+                });
+            })
+    })
+    
+    $('.close-btn').click(function() {
+        $('.alert').removeClass("show");
+        $('.alert').addClass("hide");
+    });
+
+    function backAdd() {
+        location.href = "../index.php";
+    }
     </script>
 </body>
 

@@ -1,11 +1,13 @@
 <?php
 
+require_once("db.php");
+
 if(isset($_GET['offset']) && isset($_GET['limit'])){
 
     $limit = $_GET['limit'];
     $offset = $_GET['offset'];
 
-    $connect = mysqli_connect('localhost', 'root', '', 'sakila');
+    $connect = mysqli_connect(HOST, SIBEUX, pass, DB);
 
     $data = mysqli_query($connect, "SELECT * FROM film ORDER BY title LIMIT $limit OFFSET $offset");
 
@@ -46,7 +48,7 @@ if(isset($_GET['offset']) && isset($_GET['limit'])){
                                         echo "</a>";
                                 echo "</div>
                                 <div class='btn'>
-                                    <i class='bx bxs-edit-alt'></i>
+                                    <i class='bx bxs-edit-alt' onclick='edit({$id})'></i>
                                     <i class='bx bxs-trash'></i>
                                 </div>
                             </div>
@@ -57,3 +59,9 @@ if(isset($_GET['offset']) && isset($_GET['limit'])){
     ";
     }
 }
+
+echo "<script>";
+echo "function edit(id){
+    location.href = 'form/edit.php?op=update&id=' + id;
+}";
+echo "</script>";

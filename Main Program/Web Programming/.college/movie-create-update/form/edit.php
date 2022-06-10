@@ -1,11 +1,8 @@
 <?php
                 require_once("../db.php");
 
-                if(isset($_GET['op'])){
-                    $op = $_GET['op'];
-                }else{
-                    $op = "";
-                }
+                $op = isset($_GET['op']) ? $_GET['op'] : "";
+                $loc = $op;
                 $id = isset($_GET['id']) ? $_GET['id'] : '';
                 $sql = "SELECT * FROM film WHERE film_id = '$id'";
                 $table_language = "SELECT * FROM language";
@@ -18,6 +15,7 @@
                 $table_language = mysqli_query($db, $table_language) or die( mysqli_error($db));
 
                 $data = [];
+                
                 while ($row = mysqli_fetch_array($query)) {
                     array_push($data, $row);
             ?>
@@ -33,7 +31,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="confirm.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- pooper js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    </script>
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
 </head>
 
 <body">
@@ -66,15 +79,20 @@
             <div class="form-group mb-2 required row">
                 <label for="title" class="col-sm-2 col-form-label control-label">Title</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" placeholder="Insert Title" id="title" name="title"
-                        value="<?php echo $row['title']; ?>" required="required">
+                    <input type="text" class="form-control" placeholder="Insert Title" maxlength="30" id="title"
+                        name="title" value="<?php echo $row['title']; ?>" required="required">
+                    <div id="the-count-title">
+                        <span id="current-title"><?php echo strlen($row['title']); ?></span>
+                        <span id="maximum-title">/ 30</span>
+                    </div>
                 </div>
             </div>
 
             <div class="form-group mb-2 row">
                 <label for="description" class="col-sm-2 col-form-label control-label">Description</label>
                 <div class="col-sm-10">
-                    <textarea class="form-control" id="description" maxlength="150" name="description"
+                    <textarea class="form-control" placeholder="Description" id="description" maxlength="150"
+                        name="description"
                         value="<?php echo $row['description']; ?>"><?php echo $row['description']; ?></textarea>
                     <div id="the-count">
                         <span id="current"><?php echo strlen($row['description']); ?></span>
@@ -86,19 +104,15 @@
             <div class="form-group mb-2 row">
                 <label for="release_year" class="col-sm-2 col-form-label control-label">Release Year</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" value="<?php echo $row['release_year']; ?>"
-                        id="release_year" name="release_year">
+                    <input type="number" placeholder="Year" class="form-control"
+                        value="<?php echo $row['release_year']; ?>" id="release_year" name="release_year">
                 </div>
             </div>
 
-            <?php 
-            while ($rowLanguage = mysqli_fetch_array($query_language)) {
-            ?>
             <div class="form-group mb-2 required row">
                 <label class="col-sm-2 col-form-label control-label" for="language_id">Language</label>
                 <div class="col-sm-10">
                     <select class="form-select" id="language_id" name="language_id" required>
-
                     </select>
                 </div>
             </div>
@@ -108,19 +122,18 @@
                     Language</label>
                 <div class="col-sm-10">
                     <select class="form-select" id="original_language_id" name="original_language_id">
-                        <option value="NULL" selected="selected">-</option>
+                        <option value="" selected="selected">-</option>
                     </select>
                 </div>
             </div>
-            <?php } ?>
 
             <div class="form-group mb-2 required row">
                 <label for="rental_duration" class="col-sm-2 col-form-label control-label">Rental Duration</label>
                 <div class="col-sm-10">
                     <div class="input-group">
-                        <input type="number" class="form-control" placeholder="" aria-label="Recipient's username"
-                            aria-describedby="basic-addon2" required="required" id="rental_duration"
-                            name="rental_duration" value="<?php echo $row['rental_duration']; ?>">
+                        <input type="number" class="form-control" placeholder="Rental Duration"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2" required="required"
+                            id="rental_duration" name="rental_duration" value="<?php echo $row['rental_duration']; ?>">
                         <span class="input-group-text" id="inputGroup-sizing-default">Days</span>
                     </div>
                 </div>
@@ -131,7 +144,7 @@
                 <div class="col-sm-10">
                     <div class="input-group">
                         <span class="input-group-text" id="inputGroup-sizing-default">$</span>
-                        <input type="number" step="0.01" class="form-control" placeholder=""
+                        <input type="number" step="0.01" class="form-control" placeholder="Rental Rate"
                             aria-label="Amount (to the nearest dollar)" aria-describedby="basic-addon2"
                             required="required" id="rental_rate" name="rental_rate"
                             value="<?php echo $row['rental_rate']; ?>">
@@ -143,7 +156,7 @@
                 <label for="length" class="col-sm-2 col-form-label control-label">Length</label>
                 <div class="col-sm-10">
                     <div class="input-group">
-                        <input type="number" class="form-control" placeholder=""
+                        <input type="number" class="form-control" placeholder="Length"
                             aria-label="Amount (to the nearest dollar)" aria-describedby="basic-addon2" id="length"
                             name="length" value="<?php echo $row['length']; ?>">
                         <span class="input-group-text" id="inputGroup-sizing-default">Minutes</span>
@@ -156,7 +169,7 @@
                 <div class="col-sm-10">
                     <div class="input-group">
                         <span class="input-group-text" id="inputGroup-sizing-default">$</span>
-                        <input type="number" step="0.01" class="form-control" placeholder=""
+                        <input type="number" step="0.01" class="form-control" placeholder="Replacement Cost"
                             aria-label="Amount (to the nearest dollar)" aria-describedby="basic-addon2"
                             required="required" id="replacement_cost" name="replacement_cost"
                             value="<?php echo $row['replacement_cost']; ?>">
@@ -168,7 +181,6 @@
                 <label class="col-sm-2 col-form-label control-label" for="rating">Rating</label>
                 <div class="col-sm-10">
                     <select class="form-select" id="rating" name="rating" required>
-
                     </select>
                 </div>
             </div>
@@ -178,11 +190,6 @@
                 <div class="col-sm-10">
                     <select class="form-select" multiple aria-label="multiple select example" id="special_features"
                         name="special_features[]">
-                        <option selected value="<?php echo $row['special_features']; ?>">-</option>
-                        <option value="Trailers">Trailers</option>
-                        <option value="Commentaries">Commentaries</option>
-                        <option value="Deleted Scenes">Deleted Scenes</option>
-                        <option value="Behind the Scenes">Behind the Scenes</option>
                     </select>
                 </div>
             </div>
@@ -198,29 +205,26 @@
             <div class="form-group mb-2 mt-md-4 row">
                 <label for="inputEmail3" class="col-sm-2 col-form-label control-label"></label>
                 <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary" name="submit">
                         <span class="fa-solid fa-paper-plane"></span>
                         Submit
                     </button>
+
                     <button type="button" class="btn btn-outline-secondary" onclick="backAdd()">
                         <span class="fa-solid fa-arrow-left-long"></span>
                         Back</button>
                 </div>
             </div>
         </form>
-    </div>
-    <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- pooper js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
-    </script>
-    <!-- bootstrap js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
-    </script>
 
+        <div class="alert hide">
+            <span class="fas fa-exclamation-circle"></span>
+            <span class="msg">Success: Film has been updated!</span>
+            <div class="close-btn">
+                <span class="fas fa-times"></span>
+            </div>
+        </div>
+    </div>
     <script src="textareaLimit.js"></script>
 
     <script>
@@ -253,8 +257,9 @@
 
         const ratings = ["G", "PG", "PG-13", "R", "NC-17"];
         var rating = data[0]['rating'];
-        ratings.forEach(myFunction);
-        function myFunction(item, index) {
+        ratings.forEach(myFunctionRating);
+
+        function myFunctionRating(item, index) {
             if (item == rating) {
                 $('#rating').append("<option selected value='" + item + "'>" + item + "</option>");
             } else {
@@ -263,35 +268,46 @@
         }
 
         const features = ["Trailers", "Commentaries", "Deleted Scenes", "Behind the Scenes"];
-        var special_features = data[0]['special_features'];
-        features.forEach(myFunction);
-        function myFunction(item, index) {
-            if (item == special_features) {
+        var special_features = (data[0]['special_features']).split(",");
+        console.log(special_features);
+        features.forEach(myFunctionFeatures);
+
+        function myFunctionFeatures(item, index) {
+            if (special_features.includes(item)) {
                 $('#special_features').append("<option selected value='" + item + "'>" + item + "</option>");
             } else {
                 $('#special_features').append("<option value='" + item + "'>" + item + "</option>");
             }
         }
 
+        var film_id = data[0]['film_id'];
         $("form").submit(function(event) {
             event.preventDefault();
-        });
-
-        // $("form").submit(function(event) {
-        //     event.preventDefault();
-        //     var data = $(this).serialize();
-        //     $.post("film.php?action=create", data, function(response) {
-        //         alert("Success add film");
-        //     });
-        // })
+            var data = $(this).serialize();
+            $.post("film.php?action=update&id=" + film_id, data, function(response) {
+                // script untuk menampilkan notifikasi
+                $('.alert').addClass("show");
+                $('.alert').removeClass("hide");
+                $('.alert').addClass("showAlert");
+                setTimeout(function() {
+                    $('.alert').removeClass("show");
+                    $('.alert').addClass("hide");
+                }, 5000);
+            });
+        })
     })
 
+    $('.close-btn').click(function() {
+        $('.alert').removeClass("show");
+        $('.alert').addClass("hide");
+    });
+
     function backAdd() {
-        location.href = "javascript:history.go(-1)";
+            location.href = "../film_detail.php?op=detail&id=" + data[0]['film_id'];
     }
 
     function submitBtn() {
-        location.href = "../index.php";
+        location.href = "#myModal";
     }
     </script>
     </body>

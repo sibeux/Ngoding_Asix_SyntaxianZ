@@ -383,7 +383,7 @@ ul {
     position: relative;
     margin: auto;
     /* background: #51489a; */
-    min-height: 100vh;
+    min-height: 50vh;
     top: 20px;
     right: 0;
     left: 38px;
@@ -628,7 +628,7 @@ a img {
 footer {
     position: absolute;
     left: 0px;
-    margin-top: -220px;
+    margin-top: 50px;
     background: rgb(29, 16, 49);
     height: auto;
     width: 100%;
