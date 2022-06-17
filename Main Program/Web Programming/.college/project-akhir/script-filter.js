@@ -13,6 +13,6 @@ genre.addEventListener("change",function () {
         }
     }
 
-    ObjAjax.open("get","./data-filter.php?genre="+genre.value,true);
+    ObjAjax.open("get","./controller/filter-siswaApp.php?genre="+genre.value,true);
     ObjAjax.send();
 }) 

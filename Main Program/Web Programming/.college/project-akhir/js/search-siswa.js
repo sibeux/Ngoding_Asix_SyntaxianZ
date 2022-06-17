@@ -1,10 +1,10 @@
-var milih = document.getElementById("milih");
+var typing = document.getElementById("typing");
 var data = document.getElementById("data");
 
-milih.addEventListener("change",function () {
+typing.addEventListener("keyup",function () {
     // inisiasi objek ajax
     var ObjAjax = new XMLHttpRequest();
-    
+
     // cek kesiapan ajax
     ObjAjax.onreadystatechange = function () {
         if (ObjAjax.readyState == 4 && ObjAjax.status == 200) {
@@ -13,6 +13,6 @@ milih.addEventListener("change",function () {
         }
     }
 
-    ObjAjax.open("get","./data-sort.php?milih="+milih.value,true);
+    ObjAjax.open("get","./controller/search-siswaApp.php?typing="+typing.value,true);
     ObjAjax.send();
 }) 

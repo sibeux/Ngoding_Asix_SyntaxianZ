@@ -35,11 +35,39 @@
                     <span class="tooltip">Tambah Siswa</span>
                 </li>
                 <li>
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Cari Nama" id="typing">
+                    <span class="tooltip">Cari Nama</span>
+                </li>
+                <li>
+                    <i class='bx bx-sort-alt-2'></i>
+                    <select class="form-select" aria-label="Default select example" id="milih">
+                        <option selected value="nis ASC">NIS teratas</option>
+                        <option value="nis DESC">NIS terbawah</option>
+                        <option value="nama_siswa ASC">Nama teratas</option>
+                        <option value="nama_siswa DESC">Nama terbawah</option>
+                    </select>
+                    <span class="tooltip">Sort</span>
+                </li>
+                <li>
+                    <i class='bx bx-filter-alt'></i>
+                    <select class="form-select" aria-label="Default select example" id="genre">
+                        <option selected value="all">ALL</option>
+                        <option value="1">MIPA</option>
+                        <option value="2">IPS</option>
+                        <option value="3">BAHASA</option>
+                        <option value="4">SENI</option>
+                        <option value="5">OLAHRAGA</option>
+                        <option value="6">MESIN</option>
+                    </select>
+                    <span class="tooltip">Filter</span>
+                </li>
+                <li>
                     <a href="menu_teacher.php">
                         <i class='bx bx-cog'></i>
-                        <span class="links_name">Kembali</span>
+                        <span class="links_name">Menu Utama</span>
                     </a>
-                    <span class="tooltip">Kembali</span>
+                    <span class="tooltip">Menu Utama</span>
                 </li>
                 <li class="profile">
                     <div class="profile-details">
@@ -150,10 +178,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
     </script>
-    <script src="script.js"></script>
+    <script src="js/search-siswa.js"></script>
     <script src="script-sort.js"></script>
     <script src="script-filter.js"></script>
-    <script src="lazy-load.js"></script>
     <script src="js/get_data_siswa.js"></script>
 </body>
 

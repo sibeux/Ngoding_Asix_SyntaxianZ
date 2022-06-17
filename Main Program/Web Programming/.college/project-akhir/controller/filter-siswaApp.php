@@ -1,18 +1,21 @@
 <?php
 
-require_once("db.php");
+require_once "../db.php";
 
-if(isset($_GET['offset']) && isset($_GET['limit'])){
+$jurusan = $_GET["genre"];
 
-    $limit = $_GET['limit'];
-    $offset = $_GET['offset'];
+if ($jurusan == "all") {
+    $sql = "SELECT jurusan.id_jurusan,
+    jurusan.nama_jurusan, siswa.* FROM siswa join jurusan on jurusan.id_jurusan = siswa.id_jurusan";
+} else {
+    $sql = "SELECT jurusan.id_jurusan,
+    jurusan.nama_jurusan, siswa.* FROM siswa join jurusan on jurusan.id_jurusan = siswa.id_jurusan 
+    WHERE siswa.id_jurusan = '{$jurusan}'";
+}
 
-    $connect = mysqli_connect(HOST, SIBEUX, pass, DB);
+$result = $db->query($sql);
 
-    $data = mysqli_query($connect, "SELECT jurusan.id_jurusan,
-    jurusan.nama_jurusan, siswa.* FROM siswa join jurusan on jurusan.id_jurusan = siswa.id_jurusan ORDER BY nis LIMIT $limit OFFSET $offset");
-
-    while($row = mysqli_fetch_array($data)){
+while($row =  $result->fetch_assoc()){
     $nama_siswa = ucwords($row['nama_siswa']);
     $jurusan = ucwords($row['nama_jurusan']);
     $tingkat = ($row['tingkat']);
@@ -21,13 +24,13 @@ if(isset($_GET['offset']) && isset($_GET['limit'])){
     <div class='col col-lg-6 col-xl-4'>
                     <div class='product-container'>
                         <div class='product-card'>
-                            <a href='film_detail.php?op=detail&id={$row['nis']}' style='text-decoration: none'>
+                            <a href='view/detail_siswa.php?op=detail&id={$row['nis']}' style='text-decoration: none'>
                                 <img width='95' height='135'
                                     src='img/user.png'
                                     title='$nama_siswa' />
                             </a>
                             <div class='product-body'>
-                                <a href='film_detail.php?op=detail&id={$row['nis']}'
+                                <a href='view/detail_siswa.php?op=detail&id={$row['nis']}'
                                     style='text-decoration: none;'>
                                     <span class='product-title'>{$nama_siswa}</span>
                                 </a>
@@ -44,7 +47,7 @@ if(isset($_GET['offset']) && isset($_GET['limit'])){
                                         echo "Kategori\t: {$row['kategori']}";
                                         $id = $row['nis'];
                                         echo "<br>";
-                                        echo "<a href='film_detail.php?op=detail&id={$id}' style='text-decoration: none;'>";
+                                        echo "<a href='view/detail_siswa.php?op=detail&id={$id}' style='text-decoration: none;'>";
                                         echo "<span class='detail'>Detail</span>";
                                         echo "</a>";
                                 echo "</div>
@@ -59,7 +62,6 @@ if(isset($_GET['offset']) && isset($_GET['limit'])){
                 
     ";
     }
-}
 
 echo "<script>";
 echo "function edit(id){
