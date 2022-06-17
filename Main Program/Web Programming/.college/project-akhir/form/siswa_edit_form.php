@@ -46,6 +46,22 @@ $op = isset($_GET['op']) ? $_GET['op'] : "";
             Ubah Data Siswa
         </h3>
         <form>
+        <div class="form-group mb-2 row">
+                <label for="username" class="col-sm-2 col-form-label control-label">Username</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" placeholder="<?php echo $row['username']; ?>" id="username" name="username"
+                        disabled>
+                </div>
+            </div>
+
+            <div class="form-group mb-2 row">
+                <label for="pass" class="col-sm-2 col-form-label control-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" placeholder="secret" id="pass" name="pass"
+                        disabled>
+                </div>
+            </div>
+
             <div class="form-group mb-2 required row">
                 <label for="siswa" class="col-sm-2 col-form-label control-label">Nama Siswa</label>
                 <div class="col-sm-10">

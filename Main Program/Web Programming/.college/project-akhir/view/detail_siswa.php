@@ -80,11 +80,11 @@ if($op == 'detail'){
                                     <div class="row pt-1">
                                         <div class="col-6 mb-3">
                                             <h6>Sekolah</h6>
-                                            <p class="text-muted">Lorem ipsum</p>
+                                            <p class="text-muted">SMAN 1 SRENGAT</p>
                                         </div>
                                         <div class="col-6 mb-3">
                                             <h6>Nilai</h6>
-                                            <p class="text-muted">Dolor sit amet</p>
+                                            <p class="text-muted">Belum Ada Nilai</p>
                                         </div>
                                     </div>
                                     <div class="d-flex justify-content-start">

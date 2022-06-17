@@ -10,7 +10,7 @@ if(isset($_GET['offset']) && isset($_GET['limit'])){
     $connect = mysqli_connect(HOST, SIBEUX, pass, DB);
 
     $data = mysqli_query($connect, "SELECT jurusan.id_jurusan,
-    jurusan.nama_jurusan, siswa.* FROM siswa join jurusan on jurusan.id_jurusan = siswa.id_jurusan ORDER BY nis LIMIT $limit OFFSET $offset");
+    jurusan.nama_jurusan, siswa.* FROM siswa join jurusan on jurusan.id_jurusan = siswa.id_jurusan ORDER BY urutan LIMIT $limit OFFSET $offset");
 
     while($row = mysqli_fetch_array($data)){
     $nama_siswa = ucwords($row['nama_siswa']);
@@ -50,7 +50,7 @@ if(isset($_GET['offset']) && isset($_GET['limit'])){
                                 echo "</div>
                                 <div class='btn'>
                                     <i class='bx bxs-edit-alt' onclick='edit({$row['nis']})'></i>
-                                    <i class='bx bxs-trash'></i>
+                                    <i class='bx bxs-trash' onclick='hapus({$row['nis']})'></i>
                                 </div>
                             </div>
                         </div>
@@ -60,9 +60,13 @@ if(isset($_GET['offset']) && isset($_GET['limit'])){
     ";
     }
 }
-
 echo "<script>";
 echo "function edit(id){
     location.href = 'form/siswa_edit_form.php?op=update&id=' + id;
+}";
+echo "</script>";
+echo "<script>";
+echo "function hapus(id){
+    location.href = 'form/siswa_delete_form.php?op=delete&id=' + id;
 }";
 echo "</script>";

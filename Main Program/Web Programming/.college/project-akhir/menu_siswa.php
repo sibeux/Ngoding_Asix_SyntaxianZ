@@ -24,28 +24,13 @@
                 <i class='bx bx-menu' id="btn"></i>
             </div>
             <ul class="nav-list">
-                <li class="new">
-                    <i class='bx bxs-user' onclick="dataSiswa()"></i>
-                    <input type="submit" value="Data Siswa" onclick="dataSiswa()">
-                    <span class="tooltip">Data Siswa</span>
-                </li>
-                <li class="new">
-                    <i class='bx bx-book'></i>
-                    <input type="submit" value="Tugas Harian">
-                    <span class="tooltip">Tugas Harian</span>
-                </li>
-                <li class="new">
-                    <i class='bx bx-trophy'></i>
-                    <input type="submit" value="Ranking Nilai">
-                    <span class="tooltip">Ranking Nilai</span>
-                </li>
-                <!-- <li>
+                <li>
                     <a href="#">
                         <i class='bx bx-cog'></i>
-                        <span class="links_name">Setting</span>
+                        <span class="links_name">Profil Saya</span>
                     </a>
-                    <span class="tooltip">Setting</span>
-                </li> -->
+                    <span class="tooltip">Profil Saya</span>
+                </li>
                 <li class="profile">
                     <div class="profile-details">
                         <img src="img/logs.png" alt="profileImg">
@@ -54,9 +39,7 @@
                             <div class="job">School Learning</div>
                         </div>
                     </div>
-                    <a href="index.html">
-                        <i class='bx bx-log-out' id="log_out"></i>
-                    </a>
+                    <i class='bx bx-log-out' id="log_out"></i>
                 </li>
             </ul>
         </div>
@@ -162,11 +145,6 @@
         } else {
             closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
         }
-    }
-
-    // function to logout
-    function logout(){
-        location.href = "index.html";
     }
 
     function dataSiswa() {

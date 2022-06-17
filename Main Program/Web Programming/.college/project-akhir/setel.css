@@ -714,3 +714,8 @@ img {
 .product-body #biodata{
     color: #1fe6d5;
 }
+
+.bx-log-out:hover{
+    color: #1fe6d5;
+    cursor: pointer;
+}

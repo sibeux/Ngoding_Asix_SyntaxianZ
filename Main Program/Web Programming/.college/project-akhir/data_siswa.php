@@ -22,11 +22,6 @@
                 <i class='bx bx-menu' id="btn"></i>
             </div>
             <ul class="nav-list">
-                <li class="new">
-                    <i class='bx bxs-user'></i>
-                    <input type="submit" value="Data Siswa" onclick="dataSiswa()">
-                    <span class="tooltip">Data Siswa</span>
-                </li>
                 <li>
                     <a href="form/siswa_new_form.php">
                         <i class='bx bx-user-plus'></i>
@@ -64,7 +59,7 @@
                 </li>
                 <li>
                     <a href="menu_teacher.php">
-                        <i class='bx bx-cog'></i>
+                    <i class='bx bxs-home'></i>
                         <span class="links_name">Menu Utama</span>
                     </a>
                     <span class="tooltip">Menu Utama</span>
@@ -77,7 +72,9 @@
                             <div class="job">School Learning</div>
                         </div>
                     </div>
-                    <i class='bx bx-log-out' id="log_out"></i>
+                    <a href="index.html">
+                        <i class='bx bx-log-out' id="log_out"></i>
+                    </a>
                 </li>
             </ul>
         </div>

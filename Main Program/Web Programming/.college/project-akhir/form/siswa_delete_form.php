@@ -1,3 +1,20 @@
+<?php
+require_once("../db.php");
+
+$op = isset($_GET['op']) ? $_GET['op'] : "";
+                $loc = $op;
+                $id = isset($_GET['id']) ? $_GET['id'] : '';
+                $sql = "SELECT jurusan.id_jurusan,
+                jurusan.nama_jurusan, siswa.* FROM siswa join jurusan on jurusan.id_jurusan = siswa.id_jurusan where nis='$id'";
+                $query = mysqli_query($db, $sql) or die( mysqli_error($db));
+                
+                $data = [];
+                
+                while ($row = mysqli_fetch_array($query)) {
+                    array_push($data, $row);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,14 +43,14 @@
     <div class="container">
         <h3>
             <span class="fa-solid fa-pen-to-square"></span>
-            Data Siswa Baru
+            Ubah Data Siswa
         </h3>
         <form>
             <div class="form-group mb-2 row">
                 <label for="username" class="col-sm-2 col-form-label control-label">Username</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" placeholder="20241010100..." id="username" name="username"
-                        disabled>
+                    <input type="text" class="form-control" placeholder="<?php echo $row['username']; ?>" id="username"
+                        name="username" disabled>
                 </div>
             </div>
 
@@ -48,9 +65,9 @@
                 <label for="siswa" class="col-sm-2 col-form-label control-label">Nama Siswa</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" placeholder="Nama Siswa" id="siswa" name="siswa"
-                        maxlength="30" required="required">
+                        maxlength="30" value="<?php echo $row['nama_siswa']; ?>" required="required">
                     <div id="the-count">
-                        <span id="current">0</span>
+                        <span id="current"><?php echo strlen($row['nama_siswa']); ?></span>
                         <span id="maximum">/ 30</span>
                     </div>
                 </div>
@@ -62,7 +79,7 @@
                     <div class="input-group">
                         <input type="number" class="form-control" placeholder="Tingkat Kelas"
                             aria-label="Recipient's username" aria-describedby="basic-addon2" required="required"
-                            id="tingkat_kelas" name="tingkat_kelas">
+                            id="tingkat_kelas" value="<?php echo $row['tingkat']; ?>" name="tingkat_kelas">
                     </div>
                 </div>
             </div>
@@ -81,33 +98,22 @@
                 <div class="col-sm-10">
                     <select class="form-select" id="kategori" name="kategori" required>
                         <option value="" selected="selected">--</option>
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="C">C</option>
-                        <option value="D">D</option>
-                        <option value="E">E</option>
-                        <option value="F">F</option>
-                        <option value="G">G</option>
                     </select>
                 </div>
             </div>
 
-            <div class="form-group mb-2 mt-md-4 row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label control-label"></label>
-                <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">
-                        <span class="fa-solid fa-paper-plane"></span>
-                        Simpan
-                    </button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="backAdd()">
-                        <span class="fa-solid fa-arrow-left-long"></span>
-                        Kembali</button>
-                </div>
+            <div id="dom-target" style="display: none;">
+                <?php 
+                    $result =  json_encode($data);
+                    echo htmlspecialchars($result);
+                ?>
             </div>
+            <?php };
+            ?>
 
             <div class="alert hide">
                 <span class="fas fa-exclamation-circle"></span>
-                <span class="msg">Data siswa berhasil ditambahkan!</span>
+                <span class="msg">Data siswa berhasil diubah!</span>
                 <div class="close-btn">
                     <span class="fas fa-times"></span>
                 </div>
@@ -126,35 +132,73 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
     </script>
     <script src="textareaLimit.js"></script>
-
+    <script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>
     <script>
+    var div = document.getElementById('dom-target');
+    var myData = div.textContent;
+    var data = JSON.parse(myData);
+
     $(document).ready(function() { // syntax ini berfungsi jika ditambahkan 3 cdn di atas
         $.get("../controller/jurusanApp.php", function(response) {
+            idjurusan = data[0]['id_jurusan'];
             $.each(response, function(key, value) {
-                $("#jurusan").append("<option value='" + value.id_jurusan + "'>" +
-                    value
-                    .nama_jurusan +
-                    "</option>");
+                if (value.id_jurusan == idjurusan) {
+                    $('#jurusan').append("<option selected value='" + value.id_jurusan +
+                        "'>" +
+                        value
+                        .nama_jurusan +
+                        "</option>");
+                } else {
+                    $("#jurusan").append("<option value='" + value.id_jurusan + "'>" +
+                        value
+                        .nama_jurusan +
+                        "</option>");
+                }
             });
         })
 
-        $("form").submit(function(event) {
-            event
-                .preventDefault(); // syntax ini berfungsi untuk menghentikan fungsi default dari form (singkatnya tidak akan terjadi apa2)
-            var data = $(this).serialize();
-            $.post("../controller/siswaApp.php?action=create", data, function(response) {
-                // script success notification
-                $('.alert').addClass("show");
-                $('.alert').removeClass("hide");
-                $('.alert').addClass("showAlert");
-                setTimeout(function() {
-                    $('.alert').removeClass("show");
-                    $('.alert').addClass("hide");
-                }, 5000);
-            });
-        })
-    })
+        const kategories = [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"
+        ];
+        var kategori = data[0]['kategori'];
+        kategories.forEach(kategoris);
 
+        function kategoris(item, index) {
+            if (item == kategori) {
+                $('#kategori').append("<option selected value='" + item + "'>" + item + "</option>");
+            } else {
+                $('#kategori').append("<option value='" + item + "'>" + item + "</option>");
+            }
+        }
+
+        var nis = data[0]['nis'];
+            swal({
+                    title: "Apakah Anda Yakin?",
+                    text: "Data Akan dihapus Secara permanen!",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willDelete) => {
+                    swal("Data berhasil dihapus!", {
+                        icon: "success",
+                    }).then((value) => {
+                    location.href = '../data_siswa.php';
+                });;
+                    if (willDelete) {
+                        var data = $(this).serialize();
+                        $.post("../controller/siswaApp.php?action=delete&id=" + nis, data, function(
+                            response) {});
+                    }
+                });
+        })
+    
     $('.close-btn').click(function() {
         $('.alert').removeClass("show");
         $('.alert').addClass("hide");
