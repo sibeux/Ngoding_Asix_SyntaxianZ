@@ -27,14 +27,13 @@ juan4 = """
 """
 
 
-
 # import itertools
 # import threading
 # import time
 # import sys
- 
+
 # done = False
- 
+
 # #animasi loading
 # def animate():
 #     for c in itertools.cycle(['1','2']):
@@ -44,15 +43,14 @@ juan4 = """
 #         sys.stdout.flush()
 #         time.sleep(0.1)
 #     # sys.stdout.write('\rDone!     ')
- 
+
 # t = threading.Thread(target=animate)
 # t.start()
- 
+
 # #proses lama disini
- 
+
 # time.sleep(1)
 # done = True
- 
 
 
 print(type(juan))
