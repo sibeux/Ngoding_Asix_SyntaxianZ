@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch constructor",
+      "request": "launch",
+      "mainClass": "com.javaoop.kelas_terbuka.constructorDasar.constructor",
+      "projectName": "PEMROGRAMAN_ff228122"
+    },
+    {
+      "type": "java",
+      "name": "Launch contoh1",
+      "request": "launch",
+      "mainClass": "com.javaoop.materi.contoh1",
+      "projectName": "PEMROGRAMAN_ff228122"
+    },
+    {
+      "type": "java",
+      "name": "Launch palindrome",
+      "request": "launch",
+      "mainClass": "com.javaoop.java_dasar.palindrome",
+      "projectName": "PEMROGRAMAN_ff228122"
+    },
+    {
+      "type": "java",
       "name": "Launch Main",
       "request": "launch",
       "mainClass": "com.javaoop.kelas_terbuka.dasarJava.Main",
