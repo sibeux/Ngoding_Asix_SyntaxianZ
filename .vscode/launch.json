@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch UnitTest",
+      "request": "launch",
+      "mainClass": "test.UnitTest",
+      "projectName": "PEMROGRAMAN_ff228122"
+    },
+    {
+      "type": "java",
+      "name": "Launch ArrayObject",
+      "request": "launch",
+      "mainClass": "com.javaoop.java_dasar.ArrayObject",
+      "projectName": "PEMROGRAMAN_ff228122"
+    },
+    {
+      "type": "java",
       "name": "Launch constructor",
       "request": "launch",
       "mainClass": "com.javaoop.kelas_terbuka.constructorDasar.constructor",
