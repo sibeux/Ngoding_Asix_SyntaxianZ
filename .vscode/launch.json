@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch perulangan",
+      "request": "launch",
+      "mainClass": "com.javaoop.materi.perulangan",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
+      "name": "Launch contoh2",
+      "request": "launch",
+      "mainClass": "com.javaoop.materi.contoh2",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
       "name": "Launch UnitTest",
       "request": "launch",
       "mainClass": "test.UnitTest",

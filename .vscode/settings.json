@@ -125,7 +125,8 @@
   "rainbow_csv.enable_tooltip_column_names": true,
   "rainbow_csv.enable_context_menu_head": true,
   "java.project.sourcePaths": [
-    "Main Program\\JAVA_OOP\\src"
+    "Main Program\\JAVA_OOP\\src",
+    "Main_Program\\JAVA_OOP\\src"
   ],
   "C_Cpp.errorSquiggles": "Disabled",
   "cssPeek.peekFromLanguages": [
@@ -165,7 +166,8 @@
       "My Program\\JAVA_OOP\\src\\com\\javaoop\\materi\\Pretty_Table\\commons-lang3-3.12.0-bin\\commons-lang3-3.12.0\\commons-lang3-3.12.0.jar",
       "Testing\\JAVA_OOP\\src\\com\\javaoop\\materi\\Pretty_Table\\commons-lang3-3.12.0-bin\\commons-lang3-3.12.0\\commons-lang3-3.12.0.jar",
       "Main Program\\JAVA_OOP\\src\\com\\javaoop\\materi\\Pretty_Table\\commons-lang3-3.12.0-bin\\commons-lang3-3.12.0\\commons-lang3-3.12.0-javadoc.jar",
-      "Main Program\\JAVA_OOP\\src\\com\\javaoop\\materi\\Pretty_Table\\commons-lang3-3.12.0-bin\\commons-lang3-3.12.0\\commons-lang3-3.12.0.jar"
+      "Main Program\\JAVA_OOP\\src\\com\\javaoop\\materi\\Pretty_Table\\commons-lang3-3.12.0-bin\\commons-lang3-3.12.0\\commons-lang3-3.12.0.jar",
+      "Main_Program\\JAVA_OOP\\src\\com\\javaoop\\materi\\Pretty_Table\\commons-lang3-3.12.0-bin\\commons-lang3-3.12.0\\commons-lang3-3.12.0.jar"
     ],
     "exclude": [
       "Main Program/JAVA_OOP/src/com/javaoop/materi/Pretty_Table/commons-lang3-3.12.0-bin/commons-lang3-3.12.0/commons-lang3-3.12.0-javadoc.jar"
