@@ -1,0 +1,1 @@
+print(set('HANYA BERDUA'))

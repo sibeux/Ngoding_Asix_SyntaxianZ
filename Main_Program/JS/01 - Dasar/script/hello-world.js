@@ -1,0 +1,1 @@
+document.writeln("<p>hello sibe</p>");
