@@ -8,7 +8,7 @@ public class ListApp {
     public static void main(String[] args) {
         
         List<String> strings = new ArrayList<>();
-        // list<String> strings = new LinkedList<>();
+        // LinkedList<String> strings = new LinkedList<>();
 
         strings.add("Java");
         strings.add("OOP");

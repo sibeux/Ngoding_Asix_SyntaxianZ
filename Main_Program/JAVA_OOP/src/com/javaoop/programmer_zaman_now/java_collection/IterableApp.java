@@ -13,7 +13,9 @@ public class IterableApp {
         }
 
         System.out.println("iterator");
-        Iterator<String> iterator = names.iterator();
+
+        Iterable<Integer> numbers = List.of(1,2,3,4,5);
+        Iterator<Integer> iterator = numbers.iterator();
 
         while (iterator.hasNext()) {
             System.out.println(iterator.next());

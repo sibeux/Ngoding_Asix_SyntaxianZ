@@ -12,7 +12,9 @@ public class CollectionApp {
         names.add("sibe");
         names.add("habqi");
         names.add("habi");
-        names.addAll(List.of("nasrul","biqi","habi"));
+        names.addAll(List.of("3","2","1"));
+
+        System.out.println(names);
 
         names.remove("habqi");
         names.remove("budi"); // no impact karena return boolean
