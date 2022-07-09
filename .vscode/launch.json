@@ -3,6 +3,48 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ListApp",
+      "request": "launch",
+      "mainClass": "com.javaoop.programmer_zaman_now.java_collection.ListApp",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
+      "name": "Launch CollectionApp",
+      "request": "launch",
+      "mainClass": "com.javaoop.programmer_zaman_now.java_collection.CollectionApp",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "com.javaoop.tugas.smt_3.PRAKTIKUM.Enkapsulasi_Polymorphisme.Main",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
+      "name": "Launch angkaBalik",
+      "request": "launch",
+      "mainClass": "com.javaoop.tugas.proton.angkaBalik",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
+      "name": "Launch MainStudy",
+      "request": "launch",
+      "mainClass": "com.javaoop.tugas.KUIS.MainStudy",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
+      "name": "Launch IterableApp",
+      "request": "launch",
+      "mainClass": "com.javaoop.programmer_zaman_now.java_collection.IterableApp",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
       "name": "Launch perulangan",
       "request": "launch",
       "mainClass": "com.javaoop.materi.perulangan",
