@@ -3,6 +3,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch NavigableSetApp",
+      "request": "launch",
+      "mainClass": "com.javaoop.programmer_zaman_now.java_collection.NavigableSetApp",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
+      "name": "Launch SortedSetAp",
+      "request": "launch",
+      "mainClass": "com.javaoop.programmer_zaman_now.java_collection.SortedSetAp",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
+      "name": "Launch ComparatorApp",
+      "request": "launch",
+      "mainClass": "com.javaoop.programmer_zaman_now.java_generic.application.ComparatorApp",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
+      "name": "Launch ComparableApp",
+      "request": "launch",
+      "mainClass": "com.javaoop.programmer_zaman_now.java_generic.application.ComparableApp",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
       "name": "Launch EnumSetApp",
       "request": "launch",
       "mainClass": "com.javaoop.programmer_zaman_now.java_collection.EnumSetApp",
