@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch EnumSetApp",
+      "request": "launch",
+      "mainClass": "com.javaoop.programmer_zaman_now.java_collection.EnumSetApp",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
+      "name": "Launch SetApp",
+      "request": "launch",
+      "mainClass": "com.javaoop.programmer_zaman_now.java_collection.SetApp",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
       "name": "Launch ImmutableApp",
       "request": "launch",
       "mainClass": "com.javaoop.programmer_zaman_now.java_collection.ImmutableApp",
