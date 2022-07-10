@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ImmutableApp",
+      "request": "launch",
+      "mainClass": "com.javaoop.programmer_zaman_now.java_collection.ImmutableApp",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
+      "name": "Launch MutableApp",
+      "request": "launch",
+      "mainClass": "com.javaoop.programmer_zaman_now.java_collection.MutableApp",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
       "name": "Launch ListApp",
       "request": "launch",
       "mainClass": "com.javaoop.programmer_zaman_now.java_collection.ListApp",
