@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch QueueApp",
+      "request": "launch",
+      "mainClass": "com.javaoop.programmer_zaman_now.java_collection.QueueApp",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
       "name": "Launch NavigableSetApp",
       "request": "launch",
       "mainClass": "com.javaoop.programmer_zaman_now.java_collection.NavigableSetApp",
