@@ -227,7 +227,7 @@
                     }, 5000);
                 });
             })
-    })
+    });
     
     $('.close-btn').click(function() {
         $('.alert').removeClass("show");
