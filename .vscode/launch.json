@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Example",
+      "request": "launch",
+      "mainClass": "com.java_gui.Example",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
+      "name": "Launch contoh1",
+      "request": "launch",
+      "mainClass": "com.javaoop.materi.contoh1",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
       "name": "Launch QueueApp",
       "request": "launch",
       "mainClass": "com.javaoop.programmer_zaman_now.java_collection.QueueApp",
