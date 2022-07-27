@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Container",
+      "request": "launch",
+      "mainClass": "com.java_gui.Container",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
       "name": "Launch Example",
       "request": "launch",
       "mainClass": "com.java_gui.Example",
