@@ -1,1 +1,1 @@
-print(set('HANYA BERDUA'))
+print(set('abc'))
