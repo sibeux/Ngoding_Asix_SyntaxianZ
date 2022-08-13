@@ -1,8 +1,8 @@
 # A PLUS B
 
-Time limit: 2 s
-
-Memory limit: 64 MB
+| Time limit | 2 s |
+| --- | --- |
+| Memory limit | 64 MB |
 
 ## Deskripsi
 
