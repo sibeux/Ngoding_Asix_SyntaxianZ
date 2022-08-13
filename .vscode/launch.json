@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch MasUniverse",
+      "request": "launch",
+      "mainClass": "competitive_programming.COMPFEST.MasUniverse",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
       "name": "Launch Container",
       "request": "launch",
       "mainClass": "com.java_gui.Container",
