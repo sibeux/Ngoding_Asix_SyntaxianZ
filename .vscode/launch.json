@@ -3,6 +3,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch UnitTest",
+      "request": "launch",
+      "mainClass": "test.UnitTest",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "com.javaoop.kelas_terbuka.inheritance.Main",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
+      "name": "Launch weapon_1052",
+      "request": "launch",
+      "mainClass": "com.javaoop.tugas.smt_3.PRAKTIKUM.geometri.weapon_1052",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
+      "name": "Launch geometry_1052",
+      "request": "launch",
+      "mainClass": "com.javaoop.tugas.smt_3.PRAKTIKUM.geometri.geometry_1052",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
+      "name": "Launch method_return",
+      "request": "launch",
+      "mainClass": "com.javaoop.java_dasar.method_return",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
       "name": "Launch MasUniverse",
       "request": "launch",
       "mainClass": "competitive_programming.COMPFEST.MasUniverse",
