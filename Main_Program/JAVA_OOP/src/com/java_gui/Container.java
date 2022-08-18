@@ -37,7 +37,7 @@ public class Container {
         JLabel judulLabel = new JLabel("Ini Adalah Aplikasi RankerIN", SwingConstants.CENTER); // membuat label baru
         judulLabel.setBounds(100, 30,210, 30); // mengatur ukuran label
         frame.add(judulLabel); // menambahkan label ke frame
-        // ========================================
+        // =========================================
 
         // menambahkan field ke frame ===============
         // bagian kode buku
