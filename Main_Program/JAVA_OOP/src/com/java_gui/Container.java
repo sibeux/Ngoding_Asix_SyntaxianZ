@@ -1,6 +1,8 @@
 package com.java_gui;
 
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
@@ -8,13 +10,14 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
-public class Container {
-    public static void main(String[] args) {
+public class Container implements ActionListener{
 
+    private void initComponent(){
         JFrame frame = new JFrame("This is title"); // membuat frame baru
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // mengatur default close operation
 
@@ -161,5 +164,38 @@ public class Container {
         // set visible ini harus ditaruh paling belakang
         // agar saat dijalankan, frame akan terlihat secara otomatis
         frame.setVisible(true); // mengatur frame terlihat atau tidak
+
+        // =========== event =============
+        buttonSimpan.addActionListener(this); // menambahkan event ke button
+        buttonReset.addActionListener(this); // menambahkan event ke button
+        buttonSimpan.setActionCommand("simpan"); // mengatur action command ke button
+        buttonReset.setActionCommand("reset"); // mengatur action command ke button
+        
+    }
+
+    public Container(){
+        initComponent();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // TODO Auto-generated method stub
+        String command = e.getActionCommand(); // mengambil action command dari button
+
+        switch(command){
+            case "simpan":
+                JOptionPane.showMessageDialog(null, "Data Tersimpan");
+                break;
+            case "reset":
+                JOptionPane.showMessageDialog(null, "Data Terreset");
+                break;
+            default:
+                System.out.println("Error");
+                break;  
+        }
+    }
+
+    public static void main(String[] args) {
+        new Container();
     }
 }
