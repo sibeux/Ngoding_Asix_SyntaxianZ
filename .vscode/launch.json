@@ -1,6 +1,14 @@
 {
   "version": "0.2.0",
   "configurations": [
+    
+    {
+      "type": "java",
+      "name": "Launch ArrayOperation",
+      "request": "launch",
+      "mainClass": "com.javaoop.java_dasar.ArrayOperation",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
     {
       "type": "java",
       "name": "Launch ArraysToString",
