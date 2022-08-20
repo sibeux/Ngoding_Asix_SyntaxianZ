@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ArraysToString",
+      "request": "launch",
+      "mainClass": "com.javaoop.java_dasar.ArraysToString",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
       "name": "Launch InstanceOf",
       "request": "launch",
       "mainClass": "com.javaoop.java_dasar.InstanceOf",
