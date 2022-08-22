@@ -3,6 +3,8 @@ package com.java_gui;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
@@ -58,6 +60,7 @@ public class Container implements ActionListener{
         JTextField fieldNamaBuku = new JTextField(); // membuat text field baru
         fieldNamaBuku.setBounds(150, 120, 150, 30);
         frame.add(fieldNamaBuku); // menambahkan text field ke frame
+        fieldNamaBuku.setEnabled(false);
 
         // bagian membership - radio button
         JLabel textMembership = new JLabel("Membership");
@@ -171,6 +174,46 @@ public class Container implements ActionListener{
         buttonSimpan.setActionCommand("simpan"); // mengatur action command ke button
         buttonReset.setActionCommand("reset"); // mengatur action command ke button
         
+        fieldKodeBuku.addKeyListener(new KeyListener(){
+
+            @Override
+            public void keyTyped(KeyEvent e) {
+                // TODO Auto-generated method stub
+                
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                // TODO Auto-generated method stub
+                if(e.getKeyCode() == KeyEvent.VK_ENTER){
+                    String buku[][] = {{"JVN", "Java"},
+                                    {"PTN","Python"},
+                                    {"CPP", "C++"}
+                        };
+
+                        String ketemu =  "tidak";
+
+                    for (int i = 0;i < buku.length;i++){
+                        if(fieldKodeBuku.getText().equals(buku[i][0])){
+                            fieldNamaBuku.setText(buku[i][1]);
+                            ketemu = "iya";
+                            break;
+                        }
+                    }
+                    if(ketemu.equals("tidak")){
+                        JOptionPane.showMessageDialog(null,"Kode Tidak Ditemukan");
+                        fieldNamaBuku.setText("");
+                    }
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                // TODO Auto-generated method stub
+                
+            }
+
+        });
     }
 
     public Container(){
