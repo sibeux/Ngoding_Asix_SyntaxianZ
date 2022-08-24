@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch LoginForm",
+      "request": "launch",
+      "mainClass": "com.java_gui.example.LoginForm",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
       "name": "Launch void_learn",
       "request": "launch",
       "mainClass": "com.javaoop.java_dasar.void_learn",

@@ -1,4 +1,4 @@
-package com.java_gui;
+package com.java_gui.example;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
