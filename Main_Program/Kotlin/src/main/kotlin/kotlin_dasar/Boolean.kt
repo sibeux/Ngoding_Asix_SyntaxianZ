@@ -2,8 +2,8 @@ package kotlin_dasar
 
 fun main() {
 
-    var benar = true
-    var salah = false
+    val benar = true
+    val salah = false
 
     println(benar)
     println(salah)
