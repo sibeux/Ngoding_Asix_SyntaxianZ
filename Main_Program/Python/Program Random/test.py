@@ -1,5 +1,2 @@
-print("Hello World")
-"okejek"
-print("okejek")
-print(22)
-1
+import tensorflow as tf
+print(tf.__version__)
