@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch IntvMetrodataAcademy",
+      "request": "launch",
+      "mainClass": "test.IntvMetrodataAcademy",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
       "name": "Launch SwapVar",
       "request": "launch",
       "mainClass": "test.SwapVar",
