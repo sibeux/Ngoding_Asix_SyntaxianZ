@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Palyndrome",
+      "request": "launch",
+      "mainClass": "test.Palyndrome",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
+      "name": "Launch FizzBuzz",
+      "request": "launch",
+      "mainClass": "test.FizzBuzz",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
+      "name": "Launch PrimeNumber",
+      "request": "launch",
+      "mainClass": "test.PrimeNumber",
+      "projectName": "PEMROGRAMAN_a6fedc34"
+    },
+    {
+      "type": "java",
       "name": "Launch IntvMetrodataAcademy",
       "request": "launch",
       "mainClass": "test.IntvMetrodataAcademy",
