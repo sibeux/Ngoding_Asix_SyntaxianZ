@@ -6,6 +6,13 @@
       "name": "Launch Palyndrome",
       "request": "launch",
       "mainClass": "test.Palyndrome",
+      "projectName": "PEMROGRAMAN_44777ce4"
+    },
+    {
+      "type": "java",
+      "name": "Launch Palyndrome",
+      "request": "launch",
+      "mainClass": "test.Palyndrome",
       "projectName": "PEMROGRAMAN_a6fedc34"
     },
     {
