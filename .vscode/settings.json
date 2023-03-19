@@ -5,7 +5,6 @@
   "markdown.preview.fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
   "markdown.math.enabled": true,
   "java.autobuild.enabled": true,
-  "jupyter.defaultCellMarker": "# %%",
   "highlight-matching-tag.enabled": true,
   "highlight-matching-tag.highlightFromName": true,
   "notebook.lineNumbers": "on",
@@ -23,7 +22,6 @@
   "notebook.editorOptionsCustomizations": {
     "editor.bracketPairColorization.enabled": true
   },
-  "jupyter.decorateCells": true,
   "highlight-matching-tag.showPath": true,
   "highlight-matching-tag.showRuler": true,
   "cssPeek.enable": true,
@@ -208,5 +206,7 @@
   ],
   "files.associations": {
     "iostream": "cpp"
-  }
+  },
+  "jupyter.interactiveWindow.cellMarker.decorateCells": true,
+  "jupyter.interactiveWindow.cellMarker.default": "# %%"
 }
