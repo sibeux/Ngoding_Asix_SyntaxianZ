@@ -1,14 +1,7 @@
-text = """ implementasiintegrasi
-sistem SIHALAL
-dengan sistem
-Lembaga Pemeriksa
-Halal (LPH)
- Memodifikasi API untuk
-integrasi sistem dengan
-LNSW
- Membuat API untuk
-integrasi sistem dengan
-marketplace/instansi/lem
-bagaterkait
+text = """Perbaikan pada
+KOPMA akan
+dianggarkan
+pada anggaran
+periode depan.
 """
 print(text.replace("\n", " "))

@@ -174,7 +174,7 @@
       "Main Program/JAVA_OOP/src/com/javaoop/materi/Pretty_Table/commons-lang3-3.12.0-bin/commons-lang3-3.12.0/commons-lang3-3.12.0-javadoc.jar"
     ]
   },
-  "python.formatting.provider": "autopep8",
+  "python.formatting.provider": "none",
   "jupyter.jupyterServerType": "local",
   "C_Cpp_Runner.cCompilerPath": "C:/Program Files/mingw64/bin/gcc.exe",
   "C_Cpp_Runner.cppCompilerPath": "C:/Program Files/mingw64/bin/g++.exe",
@@ -208,5 +208,8 @@
     "iostream": "cpp"
   },
   "jupyter.interactiveWindow.cellMarker.decorateCells": true,
-  "jupyter.interactiveWindow.cellMarker.default": "# %%"
+  "jupyter.interactiveWindow.cellMarker.default": "# %%",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  }
 }
