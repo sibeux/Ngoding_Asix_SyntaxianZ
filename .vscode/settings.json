@@ -25,7 +25,7 @@
   "highlight-matching-tag.showPath": true,
   "highlight-matching-tag.showRuler": true,
   "cssPeek.enable": true,
-  "window.zoomLevel": -1,
+  "window.zoomLevel": 0,
   "quokka.colorizeOutput": true,
   "quokka.colors": {
     "covered": "#62b455",

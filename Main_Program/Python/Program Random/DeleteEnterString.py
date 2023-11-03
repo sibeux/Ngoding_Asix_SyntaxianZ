@@ -1,7 +1,6 @@
-text = """Perbaikan pada
-KOPMA akan
-dianggarkan
-pada anggaran
-periode depan.
+text = """
+Masih akan didiskusikan 
+oleh pihak Dekanat 
+Fasilkom
 """
 print(text.replace("\n", " "))
