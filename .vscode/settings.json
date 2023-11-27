@@ -211,5 +211,6 @@
   "jupyter.interactiveWindow.cellMarker.default": "# %%",
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8"
-  }
+  },
+  "dotnet.defaultSolution": "disable"
 }
