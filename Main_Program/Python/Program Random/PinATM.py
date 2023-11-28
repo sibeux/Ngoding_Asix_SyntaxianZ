@@ -26,13 +26,13 @@ if __name__ == '__main__':
     access_code = qwerty_string + integer_Keys + dictionary_data + modulus_value
     print(f'kode akses M-Banking adalah {access_code}')
 
-integer_mode = 900030
+integer_mode = 900342
 data_binary = integer_mode % new_list
 indent_keys = str(data_binary)
 
-valueTrue = 700402
+valueTrue = 700169
 valueFalse = not valueTrue
 if valueFalse == False:
     appendData = valueTrue % new_list
     code_string = str(appendData)
-    print(f'pin atm adalah 0{indent_keys + code_string}')
+    print(f'pin atm adalah {indent_keys + code_string}')
