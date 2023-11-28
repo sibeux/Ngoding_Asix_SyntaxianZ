@@ -22,7 +22,7 @@ integer_Keys = string_list[1][0]
 dictionary_data = string_list[1][2]
 
 # MENAMPILKAN DATA
-if __name__ == '_main_':
+if __name__ == '__main__':
     access_code = qwerty_string + integer_Keys + dictionary_data + modulus_value
     print(f'kode akses M-Banking adalah {access_code}')
 
