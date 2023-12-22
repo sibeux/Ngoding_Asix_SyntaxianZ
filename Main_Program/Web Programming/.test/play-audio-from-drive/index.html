@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <audio id="player" autoplay controls>
+        <source src="http://docs.google.com/uc?export=open&id=10FL5NTa5fk7TkJpm4AnycyW_lzIe5yzv" type="audio/mp3">
+    </audio>
+
+    <!-- add button for next music -->
+    <button id="next">Next</button>
+</body>
+<script>
+    var x = ['http://docs.google.com/uc?export=open&id=107VpNA7BU4AIxVsK2sRg69-rOigdU57n',
+            'http://docs.google.com/uc?export=open&id=107Nb_AZqMUEbVQS4fJ6B2WHogoOm_3GD'];
+        var index = 0;
+        var music = document.getElementById("player");
+        if (index < 2) {
+            $("#player").bind("ended", function () {
+                music.src = x[index];
+                index = index + 1;
+                music.load();
+                music.play();
+
+                if (index >= 2) {
+                    index = 0;
+                }
+            });
+        }
+
+        $("#next").click(function () {
+            music.src = x[index];
+            index = index + 1;
+            music.load();
+            music.play();
+
+            if (index >= 2) {
+                index = 0;
+            }
+        });
+</script>
+
+</html>
