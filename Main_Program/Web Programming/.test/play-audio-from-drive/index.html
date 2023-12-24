@@ -14,23 +14,11 @@
 </body>
 <script>
     var x = ['http://docs.google.com/uc?export=open&id=107VpNA7BU4AIxVsK2sRg69-rOigdU57n',
-            'http://docs.google.com/uc?export=open&id=107Nb_AZqMUEbVQS4fJ6B2WHogoOm_3GD'];
-        var index = 0;
-        var music = document.getElementById("player");
-        if (index < 2) {
-            $("#player").bind("ended", function () {
-                music.src = x[index];
-                index = index + 1;
-                music.load();
-                music.play();
-
-                if (index >= 2) {
-                    index = 0;
-                }
-            });
-        }
-
-        $("#next").click(function () {
+        'http://docs.google.com/uc?export=open&id=107Nb_AZqMUEbVQS4fJ6B2WHogoOm_3GD'];
+    var index = 0;
+    var music = document.getElementById("player");
+    if (index < 2) {
+        $("#player").bind("ended", function () {
             music.src = x[index];
             index = index + 1;
             music.load();
@@ -40,6 +28,18 @@
                 index = 0;
             }
         });
+    }
+
+    $("#next").click(function () {
+        music.src = x[index];
+        index = index + 1;
+        music.load();
+        music.play();
+
+        if (index >= 2) {
+            index = 0;
+        }
+    });
 </script>
 
 </html>
