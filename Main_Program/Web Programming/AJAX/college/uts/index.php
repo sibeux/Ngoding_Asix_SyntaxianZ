@@ -96,6 +96,7 @@ if(isset($_POST['simpan'])){ // untuk create
     .card {
         margin-top: 10px;
     }
+
     .col-lg-4 {
         margin-left: 10px;
     }
