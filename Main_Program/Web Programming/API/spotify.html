@@ -12,46 +12,135 @@
     <input type="text" id="searchInput" placeholder="Enter a song name">
     <input type="text" id="linkInput" placeholder="Enter a song link">
     <button onclick="search()">Search</button>
+    <br>
+    <br>
+    <div>
+        <!-- title -->
+        <input type="text" value="Title" id="myInputTitle">
+        <button onclick="myFunction('myInputTitle')">Copy title</button>
+    </div>
+    <br>
+    <div>
+        <!-- artist -->
+        <input type="text" value="Artist" id="myInputArtist">
+        <button onclick="myFunction('myInputArtist')">Copy artist</button>
+    </div>
+    <br>
+    <div>
+        <!-- album -->
+        <input type="text" value="Album" id="myInputAlbum">
+        <button onclick="myFunction('myInputAlbum')">Copy album</button></div>
+    <br>
+    <div>
+        <!-- time -->
+        <input type="text" value="Time" id="myInputTime">
+        <button onclick="myFunction('myInputTime')">Copy time</button></div>
+    <br>
     <div id="results"></div>
+    <button id="download">Download</button></div>
 
-        <script>
-            function search() {
-                // const searchInput = document.getElementById('searchInput').value;
 
-                const searchInput = document.getElementById('linkInput').value;
-                const accessToken = 'BQDbG--au_BjaW2-_5VFnBUjh_Qzt4Lmekhi8NDP-eXzJaJOVbYqTKVP1w2qAuYtT9U3J1ixnRjBAMmZpGTdzjzKDH_kENxvpiUuFdsxfBs89moPcKToW6zVi5ZE_at4TcoOxV4O8ekAqbB5PUvxZkfbRSvvlnE1ootUfL1PD0q9TDoXssbfjIfQNiZkCLu7SHMMnQpUb4DxB98UbuJsYw'; // Replace with your actual Spotify access token
-
-                // fetch(`https://api.spotify.com/v1/tracks/${(searchInput)}&type=track`, {
-
-                const match = searchInput.match(/track\/(\w+)/);
-
-                fetch(`https://api.spotify.com/v1/tracks/${(match[1])}`, {
-                    headers: {
-                        'Authorization': `Bearer ${accessToken}`
-                    }
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        const resultsDiv = document.getElementById('results');
-                        resultsDiv.innerHTML = '';
-
-                        // data.tracks.items.forEach(item => {
-                        //     const trackDiv = document.createElement('div');
-                        //     trackDiv.innerHTML = `<strong>${item.name}</strong> by ${item.artists.map(artist => artist.name).join(', ')}`;
-                        //     resultsDiv.appendChild(trackDiv);
-                        // });
-
-                        const trackDiv = document.createElement('div');
-                        trackDiv.innerHTML = `<strong>${data.name}</strong> by ${data.artists.map(artist => artist.name).join(', ')}`;
-                        trackDiv.innerHTML += `<br><img src="${data.album.images[0].url}">`;
-                        resultsDiv.appendChild(trackDiv);
-                        ;
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                    });
+    <script>
+        function copyTextToClipboard(elementId) {
+                var copyText = document.getElementById(elementId);
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); // For mobile devices
+                navigator.clipboard.writeText(copyText.value);
             }
-        </script>
+
+            function myFunction(id) {
+                copyTextToClipboard(id);
+            }
+
+
+        function search() {
+            // const searchInput = document.getElementById('searchInput').value;
+
+            const searchInput = document.getElementById('linkInput').value;
+
+            async function refreshAccessToken(refreshToken) {
+                const clientId = "a13366c52a89450f938ad5964e4976fc";
+                const clientSecret = "5259fd47c2a64c6ab2c16138fbcaa8d8";
+                const tokenEndpoint = "https://accounts.spotify.com/api/token";
+
+                const basicAuth = btoa(`${clientId}:${clientSecret}`);
+
+                const requestBody = new URLSearchParams();
+                requestBody.append("grant_type", "refresh_token");
+                requestBody.append("refresh_token", refreshToken);
+
+                const response = await fetch(tokenEndpoint, {
+                    method: "POST",
+                    headers: {
+                        Authorization: `Basic ${basicAuth}`,
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body: requestBody,
+                });
+
+                if (!response.ok) {
+                    throw new Error("Failed to refresh access token");
+                }
+
+                const responseData = await response.json();
+                return responseData.access_token;
+            }
+
+            // Contoh penggunaan:
+            const refreshToken =
+                "AQBI38smNBN4Xka0G9wn0LnUq6QqASg_rS3_ZufpWe7i0MJrqrPknQre21m22sUMLMDktkLrKOJQZYF3gMzWpBxqsIUd7MS5fGuKJ4cYP9qcVvJnxvx31RcRB4mXYzSoz9Y";
+
+            refreshAccessToken(refreshToken)
+                .then((accessToken) => {
+                    const match = searchInput.match(/track\/(\w+)/);
+
+                    fetch(`https://api.spotify.com/v1/tracks/${(match[1])}`, {
+                        headers: {
+                            'Authorization': `Bearer ${accessToken}`
+                        }
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            const resultsDiv = document.getElementById('results');
+                            const downloadButton = document.getElementById('download');
+                            resultsDiv.innerHTML = '';
+
+                            // data.tracks.items.forEach(item => {
+                            //     
+                            //     trackDiv.innerHTML = `<strong>${item.name}</strong> by ${item.artists.map(artist => artist.name).join(', ')}`;
+                            //     resultsDiv.appendChild(trackDiv);
+                            // });
+
+                            const title = document.getElementById('myInputTitle');
+                            const artist = document.getElementById('myInputArtist');
+                            const album = document.getElementById('myInputAlbum');
+                            const time = document.getElementById('myInputTime');
+                            const trackDiv = document.createElement('div');
+                            const download = document.createElement('a');
+
+                            // title.value = data.name; if += then it will add the text awal ke text search => 'TitleThis is pure love' 
+                            title.value = data.name;
+                            artist.value = data.artists.map(artist => artist.name).join(', ');
+                            album.value = data.album.name;
+                            time.value = `${Math.floor(data.duration_ms / 60000).toFixed(0).padStart(2, '0')
+                                }:${(data.duration_ms % 60000 / 1000).toFixed(0).padStart(2, '0')}`;
+
+                                // download the full song
+                                
+
+                            trackDiv.innerHTML = `<br><img src="${data.album.images[0].url}">`;
+                            resultsDiv.appendChild(trackDiv);
+                            ;
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                        });
+                })
+                .catch((error) => {
+                    console.error("Error refreshing access token:", error);
+                });
+        }
+    </script>
 </body>
 
 </html>
