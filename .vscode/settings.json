@@ -205,7 +205,8 @@
     "**/.vscode/**"
   ],
   "files.associations": {
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "*.php": "c"
   },
   "jupyter.interactiveWindow.cellMarker.decorateCells": true,
   "jupyter.interactiveWindow.cellMarker.default": "# %%",
