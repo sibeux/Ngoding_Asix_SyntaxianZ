@@ -9,9 +9,9 @@
 
 <body>
     <h1>Spotify Song Search</h1>
-    <input type="text" id="searchInput" placeholder="Enter a song name">
+    <!-- <input type="text" id="searchInput" placeholder="Enter a song name"> -->
     <input type="text" id="linkInput" placeholder="Enter a song link">
-    <button onclick="search()">Search</button>
+    <button onclick="search()">Paste</button>
     <br>
     <br>
     <div>
@@ -29,34 +29,44 @@
     <div>
         <!-- album -->
         <input type="text" value="Album" id="myInputAlbum">
-        <button onclick="myFunction('myInputAlbum')">Copy album</button></div>
+        <button onclick="myFunction('myInputAlbum')">Copy album</button>
+    </div>
     <br>
     <div>
         <!-- time -->
         <input type="text" value="Time" id="myInputTime">
-        <button onclick="myFunction('myInputTime')">Copy time</button></div>
+        <button onclick="myFunction('myInputTime')">Copy time</button>
+    </div>
     <br>
+    <div>
+        <!-- link cover -->
+        <input type="text" value="Cover" id="myInputCover">
+        <button onclick="myFunction('myInputCover')">Copy link</button>
+    </div>
     <div id="results"></div>
-    <button id="download">Download</button></div>
 
 
     <script>
         function copyTextToClipboard(elementId) {
-                var copyText = document.getElementById(elementId);
-                copyText.select();
-                copyText.setSelectionRange(0, 99999); // For mobile devices
-                navigator.clipboard.writeText(copyText.value);
-            }
+            var copyText = document.getElementById(elementId);
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+            navigator.clipboard.writeText(copyText.value);
+        }
 
-            function myFunction(id) {
-                copyTextToClipboard(id);
-            }
-
+        function myFunction(id) {
+            copyTextToClipboard(id);
+        }
 
         function search() {
             // const searchInput = document.getElementById('searchInput').value;
 
+            const clickPaste = document.getElementById('linkInput');
+            navigator.clipboard.readText().then(
+                clipText => clickPaste.value = clipText
+            );
             const searchInput = document.getElementById('linkInput').value;
+
 
             async function refreshAccessToken(refreshToken) {
                 const clientId = "a13366c52a89450f938ad5964e4976fc";
@@ -115,6 +125,7 @@
                             const artist = document.getElementById('myInputArtist');
                             const album = document.getElementById('myInputAlbum');
                             const time = document.getElementById('myInputTime');
+                            const cover = document.getElementById('myInputCover');
                             const trackDiv = document.createElement('div');
                             const download = document.createElement('a');
 
@@ -124,9 +135,10 @@
                             album.value = data.album.name;
                             time.value = `${Math.floor(data.duration_ms / 60000).toFixed(0).padStart(2, '0')
                                 }:${(data.duration_ms % 60000 / 1000).toFixed(0).padStart(2, '0')}`;
+                            cover.value = data.album.images[0].url;
 
-                                // download the full song
-                                
+                            // download the full song
+
 
                             trackDiv.innerHTML = `<br><img src="${data.album.images[0].url}">`;
                             resultsDiv.appendChild(trackDiv);
