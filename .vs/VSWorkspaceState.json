@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Main_Program",
+    "\\Main_Program\\Web Programming",
+    "\\Main_Program\\Web Programming\\personal-website",
+    "\\Main_Program\\Web Programming\\personal-website\\module-akademi-crypto",
+    "\\Main_Program\\Web Programming\\personal-website\\module-akademi-crypto\\data"
   ],
+  "SelectedNode": "\\Main_Program\\Web Programming\\personal-website\\module-akademi-crypto\\data\\models.php",
   "PreviewInSolutionExplorer": false
 }
