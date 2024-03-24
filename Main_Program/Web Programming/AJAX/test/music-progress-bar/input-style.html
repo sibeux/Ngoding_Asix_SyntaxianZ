@@ -13,7 +13,8 @@
     <h1>Custom range slider</h1>
     <div class=wrapper>
         <div class="range">
-            <input onmouseenter="green(this)" onmouseleave="white(this)" type="range" min="0" max="50" value="0" id="range" />
+            <input onmouseenter="green(this)" onmouseleave="white(this)" type="range" min="0" max="50" value="0"
+                id="range" />
             <div class="value">0</div>
         </div>
     </div>
@@ -38,6 +39,8 @@
             } else {
                 sliderEl.style.background = `linear-gradient(to right, #fff ${progress}%, #3c3a3a ${progress}%)`;
             }
+
+            // border radius for sliderEl
         })
 
         function green(el) {
